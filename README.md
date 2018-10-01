@@ -23,5 +23,5 @@ Which selectors to use:
 - XPath - if there is no Id
 
 Naming your branch:
-- feature/PageName <- the page that you are working on.
-- fix/PageName <- when you are fixing/refactoring the code in the current page.
+- feature/pageName <- the page that you are working on.
+- fix/pageName <- when you are fixing/refactoring the code in the current page.

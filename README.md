@@ -3,11 +3,12 @@ SoftServe Academy Team Project for Fluxday
 
 What you need to install for this project:
 
-Selenium.WebDriver 
-Selenium.Support 
-Selenium.Chrome.WebDriver 
-Selenium.Firefox.WebDriver 
-Microsoft.VisualStudio.TestTools.UnitTesting
+- Microsoft.VisualStudio.TestTools.UnitTesting
+- Selenium.WebDriver 
+- Selenium.Support 
+- Selenium.Chrome.WebDriver 
+- Selenium.Firefox.WebDriver 
+
 
 Get started with the project:
 1. Download development branch.

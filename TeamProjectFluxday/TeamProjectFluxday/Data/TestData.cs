@@ -1,7 +1,8 @@
-﻿using SeleniumWebDriver.Data.Models;
+﻿using TeamProjectFluxday.Data.Models;
 using System.Collections.Generic;
+using TeamProjectFluxday.Data.Models;
 
-namespace SeleniumWebDriver.Data
+namespace TeamProjectFluxday.Data
 {
     public static class TestData
     {
@@ -20,6 +21,12 @@ namespace SeleniumWebDriver.Data
                 return new User("lead@fluxday.io", "password", "Team Lead");
             }
         }
-        
+        public static Team DevOps
+        {
+            get
+            {
+                return new Team("DevOps", "01");
+            }
+        }
     }
 }

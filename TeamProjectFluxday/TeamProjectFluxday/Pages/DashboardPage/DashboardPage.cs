@@ -1,8 +1,8 @@
-﻿using SeleniumWebDriver.Core;
+﻿using TeamProjectFluxday.Core;
 
-namespace SeleniumWebDriver.Pages.DashboardMainPage
+namespace TeamProjectFluxday.Pages.DashboardMainPage
 {
-    public class DashboardPage : BasePage<DashboardPageElementMap>
+    public class DashboardPage : BasePage<DashboardPageMap>
     {
         public DashboardPage(string url = "https://app.fluxday.io/") : base(url)
         {

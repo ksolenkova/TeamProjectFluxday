@@ -1,4 +1,4 @@
-﻿namespace SeleniumWebDriver.Core
+﻿namespace TeamProjectFluxday.Core
 {
     public class BasePage<TM> where TM : BasePageMap, new()
     {

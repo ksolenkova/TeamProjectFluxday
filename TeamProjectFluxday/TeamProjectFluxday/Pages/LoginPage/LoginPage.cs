@@ -1,8 +1,8 @@
-﻿using SeleniumWebDriver.Core;
-using SeleniumWebDriver.Data.Models;
-using SeleniumWebDriver.Pages.DashboardMainPage;
+﻿using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Data.Models;
+using TeamProjectFluxday.Pages.DashboardMainPage;
 
-namespace SeleniumWebDriver.Pages.LoginPage
+namespace TeamProjectFluxday.Pages.LoginPage
 {
     public class LoginPage : BasePage<LoginPageMap>
     {

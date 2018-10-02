@@ -1,9 +1,9 @@
 ﻿using OpenQA.Selenium;
-using SeleniumWebDriver.Core;
+using TeamProjectFluxday.Core;
 
-namespace SeleniumWebDriver.Pages.DashboardMainPage
+namespace TeamProjectFluxday.Pages.DashboardMainPage
 {
-    public class DashboardPageElementMap : BasePageMap
+    public class DashboardPageMap : BasePageMap
     {
         public IWebElement AdminUserLink
         {

@@ -3,7 +3,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using System;
 
-namespace SeleniumWebDriver.Core
+namespace TeamProjectFluxday.Core
 {
     public static class Driver
     {

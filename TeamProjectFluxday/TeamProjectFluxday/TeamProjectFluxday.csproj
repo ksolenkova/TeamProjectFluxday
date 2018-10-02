@@ -54,6 +54,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Models\Team.cs" />
+    <Compile Include="Pages\TeamPage\TeamPage.cs" />
+    <Compile Include="Pages\TeamPage\TeamPageMap.cs" />
     <Compile Include="Tests\LoginPageTests.cs" />
     <Compile Include="Core\BasePage.cs" />
     <Compile Include="Core\BasePageMap.cs" />
@@ -67,6 +70,7 @@
     <Compile Include="Pages\LoginPage\LoginPage.cs" />
     <Compile Include="Pages\LoginPage\LoginPageMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\TeamPageTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SeleniumWebDriver.Core;
-using SeleniumWebDriver.Pages.DashboardMainPage;
-using SeleniumWebDriver.Pages.LoginPage;
+using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Pages.DashboardMainPage;
+using TeamProjectFluxday.Pages.LoginPage;
 
-namespace SeleniumWebDriver.Tests
+namespace TeamProjectFluxday.Tests
 {
     [TestClass]
     public class LoginPageTests : BaseTest

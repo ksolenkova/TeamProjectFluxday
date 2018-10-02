@@ -12,5 +12,10 @@ namespace SeleniumWebDriver.Pages.DashboardMainPage
         {
             return Map.AdminUserLink.Text;
         }
+
+        internal void UsersLinkClick()
+        {
+            Map.UsersLink.Click();
+        }
     }
 }

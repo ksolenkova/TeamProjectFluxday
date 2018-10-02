@@ -54,6 +54,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\DepartmentsPage\DepartmentsPage.cs" />
+    <Compile Include="Pages\DepartmentsPage\DepartmentsPageMap.cs" />
+    <Compile Include="Tests\DepartmentsPageTests.cs" />
     <Compile Include="Tests\LoginPageTests.cs" />
     <Compile Include="Core\BasePage.cs" />
     <Compile Include="Core\BasePageMap.cs" />

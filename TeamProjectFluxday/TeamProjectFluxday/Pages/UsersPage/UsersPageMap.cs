@@ -73,8 +73,26 @@ namespace TeamProjectFluxday.Pages.UsersPage
         {
             get
             {
-                return GetElement(By.PartialLinkText("Test"));
+                return GetElement(By.LinkText("TestEmployee"));
             }
         }
+
+        public IWebElement SettingsButton
+        {
+            get
+            {
+                return GetElement(By.XPath("//*[@id=\"pane3\"]/div/div[1]/div[2]/a/div"));
+            }
+        }
+        
+        public IWebElement DeleteOption
+        {
+            get
+            {
+                return GetElement(By.XPath("//*[@id=\"drop1\"]/li[2]/a"));
+            }
+        }
+
+
     }
 }

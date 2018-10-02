@@ -1,5 +1,5 @@
 ﻿using SeleniumWebDriver.Core;
-using System;
+using System.Threading;
 
 namespace TeamProjectFluxday.Pages.UsersPage
 {
@@ -14,52 +14,39 @@ namespace TeamProjectFluxday.Pages.UsersPage
             Map.AddUser.Click();
         }
 
-        public string GenerateDateTimeString()
+        internal void FillInName()
         {
-            return DateTime.Now.ToString("yyyyMMddHHmmss");
-        }
-
-        internal void  FillInName()
-        {
-            var userNameField = Map.UserNameField;
-            var userName = $"Test{GenerateDateTimeString()}";
-            userNameField.SendKeys(userName);
+            Map.UserNameField.SendKeys("TestEmployee");
         }
 
         internal void FillInNickName()
         {
-            var nickNameField = Map.NickNameField;
-            nickNameField.SendKeys($"Test{GenerateDateTimeString()}");
+            Map.NickNameField.SendKeys($"Test{GenerateDateTimeString()}");
         }
 
         internal void FillInEmail()
         {
-            var emailField = Map.EmailField;
-            emailField.SendKeys($"Test{GenerateDateTimeString()}@fluxday.io");
+            Map.EmailField.SendKeys($"Test{GenerateDateTimeString()}@fluxday.io");
         }
 
         internal void FillInEmployeeCode()
         {
-            var employeeCodeField = Map.EmployeeCodeField;
-            employeeCodeField.SendKeys($"test{GenerateDateTimeString()}");
+            Map.EmployeeCodeField.SendKeys($"test{GenerateDateTimeString()}");
         }
 
         internal void FillInPassword()
         {
-            var passwordField = Map.PasswordField;
-            passwordField.SendKeys("password");
+            Map.PasswordField.SendKeys("password");
         }
 
         internal void FillInConfirmPassword()
         {
-            var confirmPasswordField = Map.ConfirmPasswordField;
-            confirmPasswordField.SendKeys("password");
+            Map.ConfirmPasswordField.SendKeys("password");
         }
 
         internal void SaveButtonClick()
         {
-            var saveButton = Map.SaveButton;
-            saveButton.Click();
+            Map.SaveButton.Click();
         }
 
         internal void FillInAddUserForm()
@@ -72,6 +59,19 @@ namespace TeamProjectFluxday.Pages.UsersPage
             FillInConfirmPassword();
         }
 
+        internal string ReadNewUserName()
+        {
+            return Map.NewUser.Text;
+        }
 
+        internal void DeleteNewUser()
+        {
+            Map.NewUser.Click();
+            Thread.Sleep(1000);
+            Map.SettingsButton.Click();
+            Thread.Sleep(1000);
+            Map.DeleteOption.Click();
+            Thread.Sleep(1000);
+        }
     }
 }

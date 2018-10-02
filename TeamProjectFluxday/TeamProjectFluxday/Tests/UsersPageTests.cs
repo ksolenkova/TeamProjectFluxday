@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SeleniumWebDriver.Core;
 using SeleniumWebDriver.Data;
-using SeleniumWebDriver.Pages.DashboardMainPage;
 using SeleniumWebDriver.Pages.LoginPage;
 using System.Threading;
 using TeamProjectFluxday.Pages.UsersPage;
@@ -29,10 +28,10 @@ namespace TeamProjectFluxday.Tests
             usersPage.AddUserClick();
 
             usersPage.FillInAddUserForm();
-
             usersPage.SaveButtonClick();
-            Thread.Sleep(2000);
-                                    
+
+            var expectedResult = "TestEmployee";
+            Assert.AreEqual(expectedResult, usersPage.ReadNewUserName());
         }
     }
 }

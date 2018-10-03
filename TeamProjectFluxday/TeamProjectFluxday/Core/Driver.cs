@@ -43,7 +43,7 @@ namespace SeleniumWebDriver.Core
             }
         }
 
-        public static void StartBrowser(BrowserTypes browserType = BrowserTypes.Chrome, int defaultTimeOut = 5)
+        public static void StartBrowser(BrowserTypes browserType = BrowserTypes.Chrome, int defaultTimeOut = 10)
         {
             switch (browserType)
             {

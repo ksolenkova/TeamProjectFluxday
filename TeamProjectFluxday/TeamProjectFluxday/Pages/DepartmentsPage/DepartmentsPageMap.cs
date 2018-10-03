@@ -9,7 +9,8 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
         {
             get
             {
-                return GetElement(By.XPath("//*[@id=\"pane2\"]/div[2]/a[1]"));
+                return GetElement(By.CssSelector("div>.pane2-content .dashed_link.transition"));
+                //return GetElement(By.XPath("//*[@id=\"pane2\"]/div[2]/a[1]"));
             }
         }
 
@@ -17,7 +18,7 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
         {
             get
             {
-                return GetElement(By.Id("project_name"));
+                return GetElement(By.CssSelector("#project_name"));
             }
         }
 
@@ -25,7 +26,7 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
         {
             get
             {
-                return GetElement(By.Id("project_code"));
+                return GetElement(By.CssSelector("#project_code"));
             }
         }
 
@@ -33,7 +34,7 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
         {
             get
             {
-                return GetElement(By.Id("project_website"));
+                return GetElement(By.CssSelector("#project_website"));
             }
         }
 
@@ -41,7 +42,7 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
         {
             get
             {
-                return GetElement(By.Id("project_description"));
+                return GetElement(By.CssSelector("#project_description"));
             }
         }
 
@@ -49,7 +50,8 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
         {
             get
             {
-                return GetElement(By.XPath("//*[@id=\"new_project\"]/div[3]/div[2]/input"));
+                return GetElement(By.CssSelector(".button.alert.right"));
+                //return GetElement(By.XPath("//*[@id=\"new_project\"]/div[3]/div[2]/input"));
             }
         }
 

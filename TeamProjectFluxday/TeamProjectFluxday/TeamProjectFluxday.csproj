@@ -54,14 +54,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
+
     <Compile Include="Pages\DepartmentsPage\DepartmentsPage.cs" />
     <Compile Include="Pages\DepartmentsPage\DepartmentsPageMap.cs" />
     <Compile Include="Tests\DepartmentsPageTests.cs" />
-=======
+
     <Compile Include="Pages\UsersPage\UsersPage.cs" />
     <Compile Include="Pages\UsersPage\UsersPageMap.cs" />
->>>>>>> f13b8557b7071109c28fe204b075c623ec628d20
+
     <Compile Include="Tests\LoginPageTests.cs" />
     <Compile Include="Core\BasePage.cs" />
     <Compile Include="Core\BasePageMap.cs" />

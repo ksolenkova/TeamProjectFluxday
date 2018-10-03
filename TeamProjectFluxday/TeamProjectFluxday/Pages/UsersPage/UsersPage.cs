@@ -72,6 +72,8 @@ namespace SeleniumWebDriver.Pages.UsersPage
             Thread.Sleep(1000);
             Map.DeleteOption.Click();
             Thread.Sleep(1000);
+
+            Driver.AcceptAlert();
         }
     }
 }

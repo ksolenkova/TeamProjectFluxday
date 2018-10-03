@@ -2,7 +2,7 @@
 using OpenQA.Selenium.Support.UI;
 using System.Collections.Generic;
 
-namespace  SeleniumWebDriver.Core
+namespace SeleniumWebDriver.Core
 {
     public class BasePageMap
     {
@@ -17,8 +17,16 @@ namespace  SeleniumWebDriver.Core
 
         public IWebElement GetElement(By by)
         {
-            BrowserWait.Until(ExpectedConditions.ElementExists(by));
-            return Browser.FindElement(by);
+            bool isDisplayed = BrowserWait.Until(driver => driver.FindElement(by).Displayed);
+            bool isEnabled = BrowserWait.Until(driver => driver.FindElement(by).Enabled);
+
+            if (isDisplayed && isEnabled)
+            {
+                return Browser.FindElement(by);
+            }
+
+            throw new ElementNotVisibleException($"Element with locator { by.ToString() } is not visible / clickable!");
+
         }
 
         public IReadOnlyCollection<IWebElement> GetElements(By by)

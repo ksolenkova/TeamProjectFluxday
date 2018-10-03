@@ -14,11 +14,19 @@ namespace SeleniumWebDriver.Pages.DashboardMainPage
             }
         }
 
+<<<<<<< HEAD
         public IWebElement DepartmentsLink
         {
             get
             {
                 return GetElement(By.XPath("/html/body/div[2]/div[1]/ul[2]/li[3]/a"));
+=======
+        public IWebElement UsersLink
+        {
+            get
+            {
+                return GetElement(By.XPath(@"/html/body/div[2]/div[1]/ul[2]/li[5]/a"));
+>>>>>>> f13b8557b7071109c28fe204b075c623ec628d20
             }
         }
     }

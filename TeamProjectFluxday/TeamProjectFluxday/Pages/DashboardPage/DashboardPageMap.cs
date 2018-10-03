@@ -1,9 +1,10 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using SeleniumWebDriver.Core;
 
 namespace SeleniumWebDriver.Pages.DashboardMainPage
 {
-    public class DashboardPageElementMap : BasePageMap
+    public class DashboardPageMap : BasePageMap
     {
         public IWebElement AdminUserLink
         {
@@ -13,11 +14,21 @@ namespace SeleniumWebDriver.Pages.DashboardMainPage
             }
         }
 
+
+        public IWebElement DepartmentsLink
+        {
+            get
+            {
+                return GetElement(By.XPath("/html/body/div[2]/div[1]/ul[2]/li[3]/a"));
+            }
+        }
+
         public IWebElement UsersLink
         {
             get
             {
                 return GetElement(By.XPath(@"/html/body/div[2]/div[1]/ul[2]/li[5]/a"));
+
             }
         }
     }

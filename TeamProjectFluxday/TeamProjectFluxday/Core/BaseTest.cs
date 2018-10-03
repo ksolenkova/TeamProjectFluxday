@@ -1,8 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 
-namespace TeamProjectFluxday.Core
+namespace SeleniumWebDriver.Core
 {
     [TestClass]
     public class BaseTest

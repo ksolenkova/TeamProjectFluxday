@@ -1,8 +1,8 @@
-﻿using TeamProjectFluxday.Data.Models;
+﻿using SeleniumWebDriver.Data.Models;
 using System.Collections.Generic;
-using TeamProjectFluxday.Data.Models;
+using SeleniumWebDriver.Data.Models;
 
-namespace TeamProjectFluxday.Data
+namespace SeleniumWebDriver.Data
 {
     public static class TestData
     {

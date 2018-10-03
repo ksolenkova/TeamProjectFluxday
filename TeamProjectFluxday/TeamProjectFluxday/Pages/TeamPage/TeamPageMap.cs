@@ -1,8 +1,8 @@
 ﻿using OpenQA.Selenium;
-using TeamProjectFluxday.Core;
+using SeleniumWebDriver.Core;
 using System.Collections.Generic;
 
-namespace TeamProjectFluxday.Pages.TeamPage
+namespace SeleniumWebDriver.Pages.TeamPage
 {
     public class TeamPageMap : BasePageMap
     {

@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
-using TeamProjectFluxday.Core;
+using SeleniumWebDriver.Core;
 
-namespace TeamProjectFluxday.Pages.LoginPage
+namespace SeleniumWebDriver.Pages.LoginPage
 {
     public class LoginPageMap : BasePageMap
     {

@@ -1,7 +1,9 @@
 ﻿using OpenQA.Selenium;
-using TeamProjectFluxday.Core;
+using OpenQA.Selenium.Support.UI;
+using SeleniumWebDriver.Core;
+using SeleniumWebDriver.Core;
 
-namespace TeamProjectFluxday.Pages.DashboardMainPage
+namespace SeleniumWebDriver.Pages.DashboardMainPage
 {
     public class DashboardPageMap : BasePageMap
     {
@@ -10,6 +12,24 @@ namespace TeamProjectFluxday.Pages.DashboardMainPage
             get
             {
                 return GetElement(By.XPath(@"/html/body/div[2]/div[1]/ul[3]/li[1]/a"));
+            }
+        }
+
+
+        public IWebElement DepartmentsLink
+        {
+            get
+            {
+                return GetElement(By.XPath("/html/body/div[2]/div[1]/ul[2]/li[3]/a"));
+            }
+        }
+
+        public IWebElement UsersLink
+        {
+            get
+            {
+                return GetElement(By.XPath(@"/html/body/div[2]/div[1]/ul[2]/li[5]/a"));
+
             }
         }
     }

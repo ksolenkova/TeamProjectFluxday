@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TeamProjectFluxday.Core;
-using TeamProjectFluxday.Pages.DashboardMainPage;
-using TeamProjectFluxday.Pages.LoginPage;
+using SeleniumWebDriver.Core;
+using SeleniumWebDriver.Pages.DashboardMainPage;
+using SeleniumWebDriver.Pages.LoginPage;
 
-namespace TeamProjectFluxday.Tests
+namespace SeleniumWebDriver.Tests
 {
     [TestClass]
     public class LoginPageTests : BaseTest
@@ -31,7 +31,7 @@ namespace TeamProjectFluxday.Tests
         [TestMethod]
         public void Test002LoginWithLeadUser()
         {
-            var loginPage = new LoginPage(); ;
+            var loginPage = new LoginPage();
             loginPage.Navigate();
 
             var teamLeadUser = Data.TestData.TeamLeadUser;

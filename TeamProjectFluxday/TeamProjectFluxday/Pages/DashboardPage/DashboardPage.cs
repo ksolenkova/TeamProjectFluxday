@@ -1,6 +1,7 @@
-﻿using TeamProjectFluxday.Core;
+﻿using SeleniumWebDriver.Core;
+using SeleniumWebDriver.Core;
 
-namespace TeamProjectFluxday.Pages.DashboardMainPage
+namespace SeleniumWebDriver.Pages.DashboardMainPage
 {
     public class DashboardPage : BasePage<DashboardPageMap>
     {
@@ -11,6 +12,18 @@ namespace TeamProjectFluxday.Pages.DashboardMainPage
         internal string ReadAdminUserLinkText()
         {
             return Map.AdminUserLink.Text;
+        }
+
+
+        internal void ClickOnDepartmentsLink()
+        {
+            Map.DepartmentsLink.Click();
+        }
+
+        internal void UsersLinkClick()
+        {
+            Map.UsersLink.Click();
+
         }
     }
 }

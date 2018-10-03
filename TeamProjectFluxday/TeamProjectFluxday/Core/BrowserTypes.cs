@@ -1,4 +1,4 @@
-﻿namespace TeamProjectFluxday.Core
+﻿namespace SeleniumWebDriver.Core
 {
     public enum BrowserTypes
     {

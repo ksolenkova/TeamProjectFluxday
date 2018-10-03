@@ -1,6 +1,8 @@
-﻿using System;
+using System;
+using SeleniumWebDriver.Core;
 
 namespace SeleniumWebDriver.Core
+
 {
     public class BasePage<TM> where TM : BasePageMap, new()
     {

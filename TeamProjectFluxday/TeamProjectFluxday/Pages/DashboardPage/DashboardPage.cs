@@ -1,4 +1,5 @@
 ﻿using SeleniumWebDriver.Core;
+using SeleniumWebDriver.Core;
 
 namespace SeleniumWebDriver.Pages.DashboardMainPage
 {

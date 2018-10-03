@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumWebDriver.Core;
+using SeleniumWebDriver.Core;
 
 namespace SeleniumWebDriver.Pages.DashboardMainPage
 {

@@ -1,6 +1,6 @@
 ﻿using SeleniumWebDriver.Core;
 
-namespace TeamProjectFluxday.Pages.DepartmentsPage
+namespace SeleniumWebDriver.Pages.DepartmentsPage
 {
     public class DepartmentsPage : BasePage<DepartmentsPageMap>
     {

@@ -3,9 +3,9 @@ using SeleniumWebDriver.Core;
 using SeleniumWebDriver.Data;
 using SeleniumWebDriver.Pages.LoginPage;
 using System.Threading;
-using TeamProjectFluxday.Pages.UsersPage;
+using SeleniumWebDriver.Pages.UsersPage;
 
-namespace TeamProjectFluxday.Tests
+namespace SeleniumWebDriver.Tests
 {
     [TestClass]
    public class UsersPageTests : BaseTest

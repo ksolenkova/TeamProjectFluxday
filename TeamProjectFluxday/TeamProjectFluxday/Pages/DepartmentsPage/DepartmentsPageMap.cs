@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using SeleniumWebDriver.Core;
 
-namespace TeamProjectFluxday.Pages.DepartmentsPage
+namespace SeleniumWebDriver.Pages.DepartmentsPage
 {
     public class DepartmentsPageMap : BasePageMap
     {

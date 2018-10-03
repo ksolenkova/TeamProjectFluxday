@@ -55,12 +55,18 @@
   </ItemGroup>
   <ItemGroup>
 
+    <Compile Include="Data\Models\Team.cs" />
+    <Compile Include="Pages\TeamPage\TeamPage.cs" />
+    <Compile Include="Pages\TeamPage\TeamPageMap.cs" />
+
+
     <Compile Include="Pages\DepartmentsPage\DepartmentsPage.cs" />
     <Compile Include="Pages\DepartmentsPage\DepartmentsPageMap.cs" />
     <Compile Include="Tests\DepartmentsPageTests.cs" />
 
     <Compile Include="Pages\UsersPage\UsersPage.cs" />
     <Compile Include="Pages\UsersPage\UsersPageMap.cs" />
+
 
     <Compile Include="Tests\LoginPageTests.cs" />
     <Compile Include="Core\BasePage.cs" />
@@ -75,7 +81,11 @@
     <Compile Include="Pages\LoginPage\LoginPage.cs" />
     <Compile Include="Pages\LoginPage\LoginPageMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+
+    <Compile Include="Tests\TeamPageTests.cs" />
+
     <Compile Include="Tests\UsersPageTests.cs" />
+
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

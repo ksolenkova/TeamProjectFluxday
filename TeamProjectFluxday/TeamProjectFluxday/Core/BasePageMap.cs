@@ -2,7 +2,7 @@
 using OpenQA.Selenium.Support.UI;
 using System.Collections.Generic;
 
-namespace SeleniumWebDriver.Core
+namespace  SeleniumWebDriver.Core
 {
     public class BasePageMap
     {

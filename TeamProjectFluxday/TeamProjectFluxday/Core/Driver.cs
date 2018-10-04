@@ -69,11 +69,11 @@ namespace SeleniumWebDriver.Core
             BrowserWait = null;
         }
 
-        internal static void AcceptAlert()
+        public static void AcceptAlert()
         {
             IAlert alert = Browser.SwitchTo().Alert();
-            Thread.Sleep(1000);
             alert.Accept();
+            Thread.Sleep(2000);
         }
     }
 }

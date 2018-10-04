@@ -9,7 +9,7 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
         {
             get
             {
-                return GetElement(By.XPath("//*[@id=\"pane2\"]/div[2]/a[1]"));
+                return GetElement(By.CssSelector("a[href=\"/projects/new\"]"));
             }
         }
 

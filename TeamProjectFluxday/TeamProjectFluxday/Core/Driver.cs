@@ -3,6 +3,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 using System;
+using System.Threading;
 
 namespace SeleniumWebDriver.Core
 {
@@ -43,7 +44,7 @@ namespace SeleniumWebDriver.Core
             }
         }
 
-        public static void StartBrowser(BrowserTypes browserType = BrowserTypes.Chrome, int defaultTimeOut = 10)
+        public static void StartBrowser(BrowserTypes browserType = BrowserTypes.Chrome, int defaultTimeOut = 5)
         {
             switch (browserType)
             {
@@ -66,6 +67,13 @@ namespace SeleniumWebDriver.Core
             Browser.Quit();
             Browser = null;
             BrowserWait = null;
+        }
+
+        public static void SwitchToAlert()
+        {
+            IAlert alert = Browser.SwitchTo().Alert();
+            alert.Accept();
+            Thread.Sleep(2000);
         }
     }
 }

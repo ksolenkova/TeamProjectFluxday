@@ -9,8 +9,7 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
         {
             get
             {
-                return GetElement(By.CssSelector("div>.pane2-content .dashed_link.transition"));
-                //return GetElement(By.XPath("//*[@id=\"pane2\"]/div[2]/a[1]"));
+                return GetElement(By.CssSelector("a[href=\"/projects/new\"]"));
             }
         }
 
@@ -51,7 +50,6 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
             get
             {
                 return GetElement(By.CssSelector(".button.alert.right"));
-                //return GetElement(By.XPath("//*[@id=\"new_project\"]/div[3]/div[2]/input"));
             }
         }
 
@@ -59,9 +57,24 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
         {
             get
             {
-                return GetElement(By.XPath("//*[@id=\"pane3\"]/div/div[1]/div[3]/div[1]"));
+                return GetElement(By.CssSelector("div.title>.main-title"));
             }
         }
 
+        public IWebElement SettingsIcon
+        {
+            get
+            {
+                return GetElement(By.CssSelector("div.icon.settings-link"));
+            }
+        }
+
+        public IWebElement DeleteLink
+        {
+            get
+            {
+                return GetElement(By.CssSelector("#drop1 li:nth-child(2)>a"));
+            }
+        }
     }
 }

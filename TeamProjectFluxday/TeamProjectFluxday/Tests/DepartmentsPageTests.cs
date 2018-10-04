@@ -35,6 +35,8 @@ namespace SeleniumWebDriver.Tests
             var departmentIsDisplayed = departmentsPage.NewDepartmentIsDisplayed();
 
             Assert.IsTrue(departmentIsDisplayed);
+
+            departmentsPage.DeleteCreatedDepartment();
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using SeleniumWebDriver.Core;
-using SeleniumWebDriver.Core;
+using System.Threading;
 
 namespace SeleniumWebDriver.Pages.DashboardMainPage
 {
@@ -18,6 +18,7 @@ namespace SeleniumWebDriver.Pages.DashboardMainPage
         internal void ClickOnDepartmentsLink()
         {
             Map.DepartmentsLink.Click();
+            Thread.Sleep(2000);
         }
 
         internal void UsersLinkClick()

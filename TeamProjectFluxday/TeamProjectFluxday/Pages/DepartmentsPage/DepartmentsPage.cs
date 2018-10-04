@@ -1,4 +1,5 @@
-﻿using SeleniumWebDriver.Core;
+﻿using System;
+using SeleniumWebDriver.Core;
 
 namespace SeleniumWebDriver.Pages.DepartmentsPage
 {
@@ -41,6 +42,23 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
         internal bool NewDepartmentIsDisplayed()
         {
             return Map.NewlyCreatedDepartment.Displayed;
+        }
+
+        internal void ClickOnSettingsIcon()
+        {
+            Map.SettingsIcon.Click();
+        }
+
+        internal void ClickOnDelete()
+        {
+            Map.DeleteLink.Click();
+        }
+
+        internal void DeleteCreatedDepartment()
+        {
+            ClickOnSettingsIcon();
+            ClickOnDelete();
+            Driver.SwitchToAlert();
         }
     }
 }

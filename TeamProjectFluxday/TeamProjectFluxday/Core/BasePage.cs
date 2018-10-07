@@ -1,8 +1,4 @@
-using System;
-using SeleniumWebDriver.Core;
-
-namespace SeleniumWebDriver.Core
-
+﻿namespace SeleniumWebDriver.Core
 {
     public class BasePage<TM> where TM : BasePageMap, new()
     {
@@ -24,11 +20,6 @@ namespace SeleniumWebDriver.Core
         public void Navigate()
         {
             Driver.Browser.Navigate().GoToUrl(Url);
-        }
-
-        public string GenerateDateTimeString()
-        {
-            return DateTime.Now.ToString("yyyyMMddHHmmss");
         }
     }
 }

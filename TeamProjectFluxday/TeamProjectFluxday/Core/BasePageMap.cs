@@ -26,7 +26,6 @@ namespace SeleniumWebDriver.Core
             }
 
             throw new ElementNotVisibleException($"Element with locator { by.ToString() } is not visible / clickable!");
-
         }
 
         public IReadOnlyCollection<IWebElement> GetElements(By by)

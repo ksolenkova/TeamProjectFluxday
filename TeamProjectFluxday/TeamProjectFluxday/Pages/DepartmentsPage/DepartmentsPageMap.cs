@@ -17,7 +17,7 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
         {
             get
             {
-                return GetElement(By.Id("project_name"));
+                return GetElement(By.CssSelector("#project_name"));
             }
         }
 
@@ -25,7 +25,7 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
         {
             get
             {
-                return GetElement(By.Id("project_code"));
+                return GetElement(By.CssSelector("#project_code"));
             }
         }
 
@@ -33,7 +33,7 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
         {
             get
             {
-                return GetElement(By.Id("project_website"));
+                return GetElement(By.CssSelector("#project_website"));
             }
         }
 
@@ -41,7 +41,7 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
         {
             get
             {
-                return GetElement(By.Id("project_description"));
+                return GetElement(By.CssSelector("#project_description"));
             }
         }
 
@@ -49,7 +49,7 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
         {
             get
             {
-                return GetElement(By.XPath("//*[@id=\"new_project\"]/div[3]/div[2]/input"));
+                return GetElement(By.CssSelector(".button.alert.right"));
             }
         }
 
@@ -57,9 +57,24 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
         {
             get
             {
-                return GetElement(By.XPath("//*[@id=\"pane3\"]/div/div[1]/div[3]/div[1]"));
+                return GetElement(By.CssSelector("div.title>.main-title"));
             }
         }
 
+        public IWebElement SettingsIcon
+        {
+            get
+            {
+                return GetElement(By.CssSelector("div.icon.settings-link"));
+            }
+        }
+
+        public IWebElement DeleteLink
+        {
+            get
+            {
+                return GetElement(By.CssSelector("#drop1 li:nth-child(2)>a"));
+            }
+        }
     }
 }

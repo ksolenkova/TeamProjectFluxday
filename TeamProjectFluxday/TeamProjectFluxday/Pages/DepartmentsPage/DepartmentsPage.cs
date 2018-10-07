@@ -58,7 +58,7 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
         {
             ClickOnSettingsIcon();
             ClickOnDelete();
-            Driver.SwitchToAlert();
+            Driver.AcceptAlert();
         }
     }
 }

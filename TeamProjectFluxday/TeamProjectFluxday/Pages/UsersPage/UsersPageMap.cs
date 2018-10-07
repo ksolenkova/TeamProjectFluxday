@@ -9,7 +9,7 @@ namespace SeleniumWebDriver.Pages.UsersPage
         {
             get
             {
-                return GetElement(By.XPath("//*[@id=\"pane2\"]/div[2]/a"));
+                return GetElement(By.CssSelector("a[href=\"/users/new\"]"));
             }
         }
 
@@ -17,7 +17,7 @@ namespace SeleniumWebDriver.Pages.UsersPage
         {
             get
             {
-                return GetElement(By.Id("user_name"));
+                return GetElement(By.CssSelector("#user_name"));
             }
         }
 
@@ -25,7 +25,7 @@ namespace SeleniumWebDriver.Pages.UsersPage
         {
             get
             {
-                return GetElement(By.Id("user_nickname"));
+                return GetElement(By.CssSelector("#user_nickname"));
             }
         }
 
@@ -33,7 +33,7 @@ namespace SeleniumWebDriver.Pages.UsersPage
         {
             get
             {
-                return GetElement(By.Id("user_email"));
+                return GetElement(By.CssSelector("#user_email"));
             }
         }
 
@@ -41,7 +41,7 @@ namespace SeleniumWebDriver.Pages.UsersPage
         {
             get
             {
-                return GetElement(By.Id("user_employee_code"));
+                return GetElement(By.CssSelector("#user_employee_code"));
             }
         }
 
@@ -49,7 +49,7 @@ namespace SeleniumWebDriver.Pages.UsersPage
         {
             get
             {
-                return GetElement(By.Id("user_password"));
+                return GetElement(By.CssSelector("#user_password"));
             }
         }
 
@@ -57,7 +57,7 @@ namespace SeleniumWebDriver.Pages.UsersPage
         {
             get
             {
-                return GetElement(By.Id("user_password_confirmation"));
+                return GetElement(By.CssSelector("#user_password_confirmation"));
             }
         }
 
@@ -65,7 +65,7 @@ namespace SeleniumWebDriver.Pages.UsersPage
         {
             get
             {
-                return GetElement(By.XPath("//*[@id=\"new_user\"]/div[3]/div[2]/input"));
+                return GetElement(By.CssSelector(".button"));
             }
         }
 
@@ -81,7 +81,7 @@ namespace SeleniumWebDriver.Pages.UsersPage
         {
             get
             {
-                return GetElement(By.XPath("//*[@id=\"pane3\"]/div/div[1]/div[2]/a/div"));
+                return GetElement(By.CssSelector(".icon.settings-link"));
             }
         }
         
@@ -89,7 +89,7 @@ namespace SeleniumWebDriver.Pages.UsersPage
         {
             get
             {
-                return GetElement(By.XPath("//*[@id=\"drop1\"]/li[2]/a"));
+                return GetElement(By.CssSelector("#drop1>li+li"));
             }
         }
 

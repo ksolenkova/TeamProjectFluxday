@@ -1,5 +1,4 @@
 using System;
-using SeleniumWebDriver.Core;
 
 namespace SeleniumWebDriver.Core
 

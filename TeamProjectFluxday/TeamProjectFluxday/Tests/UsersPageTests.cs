@@ -32,6 +32,7 @@ namespace SeleniumWebDriver.Tests
 
             var expectedResult = "TestEmployee";
             Assert.AreEqual(expectedResult, usersPage.ReadNewUserName());
+            usersPage.DeleteNewUser();
         }
     }
 }

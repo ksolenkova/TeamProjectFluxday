@@ -1,6 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
-using SeleniumWebDriver.Core;
 using SeleniumWebDriver.Core;
 
 namespace SeleniumWebDriver.Pages.DashboardMainPage
@@ -29,7 +27,6 @@ namespace SeleniumWebDriver.Pages.DashboardMainPage
             get
             {
                 return GetElement(By.XPath(@"/html/body/div[2]/div[1]/ul[2]/li[5]/a"));
-
             }
         }
     }

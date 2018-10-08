@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SeleniumWebDriver.Core;
+using SeleniumWebDriver.Data;
 using SeleniumWebDriver.Pages.DashboardMainPage;
 using SeleniumWebDriver.Pages.LoginPage;
 
@@ -29,18 +30,17 @@ namespace SeleniumWebDriver.Tests
 
         [TestCategory("LoginPageTests")]
         [TestMethod]
-        public void Test002LoginWithLeadUser()
+        public void Test003LoginWithLeadUser()
         {
-            var loginPage = new LoginPage();
+            var loginPage = new LoginPage(); ;
             loginPage.Navigate();
 
-            var teamLeadUser = Data.TestData.TeamLeadUser;
+            var teamLeadUser = TestData.TeamLeadUser;
 
             var dashboardPage = loginPage.Login(teamLeadUser);
-            var actualResul = dashboardPage.ReadAdminUserLinkText();
+            var actualResul = dashboardPage.NavigationPanel.ReadUserLinkText();
 
             Assert.AreEqual(teamLeadUser.Name, actualResul);
         }
-
     }
 }

@@ -1,6 +1,5 @@
 ﻿using SeleniumWebDriver.Data.Models;
 using System.Collections.Generic;
-using SeleniumWebDriver.Data.Models;
 
 namespace SeleniumWebDriver.Data
 {

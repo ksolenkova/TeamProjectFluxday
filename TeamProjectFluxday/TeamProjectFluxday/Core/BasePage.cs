@@ -1,3 +1,4 @@
+using SeleniumWebDriver.Parts;
 using System;
 
 namespace SeleniumWebDriver.Core
@@ -23,6 +24,14 @@ namespace SeleniumWebDriver.Core
         public void Navigate()
         {
             Driver.Browser.Navigate().GoToUrl(Url);
+        }
+
+        public NavigationPanel NavigationPanel
+        {
+            get
+            {
+                return new NavigationPanel();
+            }
         }
 
         public string GenerateDateTimeString()

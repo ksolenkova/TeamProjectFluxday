@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SeleniumWebDriver.Core;
-using SeleniumWebDriver.Pages.LoginPage;
-using SeleniumWebDriver.Pages.TeamPage;
+using SeleniumWebDriver.Pages;
 
 namespace SeleniumWebDriver.Tests
 {
@@ -14,7 +13,7 @@ namespace SeleniumWebDriver.Tests
             [TestMethod]
             public void Test001AddMembersToTeam()
             {
-                var loginPage = new LoginPage(); ;
+                var loginPage = new LoginPage(); 
                 loginPage.Navigate();
 
                 var adminUser = Data.TestData.TeamLeadUser;

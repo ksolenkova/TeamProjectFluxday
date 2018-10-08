@@ -1,9 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SeleniumWebDriver.Core;
 using SeleniumWebDriver.Data;
-using SeleniumWebDriver.Pages.LoginPage;
+using SeleniumWebDriver.Pages;
 using System.Threading;
-using SeleniumWebDriver.Pages.UsersPage;
 
 namespace SeleniumWebDriver.Tests
 {

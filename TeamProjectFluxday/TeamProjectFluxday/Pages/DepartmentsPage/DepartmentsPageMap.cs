@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using SeleniumWebDriver.Core;
 
-namespace SeleniumWebDriver.Pages.DepartmentsPage
+namespace SeleniumWebDriver.Pages
 {
     public class DepartmentsPageMap : BasePageMap
     {

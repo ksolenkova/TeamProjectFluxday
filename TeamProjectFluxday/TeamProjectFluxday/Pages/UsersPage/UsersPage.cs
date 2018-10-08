@@ -1,7 +1,7 @@
 ﻿using SeleniumWebDriver.Core;
 using System.Threading;
 
-namespace SeleniumWebDriver.Pages.UsersPage
+namespace SeleniumWebDriver.Pages
 {
     public class UsersPage : BasePage<UsersPageMap>
     {

@@ -2,7 +2,7 @@
 using SeleniumWebDriver.Core;
 using System.Collections.Generic;
 
-namespace SeleniumWebDriver.Pages.TeamPage
+namespace SeleniumWebDriver.Pages
 {
     public class TeamPageMap : BasePageMap
     {

@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using SeleniumWebDriver.Core;
 
-namespace SeleniumWebDriver.Pages.LoginPage
+namespace SeleniumWebDriver.Pages
 {
     public class LoginPageMap : BasePageMap
     {

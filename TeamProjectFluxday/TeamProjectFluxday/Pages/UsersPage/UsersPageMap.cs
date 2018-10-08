@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using SeleniumWebDriver.Core;
 
-namespace SeleniumWebDriver.Pages.UsersPage
+namespace SeleniumWebDriver.Pages
 {
    public class UsersPageMap : BasePageMap
     {

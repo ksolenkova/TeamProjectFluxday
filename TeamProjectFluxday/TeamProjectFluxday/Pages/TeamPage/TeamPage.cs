@@ -3,7 +3,7 @@ using SeleniumWebDriver.Data.Models;
 using System.Collections.Generic;
 using OpenQA.Selenium;
 
-namespace SeleniumWebDriver.Pages.TeamPage
+namespace SeleniumWebDriver.Pages
 {
     class TeamPage : BasePage<TeamPageMap>
     {

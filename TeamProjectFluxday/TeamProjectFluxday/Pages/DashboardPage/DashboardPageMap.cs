@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using SeleniumWebDriver.Core;
 
-namespace SeleniumWebDriver.Pages.DashboardMainPage
+namespace SeleniumWebDriver.Pages
 {
     public class DashboardPageMap : BasePageMap
     {
@@ -9,7 +9,7 @@ namespace SeleniumWebDriver.Pages.DashboardMainPage
         {
             get
             {
-                return GetElement(By.XPath(@"/html/body/div[2]/div[1]/ul[3]/li[1]/a"));
+                return GetElement(By.CssSelector("ul.user-links.side-nav.sidebar-links >li:first-child >a"));
             }
         }
 
@@ -26,7 +26,7 @@ namespace SeleniumWebDriver.Pages.DashboardMainPage
         {
             get
             {
-                return GetElement(By.CssSelector("ul.user-links.side-nav.sidebar-links>li>a>.icon.icon-profile-16"));
+                return GetElement(By.XPath(@"/html/body/div[2]/div[1]/ul[2]/li[5]/a"));
             }
         }
     }

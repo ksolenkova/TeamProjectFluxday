@@ -56,6 +56,8 @@
   <ItemGroup>
     <Compile Include="Core\BasePageValidator.cs" />
     <Compile Include="Data\Models\Team.cs" />
+    <Compile Include="Pages\DepartmentsPage\CreateDepartmentsPage\CreateDepartmentsPage.cs" />
+    <Compile Include="Pages\DepartmentsPage\CreateDepartmentsPage\CreateDepartmentsPageMap.cs" />
     <Compile Include="Pages\TeamPage\TeamPage.cs" />
     <Compile Include="Pages\TeamPage\TeamPageMap.cs" />
     <Compile Include="Pages\DepartmentsPage\DepartmentsPage.cs" />

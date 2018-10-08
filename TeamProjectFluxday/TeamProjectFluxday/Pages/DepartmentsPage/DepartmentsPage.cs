@@ -1,7 +1,6 @@
-﻿using System;
-using SeleniumWebDriver.Core;
+﻿using SeleniumWebDriver.Core;
 
-namespace SeleniumWebDriver.Pages.DepartmentsPage
+namespace SeleniumWebDriver.Pages
 {
     public class DepartmentsPage : BasePage<DepartmentsPageMap>
     {

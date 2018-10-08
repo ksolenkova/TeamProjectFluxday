@@ -1,8 +1,7 @@
 ﻿using SeleniumWebDriver.Core;
 using SeleniumWebDriver.Data.Models;
-using SeleniumWebDriver.Pages.DashboardMainPage;
 
-namespace SeleniumWebDriver.Pages.LoginPage
+namespace SeleniumWebDriver.Pages
 {
     public class LoginPage : BasePage<LoginPageMap>
     {

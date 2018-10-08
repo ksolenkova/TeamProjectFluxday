@@ -1,9 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SeleniumWebDriver.Core;
 using SeleniumWebDriver.Data;
-using SeleniumWebDriver.Pages.DashboardMainPage;
-using SeleniumWebDriver.Pages.LoginPage;
-using SeleniumWebDriver.Pages.DepartmentsPage;
+using SeleniumWebDriver.Pages;
 
 namespace SeleniumWebDriver.Tests
 {

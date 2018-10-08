@@ -1,7 +1,7 @@
 ﻿using SeleniumWebDriver.Core;
 using System.Threading;
 
-namespace SeleniumWebDriver.Pages.DashboardMainPage
+namespace SeleniumWebDriver.Pages
 {
     public class DashboardPage : BasePage<DashboardPageMap>
     {

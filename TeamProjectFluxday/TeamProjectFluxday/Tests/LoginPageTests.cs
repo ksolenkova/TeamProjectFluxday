@@ -16,10 +16,7 @@ namespace SeleniumWebDriver.Tests
             loginPage.Navigate();
 
             var adminUser = Data.TestData.AdminUser;
-
-            loginPage.TypeEmail(adminUser.Email);
-            loginPage.TypePassword(adminUser.Password);
-            loginPage.PressLoginButton();
+            var logInAsAdmin = loginPage.Login(adminUser);
 
             var dashboardPage = new DashboardPage();
             var actualResult = dashboardPage.ReadAdminUserLinkText();

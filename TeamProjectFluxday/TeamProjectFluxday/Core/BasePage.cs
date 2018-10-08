@@ -1,4 +1,5 @@
 using System;
+using TeamProjectFluxday.Core;
 
 namespace SeleniumWebDriver.Core
 
@@ -28,6 +29,20 @@ namespace SeleniumWebDriver.Core
         public string GenerateDateTimeString()
         {
             return DateTime.Now.ToString("yyyyMMddHHmmss");
+        }
+    }
+
+    public class BasePage<TM, TV> : BasePage<TM>
+        where TM : BasePageMap, new()
+        where TV : BasePageValidator<TM>, new()
+    {
+        public BasePage(string url) : base(url)
+        {
+        }
+
+        public TV Validate()
+        {
+            return new TV();
         }
     }
 }

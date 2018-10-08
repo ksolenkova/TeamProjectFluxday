@@ -26,7 +26,7 @@ namespace SeleniumWebDriver.Pages.DashboardMainPage
         {
             get
             {
-                return GetElement(By.XPath(@"/html/body/div[2]/div[1]/ul[2]/li[5]/a"));
+                return GetElement(By.CssSelector("ul.user-links.side-nav.sidebar-links>li>a>.icon.icon-profile-16"));
             }
         }
     }

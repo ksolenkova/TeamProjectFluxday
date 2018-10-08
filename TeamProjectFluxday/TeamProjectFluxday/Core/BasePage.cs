@@ -1,6 +1,7 @@
 using System;
 
 namespace SeleniumWebDriver.Core
+
 {
     public class BasePage<TM> where TM : BasePageMap, new()
     {

@@ -31,7 +31,7 @@ namespace SeleniumWebDriver.Tests
         [TestMethod]
         public void Test002LoginWithLeadUser()
         {
-            var loginPage = new LoginPage(); ;
+            var loginPage = new LoginPage();
             loginPage.Navigate();
 
             var teamLeadUser = Data.TestData.TeamLeadUser;

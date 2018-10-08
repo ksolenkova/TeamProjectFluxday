@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace SeleniumWebDriver.Pages.DashboardMainPage
 {
-    public class DashboardPage : BasePage<DashboardPageElementMap>
+    public class DashboardPage : BasePage<DashboardPageMap>
     {
         public DashboardPage(string url = "https://app.fluxday.io/") : base(url)
         {
@@ -13,6 +13,7 @@ namespace SeleniumWebDriver.Pages.DashboardMainPage
         {
             return Map.AdminUserLink.Text;
         }
+
 
         internal void ClickOnDepartmentsLink()
         {
@@ -24,6 +25,11 @@ namespace SeleniumWebDriver.Pages.DashboardMainPage
         {
             Map.UsersLink.Click();
 
+        }
+
+        internal string ReadTaskTitleText()
+        {
+            return Map.TaskTitle.Text;
         }
     }
 }

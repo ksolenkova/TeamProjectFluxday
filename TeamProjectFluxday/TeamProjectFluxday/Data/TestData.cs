@@ -1,5 +1,5 @@
 ﻿using SeleniumWebDriver.Data.Models;
-using System.Collections.Generic;
+using TeamProjectFluxday.Data.Models;
 
 namespace SeleniumWebDriver.Data
 {
@@ -25,6 +25,14 @@ namespace SeleniumWebDriver.Data
             get
             {
                 return new Team("DevOps", "01");
+            }
+        }
+
+        public static Task NewTask
+        {
+            get
+            {
+                return new Task("Test Title", "Test Description");
             }
         }
     }

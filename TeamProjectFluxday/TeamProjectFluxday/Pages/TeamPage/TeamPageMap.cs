@@ -10,35 +10,29 @@ namespace SeleniumWebDriver.Pages.TeamPage
         {
             get
             {
-                return GetElement(By.XPath("//*[@id=\"team - members\"]/a"));
+                return GetElement(By.CssSelector(".dashed_link"));
             }
         }
         public IWebElement CancelButton
         {
             get
             {
-                return GetElement(By.XPath("//*[@id=\"edit_team_11\"]/div[3]/div[2]/a/span"));
+                return GetElement(By.CssSelector(".translation_missing"));
             }
         }
         public IWebElement SaveButton
         {
             get
             {
-                return GetElement(By.XPath("//*[@id=\"edit_team_11\"]/div[3]/div[2]/input"));
+                return GetElement(By.CssSelector(".button"));
             }
         }
-        public IWebElement TeamsPane
-        {
-            get
-            {
-                return GetElement(By.XPath("//*[@id=\"pane2\"]/div[2]"));
-            }
-        }
+        
         public IReadOnlyCollection<IWebElement> Teams
         {
             get
             {
-                return GetElements(By.XPath("//*[@id=\"pane2\"]/div[2]"));
+                return GetElements(By.CssSelector(".pane2-content"));
             }
         }
     }

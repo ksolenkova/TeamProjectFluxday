@@ -12,6 +12,7 @@ namespace SeleniumWebDriver.Core
         public BasePageMap()
         {
             Browser = Driver.Browser;
+            BrowserWait = Driver.BrowserWait;
         }
 
         public IWebElement GetElement(By by)

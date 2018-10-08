@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using System;
+using System.Threading;
 
 namespace SeleniumWebDriver.Core
 {
@@ -46,6 +47,13 @@ namespace SeleniumWebDriver.Core
         {
             Browser.Quit();
             Browser = null;
+        }
+
+        public static void AcceptAlert()
+        {
+            IAlert alert = Browser.SwitchTo().Alert();
+            alert.Accept();
+            Thread.Sleep(2000);
         }
     }
 }

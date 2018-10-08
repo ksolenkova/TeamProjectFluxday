@@ -20,6 +20,12 @@ namespace SeleniumWebDriver.Data
                 return new User("lead@fluxday.io", "password", "Team Lead");
             }
         }
-        
+        public static Team DevOps
+        {
+            get
+            {
+                return new Team("DevOps", "01");
+            }
+        }
     }
 }

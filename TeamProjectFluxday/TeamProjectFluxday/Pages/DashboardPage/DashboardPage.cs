@@ -1,4 +1,5 @@
 ﻿using SeleniumWebDriver.Core;
+using System.Threading;
 
 namespace SeleniumWebDriver.Pages.DashboardMainPage
 {
@@ -11,6 +12,18 @@ namespace SeleniumWebDriver.Pages.DashboardMainPage
         internal string ReadAdminUserLinkText()
         {
             return Map.AdminUserLink.Text;
+        }
+
+        internal void ClickOnDepartmentsLink()
+        {
+            Map.DepartmentsLink.Click();
+            Thread.Sleep(2000);
+        }
+
+        internal void UsersLinkClick()
+        {
+            Map.UsersLink.Click();
+
         }
     }
 }

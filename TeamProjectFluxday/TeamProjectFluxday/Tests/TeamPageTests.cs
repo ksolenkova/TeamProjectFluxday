@@ -24,6 +24,7 @@ namespace SeleniumWebDriver.Tests
                 teamPage.Navigate();
 
                 var team = Data.TestData.DevOps;
+                var expectedResult = "Teams";
             }
         }
     }

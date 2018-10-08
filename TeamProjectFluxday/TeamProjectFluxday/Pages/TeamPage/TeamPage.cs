@@ -20,12 +20,10 @@ namespace SeleniumWebDriver.Pages.TeamPage
 
         internal void ChooseTeam(string password)
         {
-
         }
 
         internal void AddMembers(User member)
         {
-
         }
         internal void PressSaveButton()
         {

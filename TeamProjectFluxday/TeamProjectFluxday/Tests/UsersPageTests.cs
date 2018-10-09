@@ -3,6 +3,7 @@ using SeleniumWebDriver.Core;
 using SeleniumWebDriver.Data;
 using SeleniumWebDriver.Pages;
 using System.Threading;
+using TeamProjectFluxday.Parts;
 
 namespace SeleniumWebDriver.Tests
 {
@@ -20,7 +21,8 @@ namespace SeleniumWebDriver.Tests
             
             var dashboardPage = loginPage.Login(adminUser);
 
-            dashboardPage.UsersLinkClick();
+            var navigationPanel = new NavigationPanel();
+            navigationPanel.UsersLinkClick();
             Thread.Sleep(1000);
 
             var usersPage = new UsersPage();

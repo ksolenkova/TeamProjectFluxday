@@ -1,63 +1,46 @@
 ﻿using SeleniumWebDriver.Core;
+using TeamProjectFluxday.Pages;
 
 namespace SeleniumWebDriver.Pages
 {
-    public class DepartmentsPage : BasePage<DepartmentsPageMap>
+    public class DepartmentsPage : BasePage<DepartmentsPageMap, DepartmentsPageValidator>
     {
         public DepartmentsPage(string url = "https://app.fluxday.io/projects#pane2") : base(url)
         {
         }
 
-        internal void ClickOnCreateDepartmentsLink()
+        public CreateDepartmentsPage NavigateToCreateDepartmentPage()
+        {
+            return new CreateDepartmentsPage();
+        }
+
+        internal CreateDepartmentsPage ClickOnCreateDepartmentsLink()
         {
             Map.CreateDepartmentLink.Click();
-        }
 
-        internal void WriteTitle()
-        {
-            Map.TitleField.SendKeys("Administration");
+            return new CreateDepartmentsPage();
         }
+        
+        //internal bool NewDepartmentIsDisplayed()
+        //{
+        //    return Map.NewlyCreatedDepartment.Displayed;
+        //}
 
-        internal void WriteCode()
-        {
-            Map.CodeDepartment.SendKeys("ADM" + GenerateDateTimeString());
-        }
+        //internal void ClickOnSettingsIcon()
+        //{
+        //    Map.SettingsIcon.Click();
+        //}
 
-        internal void WriteUrl()
-        {
-            Map.Url.SendKeys("adm");
-        }
+        //internal void ClickOnDelete()
+        //{
+        //    Map.DeleteLink.Click();
+        //}
 
-        internal void WriteDescription()
-        {
-            Map.Description.SendKeys("Administration team");
-        }
-
-        internal void ClickOnSave()
-        {
-            Map.SaveButton.Click();
-        }
-
-        internal bool NewDepartmentIsDisplayed()
-        {
-            return Map.NewlyCreatedDepartment.Displayed;
-        }
-
-        internal void ClickOnSettingsIcon()
-        {
-            Map.SettingsIcon.Click();
-        }
-
-        internal void ClickOnDelete()
-        {
-            Map.DeleteLink.Click();
-        }
-
-        internal void DeleteCreatedDepartment()
-        {
-            ClickOnSettingsIcon();
-            ClickOnDelete();
-            Driver.AcceptAlert();
-        }
+        //internal void DeleteCreatedDepartment()
+        //{
+        //    ClickOnSettingsIcon();
+        //    ClickOnDelete();
+        //    Driver.AcceptAlert();
+        //}
     }
 }

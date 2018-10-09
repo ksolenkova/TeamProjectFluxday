@@ -5,6 +5,14 @@ namespace SeleniumWebDriver.Pages
 {
     public class DepartmentsPageMap : BasePageMap
     {
+        public IWebElement DepartmentsTitle
+        {
+            get
+            {
+                return GetElement(By.CssSelector("#pane2>.pane2-meta> .title"));
+            }
+        }
+
         public IWebElement CreateDepartmentLink
         {
             get
@@ -12,69 +20,29 @@ namespace SeleniumWebDriver.Pages
                 return GetElement(By.CssSelector("a[href=\"/projects/new\"]"));
             }
         }
+        
+        //public IWebElement NewlyCreatedDepartment
+        //{
+        //    get
+        //    {
+        //        return GetElement(By.CssSelector("div.title>.main-title"));
+        //    }
+        //}
 
-        public IWebElement TitleField
-        {
-            get
-            {
-                return GetElement(By.CssSelector("#project_name"));
-            }
-        }
+        //public IWebElement SettingsIcon
+        //{
+        //    get
+        //    {
+        //        return GetElement(By.CssSelector("div.icon.settings-link"));
+        //    }
+        //}
 
-        public IWebElement CodeDepartment
-        {
-            get
-            {
-                return GetElement(By.CssSelector("#project_code"));
-            }
-        }
-
-        public IWebElement Url
-        {
-            get
-            {
-                return GetElement(By.CssSelector("#project_website"));
-            }
-        }
-
-        public IWebElement Description
-        {
-            get
-            {
-                return GetElement(By.CssSelector("#project_description"));
-            }
-        }
-
-        public IWebElement SaveButton
-        {
-            get
-            {
-                return GetElement(By.CssSelector(".button.alert.right"));
-            }
-        }
-
-        public IWebElement NewlyCreatedDepartment
-        {
-            get
-            {
-                return GetElement(By.CssSelector("div.title>.main-title"));
-            }
-        }
-
-        public IWebElement SettingsIcon
-        {
-            get
-            {
-                return GetElement(By.CssSelector("div.icon.settings-link"));
-            }
-        }
-
-        public IWebElement DeleteLink
-        {
-            get
-            {
-                return GetElement(By.CssSelector("#drop1 li:nth-child(2)>a"));
-            }
-        }
+        //public IWebElement DeleteLink
+        //{
+        //    get
+        //    {
+        //        return GetElement(By.CssSelector("#drop1 li:nth-child(2)>a"));
+        //    }
+        //}
     }
 }

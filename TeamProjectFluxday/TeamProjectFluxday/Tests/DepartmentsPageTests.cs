@@ -2,6 +2,7 @@
 using SeleniumWebDriver.Core;
 using SeleniumWebDriver.Data;
 using SeleniumWebDriver.Pages;
+using TeamProjectFluxday.Parts;
 
 namespace SeleniumWebDriver.Tests
 {
@@ -10,7 +11,7 @@ namespace SeleniumWebDriver.Tests
     {
         [TestCategory("DepartmentsPageTests")]
         [TestMethod]
-        public void Test001CreateDepartmentAsAnAdmin()
+        public void Test001DepartmentsPageValidation()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();
@@ -18,23 +19,12 @@ namespace SeleniumWebDriver.Tests
             var adminUser = TestData.AdminUser;
             var logInAsAdmin = loginPage.Login(adminUser);
 
-            var dashboardPage = new DashboardPage();
-            dashboardPage.ClickOnDepartmentsLink();
+            var navigationPanel = new NavigationPanel();
+            navigationPanel.ClickOnDepartmentsLink();
 
             var departmentsPage = new DepartmentsPage();
-            departmentsPage.ClickOnCreateDepartmentsLink();
 
-            departmentsPage.WriteTitle();
-            departmentsPage.WriteCode();
-            departmentsPage.WriteUrl();
-            departmentsPage.WriteDescription();
-            departmentsPage.ClickOnSave();
-
-            var departmentIsDisplayed = departmentsPage.NewDepartmentIsDisplayed();
-
-            Assert.IsTrue(departmentIsDisplayed);
-
-            departmentsPage.DeleteCreatedDepartment();
+            departmentsPage.Validate().IsOnDepartmentsPage();
         }
     }
 }

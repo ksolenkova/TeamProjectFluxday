@@ -1,5 +1,6 @@
 using System;
 using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Parts;
 
 namespace SeleniumWebDriver.Core
 
@@ -11,6 +12,11 @@ namespace SeleniumWebDriver.Core
             Url = url;
         }
 
+        public BasePage()
+        {
+            Url = null;
+        }
+
         public string Url { get; set; }
 
         protected TM Map
@@ -18,6 +24,14 @@ namespace SeleniumWebDriver.Core
             get
             {
                 return new TM();
+            }
+        }
+
+        public NavigationPanel NavigationPanel
+        {
+            get
+            {
+                return new NavigationPanel();
             }
         }
 
@@ -37,6 +51,10 @@ namespace SeleniumWebDriver.Core
         where TV : BasePageValidator<TM>, new()
     {
         public BasePage(string url) : base(url)
+        {
+        }
+
+        public BasePage()
         {
         }
 

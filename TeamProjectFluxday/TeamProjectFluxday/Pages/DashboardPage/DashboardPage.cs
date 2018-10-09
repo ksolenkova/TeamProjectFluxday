@@ -1,30 +1,13 @@
 ﻿using SeleniumWebDriver.Core;
-using System.Threading;
+using TeamProjectFluxday.Pages;
 
 namespace SeleniumWebDriver.Pages
 {
-    public class DashboardPage : BasePage<DashboardPageMap>
+    public class DashboardPage : BasePage<DashboardPageMap, DashboardPageValidator>
     {
         public DashboardPage(string url = "https://app.fluxday.io/") : base(url)
         {
         }
-
-        internal string ReadAdminUserLinkText()
-        {
-            return Map.AdminUserLink.Text;
-        }
-
-
-        internal void ClickOnDepartmentsLink()
-        {
-            Map.DepartmentsLink.Click();
-            Thread.Sleep(2000);
-        }
-
-        internal void UsersLinkClick()
-        {
-            Map.UsersLink.Click();
-
-        }
+        
     }
 }

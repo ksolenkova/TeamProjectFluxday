@@ -1,9 +1,10 @@
 ﻿using SeleniumWebDriver.Core;
 using SeleniumWebDriver.Data.Models;
+using TeamProjectFluxday.Pages.LoginPage;
 
 namespace SeleniumWebDriver.Pages
 {
-    public class LoginPage : BasePage<LoginPageMap>
+    public class LoginPage : BasePage<LoginPageMap, LoginPageValidator>
     {
         public LoginPage(string url = "https://app.fluxday.io/users/sign_in") : base(url)
         {

@@ -1,4 +1,5 @@
 ﻿using SeleniumWebDriver.Core;
+using TeamProjectFluxday.Parts;
 
 namespace TeamProjectFluxday.Core
 {
@@ -9,6 +10,14 @@ namespace TeamProjectFluxday.Core
             get
             {
                 return new TM();
+            }
+        }
+
+        protected NavigationPanel NavigationPanel
+        {
+            get
+            {
+                return new NavigationPanel();
             }
         }
     }

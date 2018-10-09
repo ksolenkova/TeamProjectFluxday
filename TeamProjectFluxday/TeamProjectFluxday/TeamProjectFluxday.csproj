@@ -56,12 +56,21 @@
   <ItemGroup>
     <Compile Include="Core\BasePageValidator.cs" />
     <Compile Include="Data\Models\Team.cs" />
+    <Compile Include="Pages\DashboardPage\DashboardPageValidator.cs" />
     <Compile Include="Pages\DepartmentsPage\CreateDepartmentsPage\CreateDepartmentsPage.cs" />
     <Compile Include="Pages\DepartmentsPage\CreateDepartmentsPage\CreateDepartmentsPageMap.cs" />
+    <Compile Include="Pages\DepartmentsPage\CreateDepartmentsPage\CreateDepartmentsValidator.cs" />
+    <Compile Include="Pages\DepartmentsPage\DepartmentsListPage\DepartmentsListPage.cs" />
+    <Compile Include="Pages\DepartmentsPage\DepartmentsListPage\DepartmentsListPageMap.cs" />
+    <Compile Include="Pages\DepartmentsPage\DepartmentsPageValidator.cs" />
+    <Compile Include="Pages\LoginPage\LoginPageValidator.cs" />
     <Compile Include="Pages\TeamPage\TeamPage.cs" />
     <Compile Include="Pages\TeamPage\TeamPageMap.cs" />
     <Compile Include="Pages\DepartmentsPage\DepartmentsPage.cs" />
     <Compile Include="Pages\DepartmentsPage\DepartmentsPageMap.cs" />
+    <Compile Include="Parts\NavigationPanel.cs" />
+    <Compile Include="Parts\NavigationPanelMap.cs" />
+    <Compile Include="Tests\CreateDepartmentPageTests.cs" />
     <Compile Include="Tests\DepartmentsPageTests.cs" />
     <Compile Include="Pages\UsersPage\UsersPage.cs" />
     <Compile Include="Pages\UsersPage\UsersPageMap.cs" />

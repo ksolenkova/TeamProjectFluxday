@@ -1,6 +1,5 @@
 ﻿using SeleniumWebDriver.Data.Models;
 using System.Collections.Generic;
-using SeleniumWebDriver.Data.Models;
 
 namespace SeleniumWebDriver.Data
 {
@@ -21,12 +20,6 @@ namespace SeleniumWebDriver.Data
                 return new User("lead@fluxday.io", "password", "Team Lead");
             }
         }
-        public static Team DevOps
-        {
-            get
-            {
-                return new Team("DevOps", "01");
-            }
-        }
+        
     }
 }

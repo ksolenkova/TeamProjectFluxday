@@ -39,5 +39,13 @@ namespace TeamProjectFluxday.Pages.MyTasksPage
             }
         }
 
+        public IWebElement TaskTitle
+        {
+            get
+            {
+                return GetElement(By.XPath(@"//*[@id='paginator']/a/div/div[1]"));
+            }
+        }
+
     }
 }

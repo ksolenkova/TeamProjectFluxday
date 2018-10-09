@@ -34,5 +34,10 @@ namespace TeamProjectFluxday.Pages.MyTasksPage
             Map.CreateTaskButton.Click();
         }
 
+        internal string ReadTaskTitleText()
+        {
+            return Map.TaskTitle.Text;
+        }
+
     }
 }

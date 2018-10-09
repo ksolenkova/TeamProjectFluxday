@@ -33,12 +33,12 @@ namespace TeamProjectFluxday.Tests
             myTasksPage.TypeTitle(newTask.Title);
             myTasksPage.TypeDescription(newTask.Description);
             myTasksPage.PressCreateTaskButton();
-            Thread.Sleep(3000);
 
-            var dashboardPage = new DashboardPage();
-            dashboardPage.Navigate();
 
-            var actualResul = dashboardPage.ReadTaskTitleText();
+            var myTasksPage2 = new MyTasksPage();
+            myTasksPage.Navigate();
+
+            var actualResul = myTasksPage2.ReadTaskTitleText();
 
             Assert.AreEqual(newTask.Title, actualResul);
         }

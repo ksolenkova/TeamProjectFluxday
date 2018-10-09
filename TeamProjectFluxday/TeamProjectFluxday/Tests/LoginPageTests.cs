@@ -1,7 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SeleniumWebDriver.Core;
-using SeleniumWebDriver.Data;
-using SeleniumWebDriver.Data.Models;
 using SeleniumWebDriver.Pages;
 
 namespace SeleniumWebDriver.Tests
@@ -48,26 +46,5 @@ namespace SeleniumWebDriver.Tests
 
             Assert.AreEqual(teamLeadUser.Name, actualResult);
         }
-
-        [TestCategory("LoginPageTests")]
-        [TestMethod]
-        public void Test004LoginWithAUser()
-        {
-            var userList = TestData.UserList;
-
-            foreach (User user in userList)
-            {
-                var loginPage = new LoginPage();
-                loginPage.Navigate();
-                loginPage.Validate().LoginForm();
-
-                var dashboardPage = loginPage.Login(user);
-                dashboardPage.Validate().UserNameLink(user.Name);
-
-                loginPage = dashboardPage.NavigationPanel.Logout();
-                loginPage.Validate().LoginForm();
-            }
-        }
-
     }
 }

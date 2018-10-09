@@ -1,8 +1,8 @@
-﻿using SeleniumWebDriver.Pages;
+﻿using SeleniumWebDriver.Core;
 
 namespace TeamProjectFluxday.Pages
 {
-    public class DepartmentsListPageMap : DepartmentsPageMap
+    public class DepartmentsListPageMap : BasePageMap
     {
     }
 }

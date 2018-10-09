@@ -1,9 +1,9 @@
 ﻿using OpenQA.Selenium;
-using SeleniumWebDriver.Pages;
+using SeleniumWebDriver.Core;
 
 namespace TeamProjectFluxday.Pages
 {
-    public class CreateDepartmentsPageMap : DepartmentsPageMap
+    public class CreateDepartmentsPageMap : BasePageMap
     {
         public IWebElement AddDepartmentTitle
         {

@@ -5,25 +5,10 @@ namespace TeamProjectFluxday.Pages
 {
     public class CreateDepartmentsPage : BasePage<CreateDepartmentsPageMap, CreateDepartmentsValidator>
     {
-        private DepartmentsPage departmentsPage;
-
         public CreateDepartmentsPage(string url = @"https://app.fluxday.io/projects/new#pane3") : base(url)
         {
-            departmentsPage = new DepartmentsPage();
         }
-
-        public DepartmentsPage DepartmentsPage
-        {
-            get
-            {
-                return departmentsPage;
-            }
-            private set
-            {
-                departmentsPage = value;
-            }
-        }
-
+        
         internal void WriteTitle()
         {
             Map.TitleField.SendKeys("Administration");

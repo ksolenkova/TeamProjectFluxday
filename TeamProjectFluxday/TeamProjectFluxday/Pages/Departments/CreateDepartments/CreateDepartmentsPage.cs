@@ -1,5 +1,5 @@
 ﻿using TeamProjectFluxday.Core;
-using TeamProjectFluxday.Pages;
+using TeamProjectFluxday.Utils;
 
 namespace TeamProjectFluxday.Pages
 {
@@ -16,7 +16,7 @@ namespace TeamProjectFluxday.Pages
 
         internal void WriteCode()
         {
-            Map.CodeDepartment.SendKeys("ADM" + GenerateDateTimeString());
+            Map.CodeDepartment.SendKeys(StringHelper.PrependDateTimeString("ADM"));
         }
 
         internal void WriteUrl()

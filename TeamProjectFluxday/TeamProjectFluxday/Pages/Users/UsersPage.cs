@@ -1,5 +1,6 @@
-﻿using TeamProjectFluxday.Core;
-using System.Threading;
+﻿using System.Threading;
+using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Utils;
 
 namespace TeamProjectFluxday.Pages.Users
 {
@@ -21,17 +22,17 @@ namespace TeamProjectFluxday.Pages.Users
 
         internal void FillInNickName()
         {
-            Map.NickNameField.SendKeys($"Test{GenerateDateTimeString()}");
+            Map.NickNameField.SendKeys(StringHelper.AppendDateTimeString("Test"));
         }
 
         internal void FillInEmail()
         {
-            Map.EmailField.SendKeys($"Test{GenerateDateTimeString()}@fluxday.io");
+            Map.EmailField.SendKeys($"Test{StringHelper.GenerateDateTimeString()}@fluxday.io");
         }
 
         internal void FillInEmployeeCode()
         {
-            Map.EmployeeCodeField.SendKeys($"test{GenerateDateTimeString()}");
+            Map.EmployeeCodeField.SendKeys(StringHelper.AppendDateTimeString("test"));
         }
 
         internal void FillInPassword()
@@ -72,8 +73,8 @@ namespace TeamProjectFluxday.Pages.Users
             Thread.Sleep(1000);
             Map.DeleteOption.Click();
             Thread.Sleep(1000);
-
-            Driver.AcceptAlert();
+            SwitchToAlert().Accept();
+            Thread.Sleep(2000);
         }
     }
 }

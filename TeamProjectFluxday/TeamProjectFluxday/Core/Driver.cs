@@ -68,12 +68,5 @@ namespace TeamProjectFluxday.Core
             Browser = null;
             BrowserWait = null;
         }
-
-        public static void AcceptAlert()
-        {
-            IAlert alert = Browser.SwitchTo().Alert();
-            alert.Accept();
-            Thread.Sleep(2000);
-        }
     }
 }

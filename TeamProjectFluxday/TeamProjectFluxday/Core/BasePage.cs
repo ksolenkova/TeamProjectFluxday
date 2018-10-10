@@ -1,8 +1,8 @@
 using System;
-using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Parts;
 
 namespace TeamProjectFluxday.Core
+
 {
     public class BasePage<TM> where TM : BasePageMap, new()
     {

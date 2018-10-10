@@ -55,15 +55,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\BasePageValidator.cs" />
+    <Compile Include="Data\Models\Task.cs" />
     <Compile Include="Data\Models\Team.cs" />
     <Compile Include="Pages\Dashboard\DashboardPageValidator.cs" />
-    <Compile Include="Pages\Departments\CreateDepartmentsPage\CreateDepartmentsPage.cs" />
-    <Compile Include="Pages\Departments\CreateDepartmentsPage\CreateDepartmentsPageMap.cs" />
-    <Compile Include="Pages\Departments\CreateDepartmentsPage\CreateDepartmentsValidator.cs" />
-    <Compile Include="Pages\Departments\DepartmentsListPage\DepartmentsListPage.cs" />
-    <Compile Include="Pages\Departments\DepartmentsListPage\DepartmentsListPageMap.cs" />
+    <Compile Include="Pages\Departments\CreateDepartments\CreateDepartmentsPage.cs" />
+    <Compile Include="Pages\Departments\CreateDepartments\CreateDepartmentsPageMap.cs" />
+    <Compile Include="Pages\Departments\CreateDepartments\CreateDepartmentsValidator.cs" />
     <Compile Include="Pages\Departments\DepartmentsPageValidator.cs" />
     <Compile Include="Pages\Login\LoginPageValidator.cs" />
+    <Compile Include="Pages\MyTasks\MyTasksPage.cs" />
+    <Compile Include="Pages\MyTasks\MyTasksPageMap.cs" />
     <Compile Include="Pages\Team\TeamPage.cs" />
     <Compile Include="Pages\Team\TeamPageMap.cs" />
     <Compile Include="Pages\Departments\DepartmentsPage.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Pages\Login\LoginPage.cs" />
     <Compile Include="Pages\Login\LoginPageMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\MyTasksPageTests.cs" />
     <Compile Include="Tests\TeamPageTests.cs" />
     <Compile Include="Tests\UsersPageTests.cs" />
   </ItemGroup>

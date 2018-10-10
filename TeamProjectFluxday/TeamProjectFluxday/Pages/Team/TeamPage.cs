@@ -35,5 +35,4 @@ namespace TeamProjectFluxday.Pages.Team
             Map.CancelButton.Click();
         }
     }
-
 }

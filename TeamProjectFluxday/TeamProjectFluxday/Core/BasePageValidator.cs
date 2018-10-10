@@ -1,5 +1,4 @@
-﻿using TeamProjectFluxday.Core;
-using TeamProjectFluxday.Parts;
+﻿using TeamProjectFluxday.Parts;
 
 namespace TeamProjectFluxday.Core
 {

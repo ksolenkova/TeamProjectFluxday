@@ -40,5 +40,4 @@ namespace TeamProjectFluxday.Tests
             //departmentsPage.DeleteCreatedDepartment();
         }
     }
-
 }

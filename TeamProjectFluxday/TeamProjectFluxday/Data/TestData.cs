@@ -1,4 +1,4 @@
-﻿using TeamProjectFluxday.Data.Models;
+using TeamProjectFluxday.Data.Models;
 using System.Collections.Generic;
 
 namespace TeamProjectFluxday.Data
@@ -34,11 +34,21 @@ namespace TeamProjectFluxday.Data
             }
         }
 
+
         public static List<User> UserList
         {
             get
             {
                 return usersList;
+
+            }
+        }
+
+        public static Task NewTask
+        {
+            get
+            {
+                return new Task("Test Title", "Test Description");
             }
         }
     }

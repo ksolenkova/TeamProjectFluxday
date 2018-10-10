@@ -39,5 +39,10 @@ namespace TeamProjectFluxday.Parts
 
             return new LoginPage();
         }
+
+        internal void PressNewTaskButton()
+        {
+            Map.NewTaskButton.Click();
+        }
     }
 }

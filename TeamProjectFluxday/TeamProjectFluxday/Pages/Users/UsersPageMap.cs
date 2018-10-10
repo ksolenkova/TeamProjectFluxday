@@ -92,7 +92,5 @@ namespace TeamProjectFluxday.Pages.Users
                 return GetElement(By.CssSelector("#drop1>li+li"));
             }
         }
-
-
     }
 }

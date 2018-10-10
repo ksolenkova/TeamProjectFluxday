@@ -13,6 +13,7 @@ namespace TeamProjectFluxday.Parts
             }
         }
 
+
         public IWebElement DepartmentsLink
         {
             get
@@ -50,6 +51,14 @@ namespace TeamProjectFluxday.Parts
             get
             {
                 return GetElement(By.CssSelector(".user-links > li:nth-child(2) > a:nth-child(1)"));
+            }
+        }
+
+        public IWebElement NewTaskButton
+        {
+            get
+            {
+                return GetElement(By.XPath(@"//a[contains(text(),'+Task')]"));
             }
         }
     }

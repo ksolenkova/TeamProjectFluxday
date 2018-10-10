@@ -36,7 +36,7 @@ namespace TeamProjectFluxday.Tests
         [TestMethod]
         public void Test003LoginWithLeadUser()
         {
-            var loginPage = new LoginPage(); ;
+            var loginPage = new LoginPage();
             loginPage.Navigate();
 
             var teamLeadUser = Data.TestData.TeamLeadUser;

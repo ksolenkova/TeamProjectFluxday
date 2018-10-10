@@ -1,6 +1,4 @@
-﻿using TeamProjectFluxday.Data.Models;
-
-namespace TeamProjectFluxday.Data.Models
+﻿namespace TeamProjectFluxday.Data.Models
 {
     public class Team
     {

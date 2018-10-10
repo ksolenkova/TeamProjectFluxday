@@ -7,6 +7,5 @@ namespace TeamProjectFluxday.Pages.Dashboard
         public DashboardPage(string url = "https://app.fluxday.io/") : base(url)
         {
         }
-
     }
 }

@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TeamProjectFluxday.Pages;
 using TeamProjectFluxday.Core;
 
 namespace TeamProjectFluxday.Pages.Departments

@@ -1,29 +1,33 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SeleniumWebDriver.Core;
-using SeleniumWebDriver.Data;
-using SeleniumWebDriver.Pages.DashboardMainPage;
-using SeleniumWebDriver.Pages.LoginPage;
+using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Pages.Login;
 
-namespace SeleniumWebDriver.Tests
+namespace TeamProjectFluxday.Tests
 {
     [TestClass]
     public class LoginPageTests : BaseTest
     {
         [TestCategory("LoginPageTests")]
         [TestMethod]
-        public void Test001LoginWithAdminUser()
+        public void Test001LoginPageValidation()
+        {
+            var loginPage = new LoginPage();
+            loginPage.Navigate();
+
+            loginPage.Validate().LoginForm();
+        }
+
+        [TestCategory("LoginPageTests")]
+        [TestMethod]
+        public void Test002LoginWithAdminUser()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();
 
             var adminUser = Data.TestData.AdminUser;
+            var dashboardPage = loginPage.Login(adminUser);
 
-            loginPage.TypeEmail(adminUser.Email);
-            loginPage.TypePassword(adminUser.Password);
-            loginPage.PressLoginButton();
-
-            var dashboardPage = new DashboardPage();
-            var actualResult = dashboardPage.ReadAdminUserLinkText();
+            var actualResult = dashboardPage.NavigationPanel.ReadUserLinkText();
 
             Assert.AreEqual(adminUser.Name, actualResult);
         }
@@ -35,12 +39,12 @@ namespace SeleniumWebDriver.Tests
             var loginPage = new LoginPage(); ;
             loginPage.Navigate();
 
-            var teamLeadUser = TestData.TeamLeadUser;
-
+            var teamLeadUser = Data.TestData.TeamLeadUser;
             var dashboardPage = loginPage.Login(teamLeadUser);
-            var actualResul = dashboardPage.NavigationPanel.ReadUserLinkText();
 
-            Assert.AreEqual(teamLeadUser.Name, actualResul);
+            var actualResult = dashboardPage.NavigationPanel.ReadUserLinkText();
+
+            Assert.AreEqual(teamLeadUser.Name, actualResult);
         }
     }
 }

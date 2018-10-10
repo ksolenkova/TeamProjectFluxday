@@ -1,14 +1,15 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SeleniumWebDriver.Core;
-using SeleniumWebDriver.Data;
-using SeleniumWebDriver.Pages.LoginPage;
 using System.Threading;
-using SeleniumWebDriver.Pages.UsersPage;
+using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Data;
+using TeamProjectFluxday.Pages.Login;
+using TeamProjectFluxday.Pages.Users;
+using TeamProjectFluxday.Parts;
 
-namespace SeleniumWebDriver.Tests
+namespace TeamProjectFluxday.Tests
 {
     [TestClass]
-   public class UsersPageTests : BaseTest
+    public class UsersPageTests : BaseTest
     {
         [TestCategory("UsersPageTests")]
         [TestMethod]
@@ -18,10 +19,11 @@ namespace SeleniumWebDriver.Tests
             loginPage.Navigate();
 
             var adminUser = TestData.AdminUser;
-            
+
             var dashboardPage = loginPage.Login(adminUser);
 
-            dashboardPage.UsersLinkClick();
+            var navigationPanel = new NavigationPanel();
+            navigationPanel.UsersLinkClick();
             Thread.Sleep(1000);
 
             var usersPage = new UsersPage();

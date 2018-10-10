@@ -1,14 +1,19 @@
-using SeleniumWebDriver.Parts;
 using System;
+using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Parts;
 
-namespace SeleniumWebDriver.Core
-
+namespace TeamProjectFluxday.Core
 {
     public class BasePage<TM> where TM : BasePageMap, new()
     {
         public BasePage(string url)
         {
             Url = url;
+        }
+
+        public BasePage()
+        {
+            Url = null;
         }
 
         public string Url { get; set; }
@@ -21,11 +26,6 @@ namespace SeleniumWebDriver.Core
             }
         }
 
-        public void Navigate()
-        {
-            Driver.Browser.Navigate().GoToUrl(Url);
-        }
-
         public NavigationPanel NavigationPanel
         {
             get
@@ -34,9 +34,32 @@ namespace SeleniumWebDriver.Core
             }
         }
 
+        public void Navigate()
+        {
+            Driver.Browser.Navigate().GoToUrl(Url);
+        }
+
         public string GenerateDateTimeString()
         {
             return DateTime.Now.ToString("yyyyMMddHHmmss");
+        }
+    }
+
+    public class BasePage<TM, TV> : BasePage<TM>
+        where TM : BasePageMap, new()
+        where TV : BasePageValidator<TM>, new()
+    {
+        public BasePage(string url) : base(url)
+        {
+        }
+
+        public BasePage()
+        {
+        }
+
+        public TV Validate()
+        {
+            return new TV();
         }
     }
 }

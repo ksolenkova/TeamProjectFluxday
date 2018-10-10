@@ -1,8 +1,7 @@
-﻿using SeleniumWebDriver.Pages;
-using SeleniumWebDriver.Pages.LoginPage;
-using SeleniumWebDriver.Pages.UsersPage;
+using System.Threading;
+using TeamProjectFluxday.Pages.Login;
 
-namespace SeleniumWebDriver.Parts
+namespace TeamProjectFluxday.Parts
 {
     public class NavigationPanel
     {
@@ -23,18 +22,22 @@ namespace SeleniumWebDriver.Parts
             return Map.UserLink.Text;
         }
 
+        internal void ClickOnDepartmentsLink()
+        {
+            Map.DepartmentsLink.Click();
+            Thread.Sleep(2000);
+        }
+
+        internal void UsersLinkClick()
+        {
+            Map.UsersLink.Click();
+        }
+
         internal LoginPage Logout()
         {
             Map.LogoutButton.Click();
 
             return new LoginPage();
-        }
-
-        internal UsersPage NavigateToUsersPage()
-        {
-            Map.UsersLink.Click();
-
-            return new UsersPage();
         }
     }
 }

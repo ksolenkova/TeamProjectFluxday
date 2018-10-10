@@ -1,4 +1,4 @@
-﻿namespace SeleniumWebDriver.Data.Models
+﻿namespace TeamProjectFluxday.Data.Models
 {
     public class User
     {

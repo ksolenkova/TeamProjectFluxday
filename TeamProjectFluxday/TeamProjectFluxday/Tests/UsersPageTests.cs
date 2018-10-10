@@ -1,11 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SeleniumWebDriver.Core;
-using SeleniumWebDriver.Data;
-using SeleniumWebDriver.Pages;
+using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Data;
+using TeamProjectFluxday.Pages;
 using System.Threading;
 using TeamProjectFluxday.Parts;
 
-namespace SeleniumWebDriver.Tests
+namespace TeamProjectFluxday.Tests
 {
     [TestClass]
    public class UsersPageTests : BaseTest

@@ -1,5 +1,5 @@
-﻿using SeleniumWebDriver.Core;
-using SeleniumWebDriver.Pages;
+﻿using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Pages;
 
 namespace TeamProjectFluxday.Pages
 {

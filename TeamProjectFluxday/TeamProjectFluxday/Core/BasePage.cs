@@ -2,7 +2,7 @@ using System;
 using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Parts;
 
-namespace SeleniumWebDriver.Core
+namespace TeamProjectFluxday.Core
 
 {
     public class BasePage<TM> where TM : BasePageMap, new()

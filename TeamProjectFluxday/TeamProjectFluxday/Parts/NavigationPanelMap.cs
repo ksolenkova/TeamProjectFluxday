@@ -1,5 +1,5 @@
 ﻿using OpenQA.Selenium;
-using SeleniumWebDriver.Core;
+using TeamProjectFluxday.Core;
 
 namespace TeamProjectFluxday.Parts
 {

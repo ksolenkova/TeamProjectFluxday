@@ -1,7 +1,7 @@
-﻿using SeleniumWebDriver.Core;
+﻿using TeamProjectFluxday.Core;
 using System.Threading;
 
-namespace SeleniumWebDriver.Pages
+namespace TeamProjectFluxday.Pages
 {
     public class UsersPage : BasePage<UsersPageMap>
     {

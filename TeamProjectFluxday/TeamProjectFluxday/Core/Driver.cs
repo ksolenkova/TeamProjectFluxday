@@ -5,7 +5,7 @@ using OpenQA.Selenium.Support.UI;
 using System;
 using System.Threading;
 
-namespace SeleniumWebDriver.Core
+namespace TeamProjectFluxday.Core
 {
     public static class Driver
     {

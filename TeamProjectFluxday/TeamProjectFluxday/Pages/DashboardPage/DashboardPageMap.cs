@@ -1,6 +1,6 @@
-﻿using SeleniumWebDriver.Core;
+﻿using TeamProjectFluxday.Core;
 
-namespace SeleniumWebDriver.Pages
+namespace TeamProjectFluxday.Pages
 {
     public class DashboardPageMap : BasePageMap
     {

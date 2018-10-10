@@ -1,7 +1,7 @@
-﻿using SeleniumWebDriver.Core;
+﻿using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Pages;
 
-namespace SeleniumWebDriver.Pages
+namespace TeamProjectFluxday.Pages
 {
     public class DashboardPage : BasePage<DashboardPageMap, DashboardPageValidator>
     {

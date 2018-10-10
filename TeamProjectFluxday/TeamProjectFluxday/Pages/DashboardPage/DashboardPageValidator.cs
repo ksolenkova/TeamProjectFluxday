@@ -1,4 +1,4 @@
-﻿using SeleniumWebDriver.Pages;
+﻿using TeamProjectFluxday.Pages;
 using TeamProjectFluxday.Core;
 
 namespace TeamProjectFluxday.Pages

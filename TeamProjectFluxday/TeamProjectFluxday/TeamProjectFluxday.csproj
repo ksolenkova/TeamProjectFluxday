@@ -92,6 +92,7 @@
     <Compile Include="Tests\MyTasksPageTests.cs" />
     <Compile Include="Tests\TeamPageTests.cs" />
     <Compile Include="Tests\UsersPageTests.cs" />
+    <Compile Include="Utils\StringHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,3 +1,4 @@
+using OpenQA.Selenium;
 using System;
 using TeamProjectFluxday.Parts;
 
@@ -39,9 +40,9 @@ namespace TeamProjectFluxday.Core
             Driver.Browser.Navigate().GoToUrl(Url);
         }
 
-        public string GenerateDateTimeString()
+        public static IAlert SwitchToAlert()
         {
-            return DateTime.Now.ToString("yyyyMMddHHmmss");
+            return Driver.Browser.SwitchTo().Alert();
         }
     }
 

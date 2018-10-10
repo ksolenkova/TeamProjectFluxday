@@ -1,20 +1,10 @@
 ﻿using OpenQA.Selenium;
-using SeleniumWebDriver.Core;
+using TeamProjectFluxday.Core;
 
 namespace TeamProjectFluxday.Pages.MyTasksPage
 {
     public class MyTasksPageMap : BasePageMap
     {
-
-
-        public IWebElement NewTaskButton
-        {
-            get
-            {
-                return GetElement(By.XPath(@"//a[contains(text(),'+Task')]"));
-            }
-        }
-
         public IWebElement TitleInput
         {
             get
@@ -46,6 +36,5 @@ namespace TeamProjectFluxday.Pages.MyTasksPage
                 return GetElement(By.XPath(@"//*[@id='paginator']/a/div/div[1]"));
             }
         }
-
     }
 }

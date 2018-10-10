@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
-using SeleniumWebDriver.Core;
+using TeamProjectFluxday.Core;
 
-namespace SeleniumWebDriver.Pages.UsersPage
+namespace TeamProjectFluxday.Pages.Users
 {
    public class UsersPageMap : BasePageMap
     {
@@ -92,7 +92,5 @@ namespace SeleniumWebDriver.Pages.UsersPage
                 return GetElement(By.CssSelector("#drop1>li+li"));
             }
         }
-
-
     }
 }

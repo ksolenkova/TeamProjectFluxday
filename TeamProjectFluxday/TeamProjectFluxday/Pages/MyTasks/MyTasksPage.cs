@@ -1,4 +1,4 @@
-﻿using SeleniumWebDriver.Core;
+﻿using TeamProjectFluxday.Core;
 
 namespace TeamProjectFluxday.Pages.MyTasksPage
 {
@@ -6,11 +6,6 @@ namespace TeamProjectFluxday.Pages.MyTasksPage
     {
         public MyTasksPage(string url = "https://app.fluxday.io/tasks#pane2") : base(url)
         {
-        }
-
-        internal void PressNewTaskButton()
-        {
-            Map.NewTaskButton.Click();
         }
 
         internal void TypeTitle(string title)
@@ -38,6 +33,5 @@ namespace TeamProjectFluxday.Pages.MyTasksPage
         {
             return Map.TaskTitle.Text;
         }
-
     }
 }

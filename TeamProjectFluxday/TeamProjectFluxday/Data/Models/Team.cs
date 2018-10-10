@@ -1,6 +1,4 @@
-﻿using SeleniumWebDriver.Data.Models;
-
-namespace SeleniumWebDriver.Data.Models
+﻿namespace TeamProjectFluxday.Data.Models
 {
     public class Team
     {

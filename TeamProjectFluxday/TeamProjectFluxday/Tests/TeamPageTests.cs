@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SeleniumWebDriver.Core;
-using SeleniumWebDriver.Pages.LoginPage;
-using SeleniumWebDriver.Pages.TeamPage;
+using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Pages.Login;
+using TeamProjectFluxday.Pages.Team;
 
-namespace SeleniumWebDriver.Tests
+namespace TeamProjectFluxday.Tests
 {
     public class TeamPageTests
     {
@@ -14,7 +14,7 @@ namespace SeleniumWebDriver.Tests
             [TestMethod]
             public void Test001AddMembersToTeam()
             {
-                var loginPage = new LoginPage(); ;
+                var loginPage = new LoginPage();
                 loginPage.Navigate();
 
                 var adminUser = Data.TestData.TeamLeadUser;

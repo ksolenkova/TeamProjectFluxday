@@ -1,8 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SeleniumWebDriver.Core;
-using SeleniumWebDriver.Pages.DashboardMainPage;
-using SeleniumWebDriver.Pages.LoginPage;
-using System.Threading;
+using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Data;
+using TeamProjectFluxday.Pages.Login;
 using TeamProjectFluxday.Pages.MyTasksPage;
 
 namespace TeamProjectFluxday.Tests
@@ -17,23 +16,21 @@ namespace TeamProjectFluxday.Tests
             var loginPage = new LoginPage();
             loginPage.Navigate();
 
-            var teamLeadUser = SeleniumWebDriver.Data.TestData.TeamLeadUser;
+            var teamLeadUser = TestData.TeamLeadUser;
            
             loginPage.TypeEmail(teamLeadUser.Email);
             loginPage.TypePassword(teamLeadUser.Password);
             loginPage.PressLoginButton();
 
-
             var myTasksPage = new MyTasksPage();
             myTasksPage.Navigate();
+            
+            myTasksPage.NavigationPanel.PressNewTaskButton();
 
-            myTasksPage.PressNewTaskButton();
-
-            var newTask = SeleniumWebDriver.Data.TestData.NewTask;
+            var newTask = TestData.NewTask;
             myTasksPage.TypeTitle(newTask.Title);
             myTasksPage.TypeDescription(newTask.Description);
             myTasksPage.PressCreateTaskButton();
-
 
             var myTasksPage2 = new MyTasksPage();
             myTasksPage.Navigate();

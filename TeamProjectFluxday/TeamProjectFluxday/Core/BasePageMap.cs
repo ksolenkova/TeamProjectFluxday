@@ -2,7 +2,7 @@
 using OpenQA.Selenium.Support.UI;
 using System.Collections.Generic;
 
-namespace SeleniumWebDriver.Core
+namespace TeamProjectFluxday.Core
 {
     public class BasePageMap
     {

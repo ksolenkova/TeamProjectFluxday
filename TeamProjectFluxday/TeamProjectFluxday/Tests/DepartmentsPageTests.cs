@@ -1,18 +1,19 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SeleniumWebDriver.Core;
-using SeleniumWebDriver.Data;
-using SeleniumWebDriver.Pages.DashboardMainPage;
-using SeleniumWebDriver.Pages.LoginPage;
-using SeleniumWebDriver.Pages.DepartmentsPage;
+using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Data;
+using TeamProjectFluxday.Pages;
+using TeamProjectFluxday.Pages.Departments;
+using TeamProjectFluxday.Pages.Login;
+using TeamProjectFluxday.Parts;
 
-namespace SeleniumWebDriver.Tests
+namespace TeamProjectFluxday.Tests
 {
     [TestClass]
     public class DepartmentsPageTests : BaseTest
     {
         [TestCategory("DepartmentsPageTests")]
         [TestMethod]
-        public void Test001CreateDepartmentAsAnAdmin()
+        public void Test001DepartmentsPageValidation()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();
@@ -20,23 +21,12 @@ namespace SeleniumWebDriver.Tests
             var adminUser = TestData.AdminUser;
             var logInAsAdmin = loginPage.Login(adminUser);
 
-            var dashboardPage = new DashboardPage();
-            dashboardPage.ClickOnDepartmentsLink();
+            var navigationPanel = new NavigationPanel();
+            navigationPanel.ClickOnDepartmentsLink();
 
             var departmentsPage = new DepartmentsPage();
-            departmentsPage.ClickOnCreateDepartmentsLink();
 
-            departmentsPage.WriteTitle();
-            departmentsPage.WriteCode();
-            departmentsPage.WriteUrl();
-            departmentsPage.WriteDescription();
-            departmentsPage.ClickOnSave();
-
-            var departmentIsDisplayed = departmentsPage.NewDepartmentIsDisplayed();
-
-            Assert.IsTrue(departmentIsDisplayed);
-
-            departmentsPage.DeleteCreatedDepartment();
+            departmentsPage.Validate().IsOnDepartmentsPage();
         }
     }
 }

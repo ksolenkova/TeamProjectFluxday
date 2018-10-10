@@ -1,15 +1,15 @@
 ﻿using OpenQA.Selenium;
-using SeleniumWebDriver.Core;
+using TeamProjectFluxday.Core;
 
-namespace SeleniumWebDriver.Pages.DepartmentsPage
+namespace TeamProjectFluxday.Pages
 {
-    public class DepartmentsPageMap : BasePageMap
+    public class CreateDepartmentsPageMap : BasePageMap
     {
-        public IWebElement CreateDepartmentLink
+        public IWebElement AddDepartmentTitle
         {
             get
             {
-                return GetElement(By.CssSelector("a[href=\"/projects/new\"]"));
+                return GetElement(By.CssSelector(""));
             }
         }
 
@@ -50,30 +50,6 @@ namespace SeleniumWebDriver.Pages.DepartmentsPage
             get
             {
                 return GetElement(By.CssSelector(".button.alert.right"));
-            }
-        }
-
-        public IWebElement NewlyCreatedDepartment
-        {
-            get
-            {
-                return GetElement(By.CssSelector("div.title>.main-title"));
-            }
-        }
-
-        public IWebElement SettingsIcon
-        {
-            get
-            {
-                return GetElement(By.CssSelector("div.icon.settings-link"));
-            }
-        }
-
-        public IWebElement DeleteLink
-        {
-            get
-            {
-                return GetElement(By.CssSelector("#drop1 li:nth-child(2)>a"));
             }
         }
     }

@@ -1,7 +1,6 @@
 ﻿using TeamProjectFluxday.Core;
-using TeamProjectFluxday.Pages;
 
-namespace TeamProjectFluxday.Pages
+namespace TeamProjectFluxday.Pages.Departments
 {
     public class DepartmentsPage : BasePage<DepartmentsPageMap, DepartmentsPageValidator>
     {
@@ -20,7 +19,7 @@ namespace TeamProjectFluxday.Pages
 
             return new CreateDepartmentsPage();
         }
-        
+
         //internal bool NewDepartmentIsDisplayed()
         //{
         //    return Map.NewlyCreatedDepartment.Displayed;

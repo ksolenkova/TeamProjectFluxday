@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TeamProjectFluxday.Core;
-using TeamProjectFluxday.Pages;
+using TeamProjectFluxday.Pages.Login;
 
 namespace TeamProjectFluxday.Tests
 {
@@ -26,7 +26,7 @@ namespace TeamProjectFluxday.Tests
 
             var adminUser = Data.TestData.AdminUser;
             var dashboardPage = loginPage.Login(adminUser);
-            
+
             var actualResult = dashboardPage.NavigationPanel.ReadUserLinkText();
 
             Assert.AreEqual(adminUser.Name, actualResult);
@@ -41,7 +41,7 @@ namespace TeamProjectFluxday.Tests
 
             var teamLeadUser = Data.TestData.TeamLeadUser;
             var dashboardPage = loginPage.Login(teamLeadUser);
-            
+
             var actualResult = dashboardPage.NavigationPanel.ReadUserLinkText();
 
             Assert.AreEqual(teamLeadUser.Name, actualResult);

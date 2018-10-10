@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using TeamProjectFluxday.Core;
 
-namespace TeamProjectFluxday.Pages
+namespace TeamProjectFluxday.Pages.Departments
 {
     public class DepartmentsPageMap : BasePageMap
     {
@@ -20,7 +20,7 @@ namespace TeamProjectFluxday.Pages
                 return GetElement(By.CssSelector("a[href=\"/projects/new\"]"));
             }
         }
-        
+
         //public IWebElement NewlyCreatedDepartment
         //{
         //    get

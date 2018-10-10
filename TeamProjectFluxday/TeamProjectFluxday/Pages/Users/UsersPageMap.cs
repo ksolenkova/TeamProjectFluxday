@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using TeamProjectFluxday.Core;
 
-namespace TeamProjectFluxday.Pages
+namespace TeamProjectFluxday.Pages.Users
 {
    public class UsersPageMap : BasePageMap
     {

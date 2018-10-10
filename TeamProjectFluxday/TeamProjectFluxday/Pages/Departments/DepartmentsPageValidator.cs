@@ -2,7 +2,7 @@
 using TeamProjectFluxday.Pages;
 using TeamProjectFluxday.Core;
 
-namespace TeamProjectFluxday.Pages
+namespace TeamProjectFluxday.Pages.Departments
 {
     public class DepartmentsPageValidator : BasePageValidator<DepartmentsPageMap>
     {

@@ -1,14 +1,15 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Threading;
 using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data;
-using TeamProjectFluxday.Pages;
-using System.Threading;
+using TeamProjectFluxday.Pages.Login;
+using TeamProjectFluxday.Pages.Users;
 using TeamProjectFluxday.Parts;
 
 namespace TeamProjectFluxday.Tests
 {
     [TestClass]
-   public class UsersPageTests : BaseTest
+    public class UsersPageTests : BaseTest
     {
         [TestCategory("UsersPageTests")]
         [TestMethod]
@@ -18,7 +19,7 @@ namespace TeamProjectFluxday.Tests
             loginPage.Navigate();
 
             var adminUser = TestData.AdminUser;
-            
+
             var dashboardPage = loginPage.Login(adminUser);
 
             var navigationPanel = new NavigationPanel();

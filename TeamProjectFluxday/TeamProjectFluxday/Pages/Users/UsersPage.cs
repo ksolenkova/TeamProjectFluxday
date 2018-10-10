@@ -1,7 +1,7 @@
 ﻿using TeamProjectFluxday.Core;
 using System.Threading;
 
-namespace TeamProjectFluxday.Pages
+namespace TeamProjectFluxday.Pages.Users
 {
     public class UsersPage : BasePage<UsersPageMap>
     {

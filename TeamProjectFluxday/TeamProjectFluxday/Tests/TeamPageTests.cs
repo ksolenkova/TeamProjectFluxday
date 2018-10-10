@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TeamProjectFluxday.Core;
-using TeamProjectFluxday.Pages;
+using TeamProjectFluxday.Pages.Login;
+using TeamProjectFluxday.Pages.Team;
 
 namespace TeamProjectFluxday.Tests
 {
@@ -13,7 +14,7 @@ namespace TeamProjectFluxday.Tests
             [TestMethod]
             public void Test001AddMembersToTeam()
             {
-                var loginPage = new LoginPage(); 
+                var loginPage = new LoginPage();
                 loginPage.Navigate();
 
                 var adminUser = Data.TestData.TeamLeadUser;

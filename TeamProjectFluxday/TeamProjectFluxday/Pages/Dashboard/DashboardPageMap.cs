@@ -1,6 +1,6 @@
 ﻿using TeamProjectFluxday.Core;
 
-namespace TeamProjectFluxday.Pages
+namespace TeamProjectFluxday.Pages.Dashboard
 {
     public class DashboardPageMap : BasePageMap
     {

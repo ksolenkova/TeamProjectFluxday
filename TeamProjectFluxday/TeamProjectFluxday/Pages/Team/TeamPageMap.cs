@@ -2,7 +2,7 @@
 using TeamProjectFluxday.Core;
 using System.Collections.Generic;
 
-namespace TeamProjectFluxday.Pages
+namespace TeamProjectFluxday.Pages.Team
 {
     public class TeamPageMap : BasePageMap
     {

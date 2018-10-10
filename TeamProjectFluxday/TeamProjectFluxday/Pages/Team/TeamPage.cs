@@ -3,7 +3,7 @@ using TeamProjectFluxday.Data.Models;
 using System.Collections.Generic;
 using OpenQA.Selenium;
 
-namespace TeamProjectFluxday.Pages
+namespace TeamProjectFluxday.Pages.Team
 {
     class TeamPage : BasePage<TeamPageMap>
     {

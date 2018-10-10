@@ -1,10 +1,10 @@
 ﻿using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data.Models;
-using TeamProjectFluxday.Pages.LoginPage;
+using TeamProjectFluxday.Pages.Dashboard;
 
-namespace TeamProjectFluxday.Pages
+namespace TeamProjectFluxday.Pages.Login
 {
-    public class LoginPage : BasePage<LoginPageMap, Pages.LoginPage.LoginPageValidator>
+    public class LoginPage : BasePage<LoginPageMap, LoginPageValidator>
     {
         public LoginPage(string url = "https://app.fluxday.io/users/sign_in") : base(url)
         {

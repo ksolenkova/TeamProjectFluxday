@@ -2,29 +2,31 @@
 using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data;
 using TeamProjectFluxday.Pages;
+using TeamProjectFluxday.Pages.Dashboard;
 using TeamProjectFluxday.Pages.Departments;
 using TeamProjectFluxday.Pages.Login;
 using TeamProjectFluxday.Parts;
+using TeamProjectFluxday.Utils;
 
 namespace TeamProjectFluxday.Tests
 {
     [TestClass]
     public class DepartmentsPageTests : BaseTest
     {
+        DashboardPage dashboardPage;
+
+        [TestInitialize]
+        public void TestSetup()
+        {
+            Driver.StartBrowser();
+            dashboardPage = LoginProvider.Login(TestData.Employee);
+        }
+
         [TestCategory("DepartmentsPageTests")]
         [TestMethod]
         public void Test001DepartmentsPageValidation()
         {
-            var loginPage = new LoginPage();
-            loginPage.Navigate();
-
-            var adminUser = TestData.AdminUser;
-            var logInAsAdmin = loginPage.Login(adminUser);
-
-            var navigationPanel = new NavigationPanel();
-            navigationPanel.ClickOnDepartmentsLink();
-
-            var departmentsPage = new DepartmentsPage();
+            var departmentsPage = dashboardPage.NavigationPanel.NavigateToDepartmentsPage();
 
             departmentsPage.Validate().IsOnDepartmentsPage();
         }

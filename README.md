@@ -20,8 +20,8 @@ NuGet packages you need to install in Visual Studio for the project:
 1. Clone the repository with your Git client tool (<https://github.com/ksolenkova/TeamProjectFluxday.git>).
 2. Open, build the project and install/restore the required dependent packages with NuGet package manager.
 3. Check if all available tests pass.
-3. Checkout into development and then create your own branch, according to the convention down below.
-4. You can start working in your branch now.
+4. Checkout into development and then create your own branch, according to the convention down below.
+5. You can start working in your branch now.
 
 ## Contributing to the project:
 1. Develop your feature/s in your branch.

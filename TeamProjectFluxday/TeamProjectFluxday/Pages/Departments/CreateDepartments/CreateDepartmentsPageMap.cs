@@ -5,14 +5,6 @@ namespace TeamProjectFluxday.Pages
 {
     public class CreateDepartmentsPageMap : BasePageMap
     {
-        public IWebElement AddDepartmentTitle
-        {
-            get
-            {
-                return GetElement(By.CssSelector(""));
-            }
-        }
-
         public IWebElement TitleField
         {
             get

@@ -1,5 +1,6 @@
 using TeamProjectFluxday.Data.Models;
 using System.Collections.Generic;
+using TeamProjectFluxday.Utils;
 
 namespace TeamProjectFluxday.Data
 {
@@ -49,6 +50,14 @@ namespace TeamProjectFluxday.Data
             get
             {
                 return new Task("Test Title", "Test Description");
+            }
+        }
+
+        public static User Employee
+        {
+            get
+            {
+                return new User("emp1@fluxday.io", "password", "Employee User");
             }
         }
     }

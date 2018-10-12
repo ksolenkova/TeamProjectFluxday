@@ -70,9 +70,14 @@
     <Compile Include="Pages\Team\TeamPageMap.cs" />
     <Compile Include="Pages\Departments\DepartmentsPage.cs" />
     <Compile Include="Pages\Departments\DepartmentsPageMap.cs" />
+    <Compile Include="Pages\Users\AddAnEmployee\AddAnEmployeePage.cs" />
+    <Compile Include="Pages\Users\AddAnEmployee\AddAnEmployeePageMap.cs" />
+    <Compile Include="Pages\Users\AddAnEmployee\AddAnEmployeePageValidator.cs" />
+    <Compile Include="Pages\Users\UsersPageValidator.cs" />
     <Compile Include="Parts\NavigationPanel.cs" />
     <Compile Include="Parts\NavigationPanelMap.cs" />
     <Compile Include="Parts\NavigationPanelValidator.cs" />
+    <Compile Include="Tests\AddAnEmployeePageTests.cs" />
     <Compile Include="Tests\CreateDepartmentPageTests.cs" />
     <Compile Include="Tests\DepartmentsPageTests.cs" />
     <Compile Include="Pages\Users\UsersPage.cs" />

@@ -7,7 +7,7 @@ using TeamProjectFluxday.Utils;
 namespace TeamProjectFluxday.Tests
 {
     [TestClass]
-    public class UsersPageTests : BaseTest
+    public class AddAnEmployeePageTests : BaseTest
     {
         DashboardPage dashboardPage;
 
@@ -18,14 +18,19 @@ namespace TeamProjectFluxday.Tests
             dashboardPage = LoginProvider.Login(TestData.AdminUser);
         }
 
-        [TestCategory("UsersPageTests")]
+        [TestCategory("AddAnEmployeePageTests")]
         [TestMethod]
-
-        public void Test001UsersPageValidation()
+        public void Test001AddAnEmployeeUser()
         {
             var usersPage = dashboardPage.NavigationPanel.NavigateToUsersPage();
 
-            usersPage.Validate().IsOnUsersPage();
+            var addAnEmployeePage = usersPage.AddUserClick();
+            addAnEmployeePage.FillInAddUserForm();
+            addAnEmployeePage.SaveButtonClick();
+
+            usersPage.Validate().NewEmployeeIsAdded();
+            
+            usersPage.DeleteNewUser();
         }
     }
 }

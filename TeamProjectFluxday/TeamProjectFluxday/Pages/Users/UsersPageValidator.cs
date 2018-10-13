@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TeamProjectFluxday.Core;
 
-namespace TeamProjectFluxday.Pages.Users
+namespace TeamProjectFluxday.Pages
 {
     public  class UsersPageValidator : BasePageValidator<UsersPageMap>
     {

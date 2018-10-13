@@ -1,7 +1,7 @@
 ﻿using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Utils;
 
-namespace TeamProjectFluxday.Pages.Users.AddAnEmployee
+namespace TeamProjectFluxday.Pages
 {
     public class AddAnEmployeePage : BasePage<AddAnEmployeePageMap,AddAnEmployeePageValidator>
     {

@@ -1,8 +1,8 @@
 ﻿using System.Threading;
 using TeamProjectFluxday.Core;
-using TeamProjectFluxday.Pages.Users.AddAnEmployee;
+using TeamProjectFluxday.Pages;
 
-namespace TeamProjectFluxday.Pages.Users
+namespace TeamProjectFluxday.Pages
 {
     public class UsersPage : BasePage<UsersPageMap, UsersPageValidator>
     {

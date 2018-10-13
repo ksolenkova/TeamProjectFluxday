@@ -69,6 +69,7 @@
     <Compile Include="Pages\Login\LoginPageValidator.cs" />
     <Compile Include="Pages\MyTasks\MyTasksPage.cs" />
     <Compile Include="Pages\MyTasks\MyTasksPageMap.cs" />
+    <Compile Include="Pages\MyTasks\MyTasksPageValidator.cs" />
     <Compile Include="Pages\Team\TeamPage.cs" />
     <Compile Include="Pages\Team\TeamPageMap.cs" />
     <Compile Include="Pages\Departments\DepartmentsPage.cs" />

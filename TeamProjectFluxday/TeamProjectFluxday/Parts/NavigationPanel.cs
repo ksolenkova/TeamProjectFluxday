@@ -1,4 +1,4 @@
-﻿using System.Threading;
+using System.Threading;
 using TeamProjectFluxday.Pages;
 
 namespace TeamProjectFluxday.Parts
@@ -43,6 +43,13 @@ namespace TeamProjectFluxday.Parts
         internal void PressNewTaskButton()
         {
             Map.NewTaskButton.Click();
+        }
+
+        internal MyTasksPage NavigateToMyTasksPage()
+        {
+            Map.MyTasksLink.Click();
+
+            return new MyTasksPage();
         }
 
         internal DepartmentsPage NavigateToDepartmentsPage()

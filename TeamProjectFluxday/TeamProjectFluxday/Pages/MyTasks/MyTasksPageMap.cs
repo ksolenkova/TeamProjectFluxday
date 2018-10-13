@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using TeamProjectFluxday.Core;
 
-namespace TeamProjectFluxday.Pages.MyTasksPage
+namespace TeamProjectFluxday.Pages
 {
     public class MyTasksPageMap : BasePageMap
     {
@@ -34,7 +34,7 @@ namespace TeamProjectFluxday.Pages.MyTasksPage
             get
             {
                 return GetElement(By.XPath(@"//*[@id='paginator']/a/div/div[1]"));
-            }
+            }                        
         }
     }
 }

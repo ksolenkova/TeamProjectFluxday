@@ -7,7 +7,8 @@ namespace TeamProjectFluxday.Pages
     {
         public void IsOnUsersPage()
         {
-            Assert.IsTrue(Map.AddUser.Displayed, "Users page is not displayed");
+            var expectedResult = "Users";
+            Assert.AreEqual(expectedResult, Map.UsersTitle.Text);
         }
 
         internal void NewEmployeeIsAdded()

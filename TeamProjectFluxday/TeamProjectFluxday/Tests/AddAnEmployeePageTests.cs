@@ -29,8 +29,9 @@ namespace TeamProjectFluxday.Tests
             addAnEmployeePage.SaveButtonClick();
 
             usersPage.Validate().NewEmployeeIsAdded();
-            
-            usersPage.DeleteNewUser();
+
+            var userDetailsPage = usersPage.NewUserClick();
+            userDetailsPage.DeleteNewUser();
         }
     }
 }

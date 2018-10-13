@@ -22,16 +22,11 @@ namespace TeamProjectFluxday.Pages
             return Map.NewUser.Text;
         }
 
-        internal void DeleteNewUser()
+        internal UserDetailsPage NewUserClick()
         {
             Map.NewUser.Click();
             Thread.Sleep(1000);
-            Map.SettingsButton.Click();
-            Thread.Sleep(1000);
-            Map.DeleteOption.Click();
-            Thread.Sleep(1000);
-            SwitchToAlert().Accept();
-            Thread.Sleep(2000);
+            return new UserDetailsPage();
         }
     }
 }

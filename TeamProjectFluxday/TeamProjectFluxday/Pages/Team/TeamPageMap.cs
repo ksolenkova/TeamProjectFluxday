@@ -1,39 +1,39 @@
 ﻿using OpenQA.Selenium;
-using TeamProjectFluxday.Core;
 using System.Collections.Generic;
+using TeamProjectFluxday.Core;
 
 namespace TeamProjectFluxday.Pages.Team
 {
     public class TeamPageMap : BasePageMap
     {
-        public IWebElement AddTeamButton
+
+        public IReadOnlyCollection<IWebElement> ListOfTeams
         {
             get
             {
-                return GetElement(By.CssSelector(".dashed_link"));
+                return GetElements(By.CssSelector(".team-name"));
             }
         }
-        public IWebElement CancelButton
+
+        public IWebElement TeamPageTitle
         {
             get
             {
-                return GetElement(By.CssSelector(".translation_missing"));
+                return GetElement(By.CssSelector("div.title"));
             }
         }
-        public IWebElement SaveButton
+
+        public IReadOnlyCollection<IWebElement> AddTaskButtonsList
         {
             get
             {
-                return GetElement(By.CssSelector(".button"));
+                return GetElements(By.CssSelector(".btn"));
             }
         }
-        
-        public IReadOnlyCollection<IWebElement> Teams
+
+        public IWebElement TeamName(string teamName)
         {
-            get
-            {
-                return GetElements(By.CssSelector(".pane2-content"));
-            }
+            return GetElement(By.LinkText(teamName));
         }
     }
 }

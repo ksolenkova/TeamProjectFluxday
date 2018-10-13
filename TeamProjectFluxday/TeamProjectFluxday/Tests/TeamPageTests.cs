@@ -1,31 +1,49 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TeamProjectFluxday.Core;
-using TeamProjectFluxday.Pages.Login;
-using TeamProjectFluxday.Pages.Team;
+using TeamProjectFluxday.Data;
+using TeamProjectFluxday.Pages.Dashboard;
+using TeamProjectFluxday.Utils;
 
 namespace TeamProjectFluxday.Tests
 {
-    public class TeamPageTests
+    [TestClass]
+    public class TeamPageTests : BaseTest
     {
-        [TestClass]
-        public class LoginPageTests : BaseTest
+        DashboardPage dashboardPage;
+
+        [TestInitialize]
+        public void TestSetup()
         {
-            [TestCategory("TeamPageTests")]
-            [TestMethod]
-            public void Test001AddMembersToTeam()
-            {
-                var loginPage = new LoginPage();
-                loginPage.Navigate();
-
-                var adminUser = Data.TestData.TeamLeadUser;
-
-                var dashboardPage = loginPage.Login(adminUser);
-                var teamPage = new TeamPage();
-                teamPage.Navigate();
-
-                var team = Data.TestData.DevOps;
-                var expectedResult = "Teams";
-            }
+            Driver.StartBrowser();
+            dashboardPage = LoginProvider.Login(TestData.AdminUser);
         }
+
+        [TestCategory("TeamPageTests")]
+        [Owner("Angel Botev")]
+        [TestMethod]
+        public void Test001NavigateToTeamPage()
+        {
+            var teamPage = dashboardPage.NavigationPanel.NavigateToTeamPage();
+            teamPage.Validate().TeamPageTitle();
+        }
+
+        [TestCategory("TeamPageTests")]
+        [Owner("Angel Botev")]
+        [TestMethod]
+        public void Test002VerifyDefaultTeamsCount()
+        {
+            var teamPage = dashboardPage.NavigationPanel.NavigateToTeamPage();
+            teamPage.Validate().DefaultTeamsCount();
+        }
+
+        [TestCategory("TeamPageTests")]
+        [Owner("Angel Botev")]
+        [TestMethod]
+        public void Test003VerifyDevOpsIsPresentInTeamsList()
+        {
+            var teamPage = dashboardPage.NavigationPanel.NavigateToTeamPage();
+            teamPage.Validate().TeamExists(TestData.DevOps.Name);
+        }
+
     }
 }

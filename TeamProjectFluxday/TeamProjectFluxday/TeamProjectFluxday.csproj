@@ -66,10 +66,17 @@
     <Compile Include="Pages\Login\LoginPageValidator.cs" />
     <Compile Include="Pages\MyTasks\MyTasksPage.cs" />
     <Compile Include="Pages\MyTasks\MyTasksPageMap.cs" />
+    <Compile Include="Pages\Team\EditTeam\EditTeamPage.cs" />
+    <Compile Include="Pages\Team\EditTeam\EditTeamPageMap.cs" />
+    <Compile Include="Pages\Team\EditTeam\EditTeamPageValidator.cs" />
+    <Compile Include="Pages\Team\TeamDetails\TeamDetailsPage.cs" />
+    <Compile Include="Pages\Team\TeamDetails\TeamDetailsPageMap.cs" />
+    <Compile Include="Pages\Team\TeamDetails\TeamDetailsPageValidator.cs" />
     <Compile Include="Pages\Team\TeamPage.cs" />
     <Compile Include="Pages\Team\TeamPageMap.cs" />
     <Compile Include="Pages\Departments\DepartmentsPage.cs" />
     <Compile Include="Pages\Departments\DepartmentsPageMap.cs" />
+    <Compile Include="Pages\Team\TeamPageValidator.cs" />
     <Compile Include="Parts\NavigationPanel.cs" />
     <Compile Include="Parts\NavigationPanelMap.cs" />
     <Compile Include="Parts\NavigationPanelValidator.cs" />
@@ -103,6 +110,7 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.2.42.0.1\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.2.42.0.1\build\Selenium.WebDriver.ChromeDriver.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

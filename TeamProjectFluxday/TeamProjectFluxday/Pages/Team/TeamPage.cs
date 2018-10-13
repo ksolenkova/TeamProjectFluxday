@@ -1,38 +1,16 @@
 ﻿using TeamProjectFluxday.Core;
-using TeamProjectFluxday.Data.Models;
-using System.Collections.Generic;
-using OpenQA.Selenium;
 
-namespace TeamProjectFluxday.Pages.Team
+namespace TeamProjectFluxday.Pages
 {
-    class TeamPage : BasePage<TeamPageMap>
+    public class TeamPage : BasePage<TeamPageMap, TeamPageValidator>
     {
         public TeamPage(string url = "https://app.fluxday.io/teams#pane2") : base(url)
         {
         }
 
-        internal IReadOnlyCollection<IWebElement> GetTeams()
+        public EditTeamPage NavigateToEditTeamPage()
         {
-            var teamsList = Map.Teams;
-
-            return teamsList;
-        }
-
-        internal void ChooseTeam(string password)
-        {
-        }
-
-        internal void AddMembers(User member)
-        {
-        }
-        internal void PressSaveButton()
-        {
-            Map.SaveButton.Click();
-        }
-
-        internal void PressLoginButton()
-        {
-            Map.CancelButton.Click();
+            return new EditTeamPage();
         }
     }
 }

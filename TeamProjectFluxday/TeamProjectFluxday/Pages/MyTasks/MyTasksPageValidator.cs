@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Data;
 
 namespace TeamProjectFluxday.Pages
 {
@@ -7,7 +8,7 @@ namespace TeamProjectFluxday.Pages
     {
         public void TaskExists()
         {
-            var expectedResult = "Test Title";
+            var expectedResult = TestData.Task.Title;
             Assert.AreEqual(expectedResult, Map.TaskTitle.Text);
         }
     }

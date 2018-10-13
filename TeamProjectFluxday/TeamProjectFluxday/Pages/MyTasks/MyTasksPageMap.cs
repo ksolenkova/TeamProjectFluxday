@@ -25,7 +25,7 @@ namespace TeamProjectFluxday.Pages
         {
             get
             {
-                return GetElement(By.XPath(@"//*[@id='new_task']/div[3]/div[2]/input"));
+                return GetElement(By.CssSelector(".button"));
             }
         }
 
@@ -35,6 +35,30 @@ namespace TeamProjectFluxday.Pages
             {
                 return GetElement(By.XPath(@"//*[@id='paginator']/a/div/div[1]"));
             }                        
+        }
+
+        public IWebElement NewTask
+        {
+            get
+            {
+                return GetElement(By.XPath(@"//*[@id='paginator']/a/div"));
+            }
+        }
+
+        public IWebElement SettingsButton
+        {
+            get
+            {
+                return GetElement(By.XPath(@"//*[@id='pane3']/div[2]/div/div[1]/div[1]/div/a[2]"));
+            }
+        }
+
+        public IWebElement DeleteOption
+        {
+            get
+            {
+                return GetElement(By.XPath(@"//a[contains(text(),'Delete')]"));
+            }
         }
     }
 }

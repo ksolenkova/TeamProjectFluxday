@@ -1,4 +1,5 @@
-﻿using TeamProjectFluxday.Core;
+﻿using System.Threading;
+using TeamProjectFluxday.Core;
 
 namespace TeamProjectFluxday.Pages
 {
@@ -27,6 +28,14 @@ namespace TeamProjectFluxday.Pages
         internal void PressCreateTaskButton()
         {
             Map.CreateTaskButton.Click();
+        }
+
+        internal void DeleteNewTask()
+        {
+            Map.NewTask.Click();
+            Map.SettingsButton.Click();
+            Thread.Sleep(1000);
+            Map.DeleteOption.Click();
         }
     }
 }

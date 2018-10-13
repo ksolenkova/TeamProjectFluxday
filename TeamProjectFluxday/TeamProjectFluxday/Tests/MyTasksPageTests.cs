@@ -19,6 +19,7 @@ namespace TeamProjectFluxday.Tests
         }
 
         [TestCategory("MyTasksPageTests")]
+        [Owner("Yusuf Machan")]
         [TestMethod]
         public void Test001CreateNewTask()
         {      
@@ -26,12 +27,13 @@ namespace TeamProjectFluxday.Tests
             
             myTasksPage.NavigationPanel.PressNewTaskButton();
 
-            var newTask = TestData.NewTask;
+            var newTask = TestData.Task;
             myTasksPage.TypeTitle(newTask.Title);
             myTasksPage.TypeDescription(newTask.Description);
             myTasksPage.PressCreateTaskButton();
 
             myTasksPage.Validate().TaskExists();
+            myTasksPage.DeleteNewTask();
         }
     }
 }

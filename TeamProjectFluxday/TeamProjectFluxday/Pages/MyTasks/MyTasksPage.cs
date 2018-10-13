@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Data;
 
 namespace TeamProjectFluxday.Pages
 {
@@ -9,30 +10,21 @@ namespace TeamProjectFluxday.Pages
         {
         }
 
-        internal void TypeTitle(string title)
+        internal void CreateNewTask()
         {
-            var titleInput = Map.TitleInput;
-            titleInput.Click();
-            titleInput.Clear();
-            titleInput.SendKeys(title);
-        }
+            var newTask = TestData.Task;
 
-        internal void TypeDescription(string description)
-        {
-            var descriptionInput = Map.DescriptionInput;
-            descriptionInput.Click();
-            descriptionInput.Clear();
-            descriptionInput.SendKeys(description);
-        }
+            Map.TitleInput.SendKeys(newTask.Title);
 
-        internal void PressCreateTaskButton()
-        {
+            Map.DescriptionInput.SendKeys(newTask.Description);
+
             Map.CreateTaskButton.Click();
         }
 
         internal void DeleteNewTask()
         {
             Map.NewTask.Click();
+            Thread.Sleep(1000);
             Map.SettingsButton.Click();
             Thread.Sleep(1000);
             Map.DeleteOption.Click();

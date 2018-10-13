@@ -27,10 +27,7 @@ namespace TeamProjectFluxday.Tests
             
             myTasksPage.NavigationPanel.PressNewTaskButton();
 
-            var newTask = TestData.Task;
-            myTasksPage.TypeTitle(newTask.Title);
-            myTasksPage.TypeDescription(newTask.Description);
-            myTasksPage.PressCreateTaskButton();
+            myTasksPage.CreateNewTask();
 
             myTasksPage.Validate().TaskExists();
             myTasksPage.DeleteNewTask();

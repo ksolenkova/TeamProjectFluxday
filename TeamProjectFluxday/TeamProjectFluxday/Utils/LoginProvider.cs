@@ -1,6 +1,5 @@
 ﻿using TeamProjectFluxday.Data.Models;
-using TeamProjectFluxday.Pages.Dashboard;
-using TeamProjectFluxday.Pages.Login;
+using TeamProjectFluxday.Pages;
 
 namespace TeamProjectFluxday.Utils
 {

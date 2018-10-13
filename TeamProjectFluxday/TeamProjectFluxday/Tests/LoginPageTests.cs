@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TeamProjectFluxday.Core;
-using TeamProjectFluxday.Pages.Login;
+using TeamProjectFluxday.Pages;
 
 namespace TeamProjectFluxday.Tests
 {
@@ -45,6 +45,20 @@ namespace TeamProjectFluxday.Tests
             var actualResult = dashboardPage.NavigationPanel.ReadUserLinkText();
 
             Assert.AreEqual(teamLeadUser.Name, actualResult);
+        }
+
+        [TestCategory("LoginPageTests")]
+        [Owner("Kristina Solenkova")]
+        [TestMethod]
+        public void Test004LoginWithEmployeeUser()
+        {
+            var loginPage = new LoginPage();
+            loginPage.Navigate();
+
+            var employeeUser = Data.TestData.Employee;
+            var dashboardPage = loginPage.Login(employeeUser);
+
+            dashboardPage.Validate().UserNameLink(employeeUser.Name);
         }
     }
 }

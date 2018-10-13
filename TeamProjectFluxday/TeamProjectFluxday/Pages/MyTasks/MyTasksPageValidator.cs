@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TeamProjectFluxday.Core;
 
-namespace TeamProjectFluxday.Pages.MyTasks
+namespace TeamProjectFluxday.Pages
 {
     public class MyTasksPageValidator : BasePageValidator<MyTasksPageMap>
     {

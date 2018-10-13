@@ -1,6 +1,6 @@
 ﻿using TeamProjectFluxday.Core;
 
-namespace TeamProjectFluxday.Pages.MyTasks
+namespace TeamProjectFluxday.Pages
 {
     public class MyTasksPage : BasePage<MyTasksPageMap, MyTasksPageValidator>
     {

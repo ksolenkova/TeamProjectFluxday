@@ -1,8 +1,7 @@
 ﻿using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data.Models;
-using TeamProjectFluxday.Pages.Dashboard;
 
-namespace TeamProjectFluxday.Pages.Login
+namespace TeamProjectFluxday.Pages
 {
     public class LoginPage : BasePage<LoginPageMap, LoginPageValidator>
     {

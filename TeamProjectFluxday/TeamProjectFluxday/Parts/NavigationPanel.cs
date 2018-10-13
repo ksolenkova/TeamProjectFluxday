@@ -1,8 +1,5 @@
-﻿using System;
 using System.Threading;
-using TeamProjectFluxday.Pages.Departments;
-using TeamProjectFluxday.Pages.Login;
-using TeamProjectFluxday.Pages.MyTasks;
+using TeamProjectFluxday.Pages;
 
 namespace TeamProjectFluxday.Parts
 {
@@ -60,6 +57,13 @@ namespace TeamProjectFluxday.Parts
             Map.DepartmentsLink.Click();
 
             return new DepartmentsPage();
+        }
+
+        internal UsersPage NavigateToUsersPage()
+        {
+            Map.UsersLink.Click();
+
+            return new UsersPage();
         }
     }
 }

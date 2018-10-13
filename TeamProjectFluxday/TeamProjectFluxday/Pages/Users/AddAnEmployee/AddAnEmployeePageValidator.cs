@@ -2,7 +2,7 @@
 
 namespace TeamProjectFluxday.Pages
 {
-    public class DashboardPageMap : BasePageMap
+    public class AddAnEmployeePageValidator : BasePageValidator<AddAnEmployeePageMap>
     {
     }
 }

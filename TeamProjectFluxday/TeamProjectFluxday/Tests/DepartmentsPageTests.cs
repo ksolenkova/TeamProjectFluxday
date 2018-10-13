@@ -2,10 +2,6 @@
 using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data;
 using TeamProjectFluxday.Pages;
-using TeamProjectFluxday.Pages.Dashboard;
-using TeamProjectFluxday.Pages.Departments;
-using TeamProjectFluxday.Pages.Login;
-using TeamProjectFluxday.Parts;
 using TeamProjectFluxday.Utils;
 
 namespace TeamProjectFluxday.Tests
@@ -19,16 +15,27 @@ namespace TeamProjectFluxday.Tests
         public void TestSetup()
         {
             Driver.StartBrowser();
-            dashboardPage = LoginProvider.Login(TestData.Employee);
+            dashboardPage = LoginProvider.Login(TestData.AdminUser);
         }
 
         [TestCategory("DepartmentsPageTests")]
+        [Owner("Kristina Solenkova")]
         [TestMethod]
         public void Test001DepartmentsPageValidation()
         {
             var departmentsPage = dashboardPage.NavigationPanel.NavigateToDepartmentsPage();
 
             departmentsPage.Validate().IsOnDepartmentsPage();
+        }
+
+        [TestCategory("DepartmentsPageTests")]
+        [Owner("Kristina Solenkova")]
+        [TestMethod]
+        public void Test002VerifyDefaultDepartmentsCount()
+        {
+            var departmentsPage = dashboardPage.NavigationPanel.NavigateToDepartmentsPage();
+
+            departmentsPage.Validate().DefaultDepartmentsCount();
         }
     }
 }

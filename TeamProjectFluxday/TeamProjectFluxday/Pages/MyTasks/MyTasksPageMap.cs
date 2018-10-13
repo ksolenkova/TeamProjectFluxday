@@ -36,5 +36,13 @@ namespace TeamProjectFluxday.Pages
                 return GetElement(By.XPath(@"//a[contains(text(),'Delete')]"));
             }
         }
+
+        public IWebElement MyTasksPageTitle
+        {
+            get
+            {
+                return GetElement(By.XPath(@"//*[@id='pane2']/div[1]/div"));
+            }
+        }
     }
 }

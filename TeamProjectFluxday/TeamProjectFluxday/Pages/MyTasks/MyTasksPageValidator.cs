@@ -11,5 +11,11 @@ namespace TeamProjectFluxday.Pages
             var expectedResult = TestData.Task.Title;
             Assert.AreEqual(expectedResult, Map.TaskTitle.Text);
         }
+
+        public void IsOnMyTasksPage()
+        {
+            var expectedResult = "My tasks";
+            Assert.AreEqual(expectedResult, Map.MyTasksPageTitle.Text);
+        }
     }
 }

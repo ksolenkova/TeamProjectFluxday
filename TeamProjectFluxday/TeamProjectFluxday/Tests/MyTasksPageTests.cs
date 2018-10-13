@@ -11,12 +11,17 @@ namespace TeamProjectFluxday.Tests
     {
         DashboardPage dashboardPage;
 
+        [TestInitialize]
+        public void TestSetup()
+        {
+            Driver.StartBrowser();
+            dashboardPage = LoginProvider.Login(TestData.TeamLeadUser);
+        }
+
         [TestCategory("MyTasksPageTests")]
         [TestMethod]
         public void Test001CreateNewTask()
-        {
-            dashboardPage = LoginProvider.Login(TestData.TeamLeadUser);
-
+        {      
             var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
             
             myTasksPage.NavigationPanel.PressNewTaskButton();
@@ -26,8 +31,7 @@ namespace TeamProjectFluxday.Tests
             myTasksPage.TypeDescription(newTask.Description);
             myTasksPage.PressCreateTaskButton();
 
-            var myTasksPageValidation = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
-            myTasksPageValidation.Validate().TaskExists(newTask.Title);
+            myTasksPage.Validate().TaskExists();
         }
     }
 }

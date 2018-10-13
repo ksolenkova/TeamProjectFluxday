@@ -17,32 +17,8 @@ namespace TeamProjectFluxday.Pages.Departments
         {
             get
             {
-                return GetElement(By.CssSelector("a[href=\"/projects/new\"]"));
+                return GetElement(By.LinkText("Create department"));
             }
         }
-
-        //public IWebElement NewlyCreatedDepartment
-        //{
-        //    get
-        //    {
-        //        return GetElement(By.CssSelector("div.title>.main-title"));
-        //    }
-        //}
-
-        //public IWebElement SettingsIcon
-        //{
-        //    get
-        //    {
-        //        return GetElement(By.CssSelector("div.icon.settings-link"));
-        //    }
-        //}
-
-        //public IWebElement DeleteLink
-        //{
-        //    get
-        //    {
-        //        return GetElement(By.CssSelector("#drop1 li:nth-child(2)>a"));
-        //    }
-        //}
     }
 }

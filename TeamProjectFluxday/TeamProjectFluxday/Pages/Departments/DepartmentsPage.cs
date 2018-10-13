@@ -1,4 +1,5 @@
-﻿using TeamProjectFluxday.Core;
+﻿using System.Threading;
+using TeamProjectFluxday.Core;
 
 namespace TeamProjectFluxday.Pages.Departments
 {
@@ -13,33 +14,12 @@ namespace TeamProjectFluxday.Pages.Departments
             return new CreateDepartmentsPage();
         }
 
-        internal CreateDepartmentsPage ClickOnCreateDepartmentsLink()
+        internal CreateDepartmentsPage PressCreateDepartmentLink()
         {
             Map.CreateDepartmentLink.Click();
+            Thread.Sleep(2000);
 
             return new CreateDepartmentsPage();
         }
-
-        //internal bool NewDepartmentIsDisplayed()
-        //{
-        //    return Map.NewlyCreatedDepartment.Displayed;
-        //}
-
-        //internal void ClickOnSettingsIcon()
-        //{
-        //    Map.SettingsIcon.Click();
-        //}
-
-        //internal void ClickOnDelete()
-        //{
-        //    Map.DeleteLink.Click();
-        //}
-
-        //internal void DeleteCreatedDepartment()
-        //{
-        //    ClickOnSettingsIcon();
-        //    ClickOnDelete();
-        //    Driver.AcceptAlert();
-        //}
     }
 }

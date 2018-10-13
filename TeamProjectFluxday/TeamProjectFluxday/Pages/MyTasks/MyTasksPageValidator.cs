@@ -5,9 +5,10 @@ namespace TeamProjectFluxday.Pages.MyTasks
 {
     public class MyTasksPageValidator : BasePageValidator<MyTasksPageMap>
     {
-        public void TaskExists(string taskTitle)
+        public void TaskExists()
         {
-            Assert.IsTrue(Map.TaskTitle(taskTitle).Displayed, $"Task with name { taskTitle } cannot be found!");
+            var expectedResult = "Test Title";
+            Assert.AreEqual(expectedResult, Map.TaskTitle.Text);
         }
     }
 }

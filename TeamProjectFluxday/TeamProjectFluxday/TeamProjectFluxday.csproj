@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\BasePageValidator.cs" />
+    <Compile Include="Data\Models\Department.cs" />
     <Compile Include="Data\Models\Task.cs" />
     <Compile Include="Data\Models\Team.cs" />
     <Compile Include="Pages\Dashboard\DashboardPageValidator.cs" />

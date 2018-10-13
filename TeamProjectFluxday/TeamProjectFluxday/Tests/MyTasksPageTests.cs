@@ -18,19 +18,19 @@ namespace TeamProjectFluxday.Tests
             dashboardPage = LoginProvider.Login(TestData.TeamLeadUser);
         }
 
-        [TestCategory("MyTasksPageTests")]
-        [Owner("Yusuf Machan")]
-        [TestMethod]
-        public void Test001CreateNewTask()
-        {      
-            var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
+        //[TestCategory("MyTasksPageTests")]
+        //[Owner("Yusuf Machan")]
+        //[TestMethod]
+        //public void Test001MyTasksPageValidation()
+        //{      
+        //    var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
             
-            myTasksPage.NavigationPanel.PressNewTaskButton();
+        //    myTasksPage.NavigationPanel.PressNewTaskButton();
 
-            myTasksPage.CreateNewTask();
+        //    myTasksPage.CreateNewTask();
 
-            myTasksPage.Validate().TaskExists();
-            myTasksPage.DeleteNewTask();
-        }
+        //    myTasksPage.Validate().TaskExists();
+        //    myTasksPage.DeleteNewTask();
+        //}
     }
 }

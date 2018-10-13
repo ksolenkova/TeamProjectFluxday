@@ -2,7 +2,7 @@
 using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Utils;
 
-namespace TeamProjectFluxday.Pages.Users
+namespace TeamProjectFluxday.Pages
 {
     public class UsersPage : BasePage<UsersPageMap>
     {

@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System.Collections.Generic;
+using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
 
 namespace TeamProjectFluxday.Core
 {
@@ -30,7 +31,7 @@ namespace TeamProjectFluxday.Core
 
         public IReadOnlyCollection<IWebElement> GetElements(By by)
         {
-            return Browser.FindElements(by);
+            return BrowserWait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(by));
         }
     }
 }

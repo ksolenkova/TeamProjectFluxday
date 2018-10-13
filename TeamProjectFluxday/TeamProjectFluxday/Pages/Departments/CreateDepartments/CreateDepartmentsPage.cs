@@ -1,6 +1,5 @@
 ﻿using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data.Models;
-using TeamProjectFluxday.Pages.Departments;
 using TeamProjectFluxday.Utils;
 
 namespace TeamProjectFluxday.Pages
@@ -28,10 +27,10 @@ namespace TeamProjectFluxday.Pages
         
         internal DepartmentsPage AddDepartment(Department newDepartment)
         {
-            Map.TitleField.SendKeys("Administration");
-            Map.CodeDepartment.SendKeys(StringHelper.AppendDateTimeString("ADM"));
-            Map.Url.SendKeys("adm");
-            Map.Description.SendKeys("Administration team");
+            Map.TitleField.SendKeys(newDepartment.Title);
+            Map.CodeDepartment.SendKeys(newDepartment.Code);
+            Map.Url.SendKeys(newDepartment.Url);
+            Map.Description.SendKeys(newDepartment.Description);
             Map.SaveButton.Click();
 
             return DepartmentsPage;

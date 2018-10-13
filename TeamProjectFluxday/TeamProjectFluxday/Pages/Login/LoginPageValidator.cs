@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TeamProjectFluxday.Core;
 
-namespace TeamProjectFluxday.Pages.Login
+namespace TeamProjectFluxday.Pages
 {
     public class LoginPageValidator : BasePageValidator<LoginPageMap>
     {

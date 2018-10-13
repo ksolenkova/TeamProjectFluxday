@@ -1,8 +1,8 @@
 ﻿using TeamProjectFluxday.Core;
 
-namespace TeamProjectFluxday.Pages.MyTasksPage
+namespace TeamProjectFluxday.Pages.MyTasks
 {
-    public class MyTasksPage : BasePage<MyTasksPageMap>
+    public class MyTasksPage : BasePage<MyTasksPageMap, MyTasksPageValidator>
     {
         public MyTasksPage(string url = "https://app.fluxday.io/tasks#pane2") : base(url)
         {
@@ -27,11 +27,6 @@ namespace TeamProjectFluxday.Pages.MyTasksPage
         internal void PressCreateTaskButton()
         {
             Map.CreateTaskButton.Click();
-        }
-
-        internal string ReadTaskTitleText()
-        {
-            return Map.TaskTitle.Text;
         }
     }
 }

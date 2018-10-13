@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using TeamProjectFluxday.Pages.Login;
+using TeamProjectFluxday.Pages.MyTasks;
 
 namespace TeamProjectFluxday.Parts
 {
@@ -43,6 +44,13 @@ namespace TeamProjectFluxday.Parts
         internal void PressNewTaskButton()
         {
             Map.NewTaskButton.Click();
+        }
+
+        internal MyTasksPage NavigateToMyTasksPage()
+        {
+            Map.MyTasksLink.Click();
+
+            return new MyTasksPage();
         }
     }
 }

@@ -1,29 +1,23 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data;
-using TeamProjectFluxday.Pages.Login;
-using TeamProjectFluxday.Pages.MyTasksPage;
+using TeamProjectFluxday.Pages.Dashboard;
+using TeamProjectFluxday.Utils;
 
 namespace TeamProjectFluxday.Tests
 {
     [TestClass]
     public class MyTasksPageTests : BaseTest
     {
+        DashboardPage dashboardPage;
+
         [TestCategory("MyTasksPageTests")]
         [TestMethod]
         public void Test001CreateNewTask()
         {
-            var loginPage = new LoginPage();
-            loginPage.Navigate();
+            dashboardPage = LoginProvider.Login(TestData.TeamLeadUser);
 
-            var teamLeadUser = TestData.TeamLeadUser;
-           
-            loginPage.TypeEmail(teamLeadUser.Email);
-            loginPage.TypePassword(teamLeadUser.Password);
-            loginPage.PressLoginButton();
-
-            var myTasksPage = new MyTasksPage();
-            myTasksPage.Navigate();
+            var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
             
             myTasksPage.NavigationPanel.PressNewTaskButton();
 
@@ -32,12 +26,8 @@ namespace TeamProjectFluxday.Tests
             myTasksPage.TypeDescription(newTask.Description);
             myTasksPage.PressCreateTaskButton();
 
-            var myTasksPage2 = new MyTasksPage();
-            myTasksPage.Navigate();
-
-            var actualResul = myTasksPage2.ReadTaskTitleText();
-
-            Assert.AreEqual(newTask.Title, actualResul);
+            var myTasksPageValidation = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
+            myTasksPageValidation.Validate().TaskExists(newTask.Title);
         }
     }
 }

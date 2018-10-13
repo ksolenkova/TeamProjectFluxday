@@ -19,6 +19,7 @@ namespace TeamProjectFluxday.Tests
         }
 
         [TestCategory("AddAnEmployeePageTests")]
+        [Owner("Dobrin Ganev")]
         [TestMethod]
         public void Test001AddAnEmployeeUser()
         {

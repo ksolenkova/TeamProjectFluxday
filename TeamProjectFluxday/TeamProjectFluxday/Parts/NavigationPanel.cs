@@ -51,5 +51,12 @@ namespace TeamProjectFluxday.Parts
 
             return new DepartmentsPage();
         }
+
+        internal UsersPage NavigateToUsersPage()
+        {
+            Map.UsersLink.Click();
+
+            return new UsersPage();
+        }
     }
 }

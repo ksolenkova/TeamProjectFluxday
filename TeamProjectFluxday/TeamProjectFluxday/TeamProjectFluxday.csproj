@@ -77,6 +77,9 @@
     <Compile Include="Pages\Users\AddAnEmployee\AddAnEmployeePage.cs" />
     <Compile Include="Pages\Users\AddAnEmployee\AddAnEmployeePageMap.cs" />
     <Compile Include="Pages\Users\AddAnEmployee\AddAnEmployeePageValidator.cs" />
+    <Compile Include="Pages\Users\UserDetails\UserDetailsPage.cs" />
+    <Compile Include="Pages\Users\UserDetails\UserDetailsPageMap.cs" />
+    <Compile Include="Pages\Users\UserDetails\UserDetailsPageValidator.cs" />
     <Compile Include="Pages\Users\UsersPageValidator.cs" />
     <Compile Include="Parts\NavigationPanel.cs" />
     <Compile Include="Parts\NavigationPanelMap.cs" />

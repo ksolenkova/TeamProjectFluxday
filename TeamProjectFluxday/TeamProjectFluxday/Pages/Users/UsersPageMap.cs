@@ -5,6 +5,14 @@ namespace TeamProjectFluxday.Pages
 {
     public class UsersPageMap : BasePageMap
     {
+        public IWebElement UsersTitle
+        {
+            get
+            {
+                return GetElement(By.CssSelector("div.title"));
+            }
+        }
+
         public IWebElement AddUser
         {
             get
@@ -18,22 +26,6 @@ namespace TeamProjectFluxday.Pages
             get
             {
                 return GetElement(By.LinkText("TestEmployee"));
-            }
-        }
-
-        public IWebElement SettingsButton
-        {
-            get
-            {
-                return GetElement(By.CssSelector(".icon.settings-link"));
-            }
-        }
-        
-        public IWebElement DeleteOption
-        {
-            get
-            {
-                return GetElement(By.CssSelector("#drop1>li+li"));
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Data;
 using TeamProjectFluxday.Pages;
 
 namespace TeamProjectFluxday.Tests
@@ -34,23 +35,21 @@ namespace TeamProjectFluxday.Tests
 
         [TestCategory("LoginPageTests")]
         [TestMethod]
-        public void Test003LoginWithLeadUser()
+        public void Test003VerifyTeamLeadCantLoginWithInvalidPassword()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();
 
-            var teamLeadUser = Data.TestData.TeamLeadUser;
-            var dashboardPage = loginPage.Login(teamLeadUser);
+            var teamLeadUser = TestData.TeamLeadUser;
 
-            var actualResult = dashboardPage.NavigationPanel.ReadUserLinkText();
-
-            Assert.AreEqual(teamLeadUser.Name, actualResult);
+            var dashboardPage = loginPage.Login(teamLeadUser.Email, "password1");
+            loginPage.Validate().LoginForm();
         }
 
         [TestCategory("LoginPageTests")]
         [Owner("Kristina Solenkova")]
         [TestMethod]
-        public void Test004LoginWithEmployeeUser()
+        public void Test004LoginWithEmployee1User()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();
@@ -64,7 +63,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("LoginPageTests")]
         [Owner("Kristina Solenkova")]
         [TestMethod]
-        public void Test005LogOutAsEmployee()
+        public void Test005LogOutAsEmployee1()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();
@@ -87,6 +86,36 @@ namespace TeamProjectFluxday.Tests
             var employeeUser = Data.TestData.Employee1;
             loginPage.Login("emploe@fluxday.io", employeeUser.Password);
 
+            loginPage.Validate().LoginForm();
+        }
+
+        [TestCategory("LoginPageTests")]
+        [Owner("Angel Botev")]
+        [TestMethod]
+        public void Test007LoginWithEmployee2User()
+        {
+            var loginPage = new LoginPage();
+            loginPage.Navigate();
+
+            var employee2User = TestData.Employee2;
+            var dashboardPage = loginPage.Login(employee2User);
+
+            var actualResult = dashboardPage.NavigationPanel.ReadUserLinkText();
+
+            Assert.AreEqual(employee2User.Name, actualResult);
+        }
+
+        [TestCategory("LoginPageTests")]
+        [Owner("Angel Botev")]
+        [TestMethod]
+        public void Test008VerifyEmployee2CantLoginWithInvalidPassword()
+        {
+            var loginPage = new LoginPage();
+            loginPage.Navigate();
+
+            var employee2User = TestData.Employee2;
+
+            var dashboardPage = loginPage.Login(employee2User.Email, "password1");
             loginPage.Validate().LoginForm();
         }
     }

@@ -11,8 +11,8 @@ namespace TeamProjectFluxday.Pages
 
         public TeamDetailsPage SelectTeam(string teamName)
         {
-            string teamCode = TestData.TeamIndexes[teamName];
-            return new TeamDetailsPage($"https://app.fluxday.io/teams/{teamCode}#pane3");
+            string teamIndex = TestData.TeamIndexes[teamName];
+            return new TeamDetailsPage($"https://app.fluxday.io/teams/{teamIndex}#pane3");
         }
     }
 }

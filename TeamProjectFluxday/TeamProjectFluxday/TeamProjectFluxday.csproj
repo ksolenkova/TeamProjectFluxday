@@ -75,23 +75,18 @@
     <Compile Include="Pages\MyTasks\AddNewTask\AddNewTaskPageValidator.cs" />
     <Compile Include="Pages\MyTasks\MyTasksPage.cs" />
     <Compile Include="Pages\MyTasks\MyTasksPageMap.cs" />
-
     <Compile Include="Pages\Team\EditTeam\EditTeamPage.cs" />
     <Compile Include="Pages\Team\EditTeam\EditTeamPageMap.cs" />
     <Compile Include="Pages\Team\EditTeam\EditTeamPageValidator.cs" />
     <Compile Include="Pages\Team\TeamDetails\TeamDetailsPage.cs" />
     <Compile Include="Pages\Team\TeamDetails\TeamDetailsPageMap.cs" />
     <Compile Include="Pages\Team\TeamDetails\TeamDetailsPageValidator.cs" />
-
     <Compile Include="Pages\MyTasks\MyTasksPageValidator.cs" />
-
     <Compile Include="Pages\Team\TeamPage.cs" />
     <Compile Include="Pages\Team\TeamPageMap.cs" />
     <Compile Include="Pages\Departments\DepartmentsPage.cs" />
     <Compile Include="Pages\Departments\DepartmentsPageMap.cs" />
-
     <Compile Include="Pages\Team\TeamPageValidator.cs" />
-
     <Compile Include="Pages\Users\AddAnEmployee\AddAnEmployeePage.cs" />
     <Compile Include="Pages\Users\AddAnEmployee\AddAnEmployeePageMap.cs" />
     <Compile Include="Pages\Users\AddAnEmployee\AddAnEmployeePageValidator.cs" />
@@ -99,7 +94,6 @@
     <Compile Include="Pages\Users\UserDetails\UserDetailsPageMap.cs" />
     <Compile Include="Pages\Users\UserDetails\UserDetailsPageValidator.cs" />
     <Compile Include="Pages\Users\UsersPageValidator.cs" />
-
     <Compile Include="Parts\NavigationPanel.cs" />
     <Compile Include="Parts\NavigationPanelMap.cs" />
     <Compile Include="Parts\NavigationPanelValidator.cs" />
@@ -110,6 +104,7 @@
     <Compile Include="Pages\Users\UsersPage.cs" />
     <Compile Include="Pages\Users\UsersPageMap.cs" />
     <Compile Include="Tests\EditDepartmentsPageTests.cs" />
+    <Compile Include="Tests\EditTeamPageTests.cs" />
     <Compile Include="Tests\LoginPageTests.cs" />
     <Compile Include="Core\BasePage.cs" />
     <Compile Include="Core\BasePageMap.cs" />

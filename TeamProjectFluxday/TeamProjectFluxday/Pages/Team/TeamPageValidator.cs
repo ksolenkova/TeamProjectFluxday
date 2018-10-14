@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading;
 using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Data;
 
 namespace TeamProjectFluxday.Pages
 {
@@ -15,7 +16,7 @@ namespace TeamProjectFluxday.Pages
 
         public void DefaultTeamsCount()
         {
-            Assert.AreEqual(6, Map.ListOfTeams.Count);
+            Assert.AreEqual(TestData.DefaultTeamsList.Count, Map.ListOfTeams.Count);
         }
 
         internal void TeamExists(string teamName)

@@ -17,6 +17,12 @@ namespace TeamProjectFluxday.Pages
             Map.CancelButton.Click();
         }
 
-        
+        internal void ChangeTeamName(string newName)
+        {
+            var nameInput = Map.TeamNameField;
+            nameInput.Click();
+            nameInput.Clear();
+            nameInput.SendKeys(newName);
+        }
     }
 }

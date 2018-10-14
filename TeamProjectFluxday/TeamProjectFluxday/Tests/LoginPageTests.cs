@@ -63,7 +63,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("LoginPageTests")]
         [Owner("Angel Botev")]
         [TestMethod]
-        public void Test004LoginWithEmployee2User()
+        public void Test010LoginWithEmployee2User()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();
@@ -79,7 +79,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("LoginPageTests")]
         [Owner("Angel Botev")]
         [TestMethod]
-        public void Test005VerifyEmployee2CantLoginWithInvalidPassword()
+        public void Test012VerifyEmployee2CantLoginWithInvalidPassword()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();

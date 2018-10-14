@@ -1,9 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data;
 using TeamProjectFluxday.Utils;
@@ -42,6 +37,21 @@ namespace TeamProjectFluxday.Tests
             departmentsPage.ClickOnFinanceDepartment();
 
             departmentsPage.Validate().SettingsIconIsNotPresent();
+        }
+
+        [TestCategory("EditDepartmentsPageTests")]
+        [Owner("Kristina Solenkova")]
+        [TestMethod]
+        public void Test003VerifyCancelAndSaveButtonsAreEnabled()
+        {
+            var dashboardPage = LoginProvider.Login(TestData.AdminUser);
+
+            var departmentsPage = dashboardPage.NavigationPanel.NavigateToDepartmentsPage();
+            departmentsPage.ClickOnFinanceDepartment();
+            departmentsPage.PressSettingsIcon();
+
+            var editDepartmentsPage = departmentsPage.PressEdit();
+            editDepartmentsPage.Validate().CancelAndSaveButtonsAreEnabled();
         }
     }
 }

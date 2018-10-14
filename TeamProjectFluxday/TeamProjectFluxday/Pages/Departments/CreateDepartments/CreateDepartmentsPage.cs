@@ -7,7 +7,7 @@ namespace TeamProjectFluxday.Pages
     {
         private DepartmentsPage departmentsPage;
 
-        public CreateDepartmentsPage(string url = @"https://app.fluxday.io/projects/new#pane3") : base(url)
+        public CreateDepartmentsPage(string url = "https://app.fluxday.io/projects/new#pane3") : base(url)
         {
             DepartmentsPage = new DepartmentsPage();
         }

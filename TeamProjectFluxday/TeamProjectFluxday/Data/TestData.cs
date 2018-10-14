@@ -87,7 +87,7 @@ namespace TeamProjectFluxday.Data
             }
         }
 
-        public static User Employee
+        public static User Employee1
         {
             get
             {

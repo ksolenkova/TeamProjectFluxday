@@ -20,5 +20,13 @@ namespace TeamProjectFluxday.Pages
                 return GetElement(By.CssSelector(".button.alert.right"));
             }
         }
+
+        public IWebElement Cancel
+        {
+            get
+            {
+                return GetElement(By.CssSelector(".btn.cancel-btn"));
+            }
+        }
     }
 }

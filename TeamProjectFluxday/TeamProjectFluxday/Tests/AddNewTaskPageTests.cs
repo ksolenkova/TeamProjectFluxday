@@ -19,10 +19,21 @@ namespace TeamProjectFluxday.Tests
             dashboardPage = LoginProvider.Login(TestData.TeamLeadUser);
         }
 
+
         [TestCategory("AddNewTaskPageTests")]
         [Owner("Yusuf Machan")]
         [TestMethod]
-        public void Test001CreateNewTask()
+        public void Test002NewTaskButtonValidation()
+        {
+            var addNewTaskPage = dashboardPage.NavigationPanel.NavigateToAddNewTaskPage();
+            Thread.Sleep(1000);
+            addNewTaskPage.Validate().IsOnAddNewTaskPage();
+        }
+
+        [TestCategory("AddNewTaskPageTests")]
+        [Owner("Yusuf Machan")]
+        [TestMethod]
+        public void Test003CreateNewTask()
         {
             var addNewTaskPage = dashboardPage.NavigationPanel.NavigateToAddNewTaskPage();
             

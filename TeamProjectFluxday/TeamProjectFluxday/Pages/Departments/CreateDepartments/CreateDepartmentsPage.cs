@@ -1,6 +1,5 @@
 ﻿using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data.Models;
-using TeamProjectFluxday.Utils;
 
 namespace TeamProjectFluxday.Pages
 {
@@ -33,7 +32,7 @@ namespace TeamProjectFluxday.Pages
             Map.Description.SendKeys(newDepartment.Description);
             Map.SaveButton.Click();
 
-            return DepartmentsPage;
+            return new DepartmentsPage();
         }
     }
 }

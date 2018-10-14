@@ -21,7 +21,19 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("AddAnEmployeePageTests")]
         [Owner("Dobrin Ganev")]
         [TestMethod]
-        public void Test001AddAnEmployeeUser()
+        public void Test001AdAnEmployeePageValidation()
+        {
+            var usersPage = dashboardPage.NavigationPanel.NavigateToUsersPage();
+
+            var addAnEmployeePage = usersPage.AddUserClick();
+
+            addAnEmployeePage.Validate().IsOnAddAnEmployeePage();
+        }
+
+        [TestCategory("AddAnEmployeePageTests")]
+        [Owner("Dobrin Ganev")]
+        [TestMethod]
+        public void Test002AddAnEmployeeUser()
         {
             var usersPage = dashboardPage.NavigationPanel.NavigateToUsersPage();
 
@@ -33,6 +45,20 @@ namespace TeamProjectFluxday.Tests
 
             var userDetailsPage = usersPage.NewUserClick();
             userDetailsPage.DeleteNewUser();
+        }
+
+        [TestCategory("AddAnEmployeePageTests")]
+        [Owner("Dobrin Ganev")]
+        [TestMethod]
+        public void Test003CancelAddingAnEmployeeUser()
+        {
+            var usersPage = dashboardPage.NavigationPanel.NavigateToUsersPage();
+
+            var addAnEmployeePage = usersPage.AddUserClick();
+            addAnEmployeePage.FillInAddUserForm();
+            addAnEmployeePage.CancelButtonClick();
+
+           // usersPage.Validate().NewEmployeeIsNotInTheList();
         }
     }
 }

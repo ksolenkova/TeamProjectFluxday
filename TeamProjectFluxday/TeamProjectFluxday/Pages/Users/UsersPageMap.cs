@@ -10,7 +10,7 @@ namespace TeamProjectFluxday.Pages
         {
             get
             {
-                return GetElement(By.CssSelector("div.title"));
+                return GetElement(By.CssSelector(".pane2-meta>.title"));
             }
         }
 
@@ -26,7 +26,7 @@ namespace TeamProjectFluxday.Pages
         {
             get
             {
-                return GetElement(By.LinkText("TestEmployee"));
+                return Browser.FindElement(By.LinkText("TestEmployee"));
             }
         }
 

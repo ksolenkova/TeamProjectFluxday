@@ -1,4 +1,5 @@
-﻿using TeamProjectFluxday.Parts;
+﻿using OpenQA.Selenium;
+using TeamProjectFluxday.Parts;
 
 namespace TeamProjectFluxday.Core
 {
@@ -19,5 +20,18 @@ namespace TeamProjectFluxday.Core
                 return new NavigationPanel();
             }
         }
+
+        //public bool ElementIsNotPresent(IWebElement element, By by)
+        //{
+        //    try
+        //    {
+        //        Driver.Browser.FindElement(by);
+        //        return false;
+        //    }
+        //    catch (NoSuchElementException)
+        //    {
+        //        return true;
+        //    }
+        //}
     }
 }

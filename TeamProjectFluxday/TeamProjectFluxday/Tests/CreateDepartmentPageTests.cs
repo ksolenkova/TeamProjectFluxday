@@ -22,7 +22,19 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("CreateDepartmentsPageTestsAsAdmin")]
         [Owner("Kristina Solenkova")]
         [TestMethod]
-        public void Test001CreateDepartmentAsAnAdmin()
+        public void Test001CreateDepartmentsPageValidation()
+        {
+            var departmentsPage = dashboardPage.NavigationPanel.NavigateToDepartmentsPage();
+
+            var createDepartmentPage = departmentsPage.PressCreateDepartmentLink();
+
+            createDepartmentPage.Validate().CreateDepartmentForm();
+        }
+
+        [TestCategory("CreateDepartmentsPageTestsAsAdmin")]
+        [Owner("Kristina Solenkova")]
+        [TestMethod]
+        public void Test002CreateDepartmentAsAnAdmin()
         {
             Department newDepartment = new Department("Administration",
                                        StringHelper.AppendDateTimeString("ADM"),

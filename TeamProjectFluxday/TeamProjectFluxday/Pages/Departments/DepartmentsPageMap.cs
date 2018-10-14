@@ -38,6 +38,14 @@ namespace TeamProjectFluxday.Pages
             }
         }
 
+        public IWebElement EditLink
+        {
+            get
+            {
+                return GetElement(By.CssSelector("#drop1>li:first-child >a"));
+            }
+        }
+
         public IWebElement DeleteLink
         {
             get
@@ -51,6 +59,22 @@ namespace TeamProjectFluxday.Pages
             get
             {
                 return GetElements(By.CssSelector(".cols > .title"));
+            }
+        }
+
+        public IWebElement FinanceLink
+        {
+            get
+            {
+                return GetElement(By.CssSelector("a[href='/projects/3']>div>div:nth-child(2)>.title"));
+            }
+        }
+
+        public bool SettingsNotVisible
+        {
+            get
+            {
+                return ElementIsNotPresent(By.CssSelector("div.icon.settings-link"));
             }
         }
     }

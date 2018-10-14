@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
+using System;
 using TeamProjectFluxday.Core;
-using TeamProjectFluxday.Data.Models;
 
 namespace TeamProjectFluxday.Pages
 {
@@ -25,6 +26,17 @@ namespace TeamProjectFluxday.Pages
         internal void DefaultDepartmentsCount()
         {
             Assert.AreEqual(4, Map.ListOfDepartments.Count);
+        }
+
+        internal void TitleIsChanged()
+        {
+            var expectedResult = "Finance Department";
+            Assert.AreEqual(expectedResult, Map.MainTitleOfDepartment.Text);
+        }
+
+        internal void SettingsIconIsNotPresent()
+        {
+            Assert.IsTrue(Map.SettingsNotVisible);
         }
     }
 }

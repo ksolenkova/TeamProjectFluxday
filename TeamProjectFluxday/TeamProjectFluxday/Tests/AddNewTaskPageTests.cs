@@ -8,7 +8,7 @@ using TeamProjectFluxday.Utils;
 namespace TeamProjectFluxday.Tests
 {
     [TestClass]
-    public class MyTasksPageTests : BaseTest
+    public class AddNewTaskPageTests : BaseTest
     {
         DashboardPage dashboardPage;
 
@@ -19,14 +19,22 @@ namespace TeamProjectFluxday.Tests
             dashboardPage = LoginProvider.Login(TestData.TeamLeadUser);
         }
 
-        [TestCategory("MyTasksPageTests")]
+        [TestCategory("AddNewTaskPageTests")]
         [Owner("Yusuf Machan")]
         [TestMethod]
-        public void Test001MyTasksPageValidation()
+        public void Test001CreateNewTask()
         {
+            var addNewTaskPage = dashboardPage.NavigationPanel.NavigateToAddNewTaskPage();
+            
+            addNewTaskPage.CreateNewTask();
+
             var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
+
+            myTasksPage.Validate().TaskExists();
             Thread.Sleep(1000);
-            myTasksPage.Validate().IsOnMyTasksPage();
+            myTasksPage.DeleteNewTask();
+            Thread.Sleep(1000);
+            myTasksPage.Validate().IsTaskDeleted();
         }
     }
 }

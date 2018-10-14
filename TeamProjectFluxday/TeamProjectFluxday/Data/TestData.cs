@@ -44,7 +44,7 @@ namespace TeamProjectFluxday.Data
             }
         }
 
-        public static Task NewTask
+        public static Task Task
         {
             get
             {

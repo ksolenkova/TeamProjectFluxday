@@ -18,6 +18,7 @@ namespace TeamProjectFluxday.Tests
         }
 
         [TestCategory("LoginPageTests")]
+        [Owner("Dobrin Ganev")]
         [TestMethod]
         public void Test002LoginWithAdminUser()
         {
@@ -27,9 +28,7 @@ namespace TeamProjectFluxday.Tests
             var adminUser = Data.TestData.AdminUser;
             var dashboardPage = loginPage.Login(adminUser);
 
-            var actualResult = dashboardPage.NavigationPanel.ReadUserLinkText();
-
-            Assert.AreEqual(adminUser.Name, actualResult);
+            dashboardPage.Validate().UserNameLink(adminUser.Name);
         }
 
         [TestCategory("LoginPageTests")]

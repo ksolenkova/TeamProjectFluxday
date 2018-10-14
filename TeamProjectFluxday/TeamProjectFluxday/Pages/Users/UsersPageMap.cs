@@ -26,7 +26,7 @@ namespace TeamProjectFluxday.Pages
         {
             get
             {
-                return Browser.FindElement(By.LinkText("TestEmployee"));
+                return Browser.FindElement(By.PartialLinkText("TestEmployee"));
             }
         }
 
@@ -35,6 +35,14 @@ namespace TeamProjectFluxday.Pages
             get
             {
                 return GetElements(By.CssSelector(".user-name"));
+            }
+        }
+
+        public bool NewEmployeeNotVisible
+        {
+            get
+            {
+                return ElementIsNotPresent(By.LinkText("TestEmployee"));
             }
         }
     }

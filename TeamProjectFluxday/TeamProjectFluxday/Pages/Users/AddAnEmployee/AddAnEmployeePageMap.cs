@@ -13,6 +13,14 @@ namespace TeamProjectFluxday.Pages
             }
         }
 
+        public bool AddAnEmployeeTitleNotVisible
+        {
+            get
+            {
+                return ElementIsNotPresent(By.CssSelector(".small-12>.title"));
+            }
+        }
+
         public IWebElement UserNameField
         {
             get

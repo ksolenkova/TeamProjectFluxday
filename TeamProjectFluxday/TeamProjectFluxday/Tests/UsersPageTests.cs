@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Threading;
 using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data;
 using TeamProjectFluxday.Pages;
@@ -25,7 +24,7 @@ namespace TeamProjectFluxday.Tests
         public void Test001UsersPageValidation()
         {
             var usersPage = dashboardPage.NavigationPanel.NavigateToUsersPage();
-            Thread.Sleep(2000);
+            
             usersPage.Validate().IsOnUsersPage();
         }
 

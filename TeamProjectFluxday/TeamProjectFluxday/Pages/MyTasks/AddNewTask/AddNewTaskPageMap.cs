@@ -28,5 +28,13 @@ namespace TeamProjectFluxday.Pages.MyTasks.AddNewTask
                 return GetElement(By.CssSelector(".button"));
             }
         }
+
+        public IWebElement AddNewTaskPageTitle
+        {
+            get
+            {
+                return GetElement(By.CssSelector(".small-12>.title"));
+            }
+        }
     }
 }

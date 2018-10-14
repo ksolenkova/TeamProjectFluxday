@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
 using TeamProjectFluxday.Core;
 
 namespace TeamProjectFluxday.Pages
@@ -41,7 +40,5 @@ namespace TeamProjectFluxday.Pages
 
             return new EditDepartmentsPage();
         }
-
-        
     }
 }

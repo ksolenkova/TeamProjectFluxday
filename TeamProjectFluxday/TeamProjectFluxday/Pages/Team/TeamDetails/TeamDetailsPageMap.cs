@@ -28,5 +28,21 @@ namespace TeamProjectFluxday.Pages
                 return GetElement(By.CssSelector(".active a .fig"));
             }
         }
+
+        public IWebElement SettingsIcon
+        {
+            get
+            {
+                return GetElement(By.CssSelector("div.icon"));
+            }
+        }
+
+        public IWebElement EditOption
+        {
+            get
+            {
+                return GetElement(By.CssSelector("#drop1 > li:nth-child(1) > a:nth-child(1)"));
+            }
+        }
     }
 }

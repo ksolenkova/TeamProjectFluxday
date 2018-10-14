@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading;
-using TeamProjectFluxday.Core;
+﻿using TeamProjectFluxday.Core;
 
 namespace TeamProjectFluxday.Pages
 {
@@ -12,7 +10,6 @@ namespace TeamProjectFluxday.Pages
         {
             DepartmentsPage = new DepartmentsPage();
         }
-
 
         public DepartmentsPage DepartmentsPage
         {

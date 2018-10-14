@@ -5,10 +5,22 @@ namespace TeamProjectFluxday.Data
 {
     public static class TestData
     {
-        private static List<User> usersList = new List<User>()
+        private static List<User> defaulUsersList = new List<User>()
         {
             AdminUser,
-            TeamLeadUser
+            TeamLeadUser,
+            Employee1,
+            Employee2
+        };
+
+        private static List<string> defaultTeamsList = new List<string>()
+        {
+            "DevOps",
+            "Fedena Development",
+            "Support",
+            "Testing",
+            "UI/UX Design",
+            "Uzity Development",
         };
 
         private static Dictionary<string, string> teamIndexes = new Dictionary<string, string>()
@@ -37,11 +49,11 @@ namespace TeamProjectFluxday.Data
             }
         }
 
-        public static List<User> UserList
+        public static List<User> DefaultUsersList
         {
             get
             {
-                return usersList;
+                return defaulUsersList;
 
             }
         }
@@ -51,6 +63,15 @@ namespace TeamProjectFluxday.Data
             get
             {
                 return teamIndexes;
+
+            }
+        }
+
+        public static List<string> DefaultTeamsList
+        {
+            get
+            {
+                return defaultTeamsList;
 
             }
         }
@@ -87,11 +108,19 @@ namespace TeamProjectFluxday.Data
             }
         }
 
-        public static User Employee
+        public static User Employee1
         {
             get
             {
                 return new User("emp1@fluxday.io", "password", "Employee 1");
+            }
+        }
+
+        public static User Employee2
+        {
+            get
+            {
+                return new User("emp2@fluxday.io", "password", "Employee 2");
             }
         }
     }

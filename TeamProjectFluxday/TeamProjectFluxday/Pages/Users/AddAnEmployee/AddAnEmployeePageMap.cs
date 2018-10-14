@@ -5,6 +5,14 @@ namespace TeamProjectFluxday.Pages
 {
     public class AddAnEmployeePageMap : BasePageMap
     {
+        public IWebElement AddAnEmployeeTitle
+        {
+            get
+            {
+                return GetElement(By.CssSelector(".small-12>.title"));
+            }
+        }
+
         public IWebElement UserNameField
         {
             get
@@ -58,6 +66,14 @@ namespace TeamProjectFluxday.Pages
             get
             {
                 return GetElement(By.CssSelector(".button"));
+            }
+        }
+
+        public IWebElement CancelButton
+        {
+            get
+            {
+                return GetElement(By.CssSelector(".btn"));
             }
         }
     }

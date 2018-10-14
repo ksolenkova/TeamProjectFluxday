@@ -1,5 +1,5 @@
-using TeamProjectFluxday.Data.Models;
 using System.Collections.Generic;
+using TeamProjectFluxday.Data.Models;
 
 namespace TeamProjectFluxday.Data
 {
@@ -9,6 +9,16 @@ namespace TeamProjectFluxday.Data
         {
             AdminUser,
             TeamLeadUser
+        };
+
+        private static Dictionary<string, string> teamIndexes = new Dictionary<string, string>()
+        {
+            { "DevOps", "11"},
+            { "Fedena Development", "1"},
+            { "Support", "4"},
+            { "Testing", "2"},
+            { "UI/UX Design", "10"},
+            { "Uzity Development", "3"}
         };
 
         public static User AdminUser
@@ -26,14 +36,6 @@ namespace TeamProjectFluxday.Data
                 return new User("lead@fluxday.io", "password", "Team Lead");
             }
         }
-        public static Team DevOps
-        {
-            get
-            {
-                return new Team("DevOps", "01");
-            }
-        }
-
 
         public static List<User> UserList
         {
@@ -41,6 +43,39 @@ namespace TeamProjectFluxday.Data
             {
                 return usersList;
 
+            }
+        }
+
+        public static Dictionary<string, string> TeamIndexes
+        {
+            get
+            {
+                return teamIndexes;
+
+            }
+        }
+
+        public static Team DevOps
+        {
+            get
+            {
+                return new Team("DevOps", "devops", "Engineering");
+            }
+        }
+
+        public static Team UzityDevelopment
+        {
+            get
+            {
+                return new Team("Uzity Development", "uzitydev", "Engineering");
+            }
+        }
+
+        public static Team Support
+        {
+            get
+            {
+                return new Team("Support", "sup", "Engineering");
             }
         }
 

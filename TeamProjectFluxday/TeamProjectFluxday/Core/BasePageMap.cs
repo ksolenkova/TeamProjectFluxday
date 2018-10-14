@@ -1,5 +1,7 @@
-﻿using OpenQA.Selenium;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using System;
 using System.Collections.Generic;
 using ExpectedConditions = SeleniumExtras.WaitHelpers.ExpectedConditions;
 
@@ -32,6 +34,19 @@ namespace TeamProjectFluxday.Core
         public IReadOnlyCollection<IWebElement> GetElements(By by)
         {
             return BrowserWait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(by));
+        }
+
+        public bool ElementIsNotPresent(By by)
+        {
+            try
+            {
+                GetElement(by);
+                return false;
+            }
+            catch (WebDriverTimeoutException)
+            {
+                return true;
+            }
         }
     }
 }

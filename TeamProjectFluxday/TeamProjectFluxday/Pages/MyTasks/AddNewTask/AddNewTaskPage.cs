@@ -2,7 +2,7 @@
 using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data;
 
-namespace TeamProjectFluxday.Pages.MyTasks.AddNewTask
+namespace TeamProjectFluxday.Pages
 {
     public class AddNewTaskPage : BasePage<AddNewTaskPageMap, AddNewTaskPageValidator>
     {

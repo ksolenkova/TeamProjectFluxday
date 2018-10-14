@@ -16,5 +16,23 @@ namespace TeamProjectFluxday.Pages
             var expectedResult = "TestEmployee";
             Assert.AreEqual(expectedResult, Map.NewUser.Text);
         }
+
+        internal void AddUserLinkIsAvailabe()
+        {
+            var expectedResult = "Add user";
+            Assert.IsTrue(Map.AddUser.Displayed, "Add user link is not displayed!");
+            Assert.IsTrue(Map.AddUser.Enabled, "Add user link is not enabled!");
+            Assert.AreEqual(expectedResult, Map.AddUser.Text);
+        }
+
+        internal void DefaultUsersListCount()
+        {
+            Assert.AreEqual(4, Map.ListOfUsers.Count);
+        }
+
+        //internal void NewEmployeeIsNotInTheList()
+        //{
+        //    Assert.IsFalse(Map.NewUser.Displayed, "New employee is in the list!");
+        //}
     }
 }

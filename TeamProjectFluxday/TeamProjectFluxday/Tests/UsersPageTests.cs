@@ -20,13 +20,33 @@ namespace TeamProjectFluxday.Tests
         }
 
         [TestCategory("UsersPageTests")]
+        [Owner("Dobrin Ganev")]
         [TestMethod]
-
         public void Test001UsersPageValidation()
         {
             var usersPage = dashboardPage.NavigationPanel.NavigateToUsersPage();
             Thread.Sleep(2000);
             usersPage.Validate().IsOnUsersPage();
+        }
+
+        [TestCategory("UsersPageTests")]
+        [Owner("Dobrin Ganev")]
+        [TestMethod]
+        public void Test002AddUserLinkValidation()
+        {
+            var usersPage = dashboardPage.NavigationPanel.NavigateToUsersPage();
+            
+            usersPage.Validate().AddUserLinkIsAvailabe();
+        }
+
+        [TestCategory("UsersPageTests")]
+        [Owner("Dobrin Ganev")]
+        [TestMethod]
+        public void Test003ValidateDefaultUsersListCount()
+        {
+            var usersPage = dashboardPage.NavigationPanel.NavigateToUsersPage();
+
+            usersPage.Validate().DefaultUsersListCount();
         }
     }
 }

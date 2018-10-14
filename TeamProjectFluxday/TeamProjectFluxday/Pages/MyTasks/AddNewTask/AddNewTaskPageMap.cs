@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using TeamProjectFluxday.Core;
 
-namespace TeamProjectFluxday.Pages.MyTasks.AddNewTask
+namespace TeamProjectFluxday.Pages
 {
     public class AddNewTaskPageMap : BasePageMap
     {

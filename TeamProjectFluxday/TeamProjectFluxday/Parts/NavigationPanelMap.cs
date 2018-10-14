@@ -22,7 +22,7 @@ namespace TeamProjectFluxday.Parts
             }
         }
 
-        public IWebElement TeamUserLink
+        public IWebElement TeamLink
         {
             get
             {

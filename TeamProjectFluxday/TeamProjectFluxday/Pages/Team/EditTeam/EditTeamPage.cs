@@ -16,5 +16,7 @@ namespace TeamProjectFluxday.Pages
         {
             Map.CancelButton.Click();
         }
+
+        
     }
 }

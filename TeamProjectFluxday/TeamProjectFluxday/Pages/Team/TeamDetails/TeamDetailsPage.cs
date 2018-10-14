@@ -7,5 +7,10 @@ namespace TeamProjectFluxday.Pages
         public TeamDetailsPage(string url) : base(url)
         {
         }
+
+        internal void ClickOnSettingsIcon()
+        {
+            Map.SettingsIcon.Click();
+        }
     }
 }

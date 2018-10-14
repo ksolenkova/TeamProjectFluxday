@@ -44,6 +44,5 @@ namespace TeamProjectFluxday.Tests
             var teamPage = dashboardPage.NavigationPanel.NavigateToTeamPage();
             teamPage.Validate().TeamExists(TestData.DevOps.Name);
         }
-
     }
 }

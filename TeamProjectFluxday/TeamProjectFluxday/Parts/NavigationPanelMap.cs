@@ -34,7 +34,7 @@ namespace TeamProjectFluxday.Parts
         {
             get
             {
-                return GetElement(By.XPath(@"/html/body/div[2]/div[1]/ul[2]/li[5]/a"));
+                return GetElement(By.CssSelector("ul.side-nav:nth-child(2) > li:nth-child(4) > a:nth-child(1)"));
             }
         }
 

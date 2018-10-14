@@ -19,7 +19,7 @@ namespace TeamProjectFluxday.Pages
         {
             get
             {
-                return GetElement(By.XPath("//*[@id=\"pane2\"]/div[1]/div"));
+                return GetElement(By.CssSelector("div.title"));
             }
         }
 

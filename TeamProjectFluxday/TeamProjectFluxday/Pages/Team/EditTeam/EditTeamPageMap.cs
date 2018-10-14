@@ -19,5 +19,13 @@ namespace TeamProjectFluxday.Pages
                 return GetElement(By.CssSelector(".button"));
             }
         }
+
+        public IWebElement TeamNameField
+        {
+            get
+            {
+                return GetElement(By.CssSelector("#team_name"));
+            }
+        }
     }
 }

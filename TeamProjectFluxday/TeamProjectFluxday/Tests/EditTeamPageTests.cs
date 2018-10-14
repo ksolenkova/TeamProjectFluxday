@@ -29,7 +29,8 @@ namespace TeamProjectFluxday.Tests
             var teamPage = dashboardPage.NavigationPanel.NavigateToTeamPage();
             var supportDetailsPage = teamPage.SelectTeam(defaultSupportName);
             //supportDetailsPage.Navigate();
-            //var editSupportPage = supportDetailsPage.NavigateToTeamDetailsPage(defaultSupportName);
+            var editSupportPage = supportDetailsPage.NavigateToTeamDetailsPage(defaultSupportName);
+            editSupportPage.Navigate();
             //supportDetailsPage.Validate();
         }
     }

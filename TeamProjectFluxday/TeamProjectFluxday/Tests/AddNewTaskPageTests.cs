@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Threading;
 using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data;
 using TeamProjectFluxday.Pages;
@@ -19,14 +18,13 @@ namespace TeamProjectFluxday.Tests
             dashboardPage = LoginProvider.Login(TestData.TeamLeadUser);
         }
 
-
         [TestCategory("AddNewTaskPageTests")]
         [Owner("Yusuf Machan")]
         [TestMethod]
-        public void Test002NewTaskButtonValidation()
+        public void Test002AddNewTaskPageValidation()
         {
             var addNewTaskPage = dashboardPage.NavigationPanel.NavigateToAddNewTaskPage();
-            Thread.Sleep(1000);
+            
             addNewTaskPage.Validate().IsOnAddNewTaskPage();
         }
 
@@ -42,9 +40,9 @@ namespace TeamProjectFluxday.Tests
             var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
 
             myTasksPage.Validate().TaskExists();
-            Thread.Sleep(1000);
+            
             myTasksPage.DeleteNewTask();
-            Thread.Sleep(1000);
+            
             myTasksPage.Validate().IsTaskDeleted();
         }
     }

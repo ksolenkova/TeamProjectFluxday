@@ -33,15 +33,30 @@ namespace TeamProjectFluxday.Tests
         }
 
         [TestCategory("LoginPageTests")]
+        [Owner("Yusuf Machan")]
         [TestMethod]
-        public void Test003VerifyTeamLeadCantLoginWithInvalidPassword()
+        public void Test000LoginWithLeadUser()
+        {
+            var loginPage = new LoginPage();
+            loginPage.Navigate();
+
+            var teamLeadUser = TestData.TeamLeadUser;
+            var dashboardPage = loginPage.Login(teamLeadUser);
+            dashboardPage.Validate().UserNameLink(teamLeadUser.Name);  
+        }
+
+        [TestCategory("LoginPageTests")]
+        [Owner("Yusuf Machan")]
+        [TestMethod]
+        public void Test001LoginWithInvalidPassword()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();
 
             var teamLeadUser = TestData.TeamLeadUser;
 
-            var dashboardPage = loginPage.Login(teamLeadUser.Email, "password1");
+            var dashboardPage = loginPage.Login(teamLeadUser.Email, "invalidPassword");
+            
             loginPage.Validate().LoginForm();
         }
 

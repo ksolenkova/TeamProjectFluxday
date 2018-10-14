@@ -1,4 +1,5 @@
 ﻿using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Data;
 
 namespace TeamProjectFluxday.Pages
 {
@@ -8,9 +9,10 @@ namespace TeamProjectFluxday.Pages
         {
         }
 
-        public EditTeamPage NavigateToEditTeamPage()
+        public TeamDetailsPage SelectTeam(string teamName)
         {
-            return new EditTeamPage();
+            string teamCode = TestData.TeamIndexes[teamName];
+            return new TeamDetailsPage($"https://app.fluxday.io/teams/{teamCode}#pane3");
         }
     }
 }

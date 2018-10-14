@@ -19,15 +19,7 @@ namespace TeamProjectFluxday.Pages
         {
             get
             {
-                return GetElement(By.CssSelector("div.title"));
-            }
-        }
-
-        public IReadOnlyCollection<IWebElement> AddTaskButtonsList
-        {
-            get
-            {
-                return GetElements(By.CssSelector(".btn"));
+                return GetElement(By.XPath("//*[@id=\"pane2\"]/div[1]/div"));
             }
         }
 

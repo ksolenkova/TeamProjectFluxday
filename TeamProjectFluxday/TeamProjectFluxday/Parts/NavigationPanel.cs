@@ -1,5 +1,6 @@
 using System.Threading;
 using TeamProjectFluxday.Pages;
+using TeamProjectFluxday.Pages;
 
 namespace TeamProjectFluxday.Parts
 {
@@ -50,6 +51,34 @@ namespace TeamProjectFluxday.Parts
             Map.TeamLink.Click();
 
             return new TeamPage();
+        }
+
+        internal MyTasksPage NavigateToMyTasksPage()
+        {
+            Map.MyTasksLink.Click();
+
+            return new MyTasksPage();
+        }
+
+        internal DepartmentsPage NavigateToDepartmentsPage()
+        {
+            Map.DepartmentsLink.Click();
+
+            return new DepartmentsPage();
+        }
+
+        internal UsersPage NavigateToUsersPage()
+        {
+            Map.UsersLink.Click();
+
+            return new UsersPage();
+        }
+
+        internal AddNewTaskPage NavigateToAddNewTaskPage()
+        {
+            Map.NewTaskButton.Click();
+
+            return new AddNewTaskPage();
         }
     }
 }

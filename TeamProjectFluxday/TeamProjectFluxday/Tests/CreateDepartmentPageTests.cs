@@ -1,42 +1,43 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data;
+using TeamProjectFluxday.Data.Models;
 using TeamProjectFluxday.Pages;
-using TeamProjectFluxday.Parts;
+using TeamProjectFluxday.Utils;
 
 namespace TeamProjectFluxday.Tests
 {
     [TestClass]
     public class CreateDepartmentPageTests : BaseTest
     {
-        [TestCategory("CreateDepartmentsPageTests")]
+        DashboardPage dashboardPage;
+
+        [TestInitialize]
+        public void TestSetup()
+        {
+            Driver.StartBrowser();
+            dashboardPage = LoginProvider.Login(TestData.AdminUser);
+        }
+
+        [TestCategory("CreateDepartmentsPageTestsAsAdmin")]
+        [Owner("Kristina Solenkova")]
         [TestMethod]
         public void Test001CreateDepartmentAsAnAdmin()
         {
-            var loginPage = new LoginPage();
-            loginPage.Navigate();
+            Department newDepartment = new Department("Administration",
+                                       StringHelper.AppendDateTimeString("ADM"),
+                                       "adm",
+                                       "Administration team");
 
-            var adminUser = TestData.AdminUser;
-            var logInAsAdmin = loginPage.Login(adminUser);
+            var departmentsPage = dashboardPage.NavigationPanel.NavigateToDepartmentsPage();
 
-            var navigationPanel = new NavigationPanel();
-            navigationPanel.ClickOnDepartmentsLink();
+            var createDepartmentPage = departmentsPage.PressCreateDepartmentLink();
+            createDepartmentPage.AddDepartment(newDepartment);
 
-            var departmentsPage = new DepartmentsPage();
-            departmentsPage.ClickOnCreateDepartmentsLink();
+            createDepartmentPage.DepartmentsPage.Validate().NewDepartmentExists();
 
-            var createDepartmentsPage = departmentsPage.NavigateToCreateDepartmentPage();
-            createDepartmentsPage.WriteTitle();
-            createDepartmentsPage.WriteCode();
-            createDepartmentsPage.WriteUrl();
-            createDepartmentsPage.WriteDescription();
-            createDepartmentsPage.ClickOnSave();
-
-            //var departmentIsDisplayed = departmentsPage.NewDepartmentIsDisplayed();
-
-            //Assert.IsTrue(departmentIsDisplayed);
-
-            //departmentsPage.DeleteCreatedDepartment();
+            departmentsPage.DeleteNewlyCreatedDepartment();
+            departmentsPage.Validate().NewDepartmentIsDeleted();
         }
     }
 }

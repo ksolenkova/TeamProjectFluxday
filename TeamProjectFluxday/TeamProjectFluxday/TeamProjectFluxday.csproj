@@ -37,6 +37,9 @@
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.VisualStudio.QualityTools.UnitTestFramework.Updated.15.0.26228\lib\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
     </Reference>
+    <Reference Include="SeleniumExtras.WaitHelpers, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -55,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\BasePageValidator.cs" />
+    <Compile Include="Data\Models\Department.cs" />
     <Compile Include="Data\Models\Task.cs" />
     <Compile Include="Data\Models\Team.cs" />
     <Compile Include="Pages\Dashboard\DashboardPageValidator.cs" />
@@ -63,22 +67,41 @@
     <Compile Include="Pages\Departments\CreateDepartments\CreateDepartmentsValidator.cs" />
     <Compile Include="Pages\Departments\DepartmentsPageValidator.cs" />
     <Compile Include="Pages\Login\LoginPageValidator.cs" />
+    <Compile Include="Pages\MyTasks\AddNewTask\AddNewTaskPage.cs" />
+    <Compile Include="Pages\MyTasks\AddNewTask\AddNewTaskPageMap.cs" />
+    <Compile Include="Pages\MyTasks\AddNewTask\AddNewTaskPageValidator.cs" />
     <Compile Include="Pages\MyTasks\MyTasksPage.cs" />
     <Compile Include="Pages\MyTasks\MyTasksPageMap.cs" />
+
     <Compile Include="Pages\Team\EditTeam\EditTeamPage.cs" />
     <Compile Include="Pages\Team\EditTeam\EditTeamPageMap.cs" />
     <Compile Include="Pages\Team\EditTeam\EditTeamPageValidator.cs" />
     <Compile Include="Pages\Team\TeamDetails\TeamDetailsPage.cs" />
     <Compile Include="Pages\Team\TeamDetails\TeamDetailsPageMap.cs" />
     <Compile Include="Pages\Team\TeamDetails\TeamDetailsPageValidator.cs" />
+
+    <Compile Include="Pages\MyTasks\MyTasksPageValidator.cs" />
+
     <Compile Include="Pages\Team\TeamPage.cs" />
     <Compile Include="Pages\Team\TeamPageMap.cs" />
     <Compile Include="Pages\Departments\DepartmentsPage.cs" />
     <Compile Include="Pages\Departments\DepartmentsPageMap.cs" />
+
     <Compile Include="Pages\Team\TeamPageValidator.cs" />
+
+    <Compile Include="Pages\Users\AddAnEmployee\AddAnEmployeePage.cs" />
+    <Compile Include="Pages\Users\AddAnEmployee\AddAnEmployeePageMap.cs" />
+    <Compile Include="Pages\Users\AddAnEmployee\AddAnEmployeePageValidator.cs" />
+    <Compile Include="Pages\Users\UserDetails\UserDetailsPage.cs" />
+    <Compile Include="Pages\Users\UserDetails\UserDetailsPageMap.cs" />
+    <Compile Include="Pages\Users\UserDetails\UserDetailsPageValidator.cs" />
+    <Compile Include="Pages\Users\UsersPageValidator.cs" />
+
     <Compile Include="Parts\NavigationPanel.cs" />
     <Compile Include="Parts\NavigationPanelMap.cs" />
     <Compile Include="Parts\NavigationPanelValidator.cs" />
+    <Compile Include="Tests\AddAnEmployeePageTests.cs" />
+    <Compile Include="Tests\AddNewTaskPageTests.cs" />
     <Compile Include="Tests\CreateDepartmentPageTests.cs" />
     <Compile Include="Tests\DepartmentsPageTests.cs" />
     <Compile Include="Pages\Users\UsersPage.cs" />

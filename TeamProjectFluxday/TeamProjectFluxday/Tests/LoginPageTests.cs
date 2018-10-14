@@ -46,5 +46,19 @@ namespace TeamProjectFluxday.Tests
 
             Assert.AreEqual(teamLeadUser.Name, actualResult);
         }
+
+        [TestCategory("LoginPageTests")]
+        [Owner("Kristina Solenkova")]
+        [TestMethod]
+        public void Test004LoginWithEmployeeUser()
+        {
+            var loginPage = new LoginPage();
+            loginPage.Navigate();
+
+            var employeeUser = Data.TestData.Employee;
+            var dashboardPage = loginPage.Login(employeeUser);
+
+            dashboardPage.Validate().UserNameLink(employeeUser.Name);
+        }
     }
 }

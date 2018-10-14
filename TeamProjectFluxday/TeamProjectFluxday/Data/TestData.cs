@@ -79,11 +79,19 @@ namespace TeamProjectFluxday.Data
             }
         }
 
-        public static Task NewTask
+        public static Task Task
         {
             get
             {
                 return new Task("Test Title", "Test Description");
+            }
+        }
+
+        public static User Employee
+        {
+            get
+            {
+                return new User("emp1@fluxday.io", "password", "Employee 1");
             }
         }
     }

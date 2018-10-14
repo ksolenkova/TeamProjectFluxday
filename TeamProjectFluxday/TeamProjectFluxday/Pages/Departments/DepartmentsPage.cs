@@ -1,4 +1,5 @@
-﻿using TeamProjectFluxday.Core;
+﻿using System.Threading;
+using TeamProjectFluxday.Core;
 
 namespace TeamProjectFluxday.Pages
 {
@@ -7,39 +8,20 @@ namespace TeamProjectFluxday.Pages
         public DepartmentsPage(string url = "https://app.fluxday.io/projects#pane2") : base(url)
         {
         }
-
-        public CreateDepartmentsPage NavigateToCreateDepartmentPage()
-        {
-            return new CreateDepartmentsPage();
-        }
-
-        internal CreateDepartmentsPage ClickOnCreateDepartmentsLink()
+        
+        internal CreateDepartmentsPage PressCreateDepartmentLink()
         {
             Map.CreateDepartmentLink.Click();
+            Thread.Sleep(2000);
 
             return new CreateDepartmentsPage();
         }
-
-        //internal bool NewDepartmentIsDisplayed()
-        //{
-        //    return Map.NewlyCreatedDepartment.Displayed;
-        //}
-
-        //internal void ClickOnSettingsIcon()
-        //{
-        //    Map.SettingsIcon.Click();
-        //}
-
-        //internal void ClickOnDelete()
-        //{
-        //    Map.DeleteLink.Click();
-        //}
-
-        //internal void DeleteCreatedDepartment()
-        //{
-        //    ClickOnSettingsIcon();
-        //    ClickOnDelete();
-        //    Driver.AcceptAlert();
-        //}
+        
+        internal void DeleteNewlyCreatedDepartment()
+        {
+            Map.SettingsIcon.Click();
+            Map.DeleteLink.Click();
+            SwitchToAlert().Accept();
+        }
     }
 }

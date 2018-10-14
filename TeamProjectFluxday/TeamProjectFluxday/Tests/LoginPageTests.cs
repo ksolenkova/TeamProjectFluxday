@@ -33,8 +33,9 @@ namespace TeamProjectFluxday.Tests
         }
 
         [TestCategory("LoginPageTests")]
+        [Owner("Yusuf Machan")]
         [TestMethod]
-        public void Test003LoginWithLeadUser()
+        public void Test005LoginWithLeadUser()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();
@@ -42,9 +43,7 @@ namespace TeamProjectFluxday.Tests
             var teamLeadUser = Data.TestData.TeamLeadUser;
             var dashboardPage = loginPage.Login(teamLeadUser);
 
-            var actualResult = dashboardPage.NavigationPanel.ReadUserLinkText();
-
-            Assert.AreEqual(teamLeadUser.Name, actualResult);
+            dashboardPage.Validate().UserNameLink(teamLeadUser.Name);
         }
 
         [TestCategory("LoginPageTests")]

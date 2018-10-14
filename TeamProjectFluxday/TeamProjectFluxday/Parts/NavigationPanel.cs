@@ -1,6 +1,5 @@
 using System.Threading;
 using TeamProjectFluxday.Pages;
-using TeamProjectFluxday.Pages.MyTasks.AddNewTask;
 
 namespace TeamProjectFluxday.Parts
 {

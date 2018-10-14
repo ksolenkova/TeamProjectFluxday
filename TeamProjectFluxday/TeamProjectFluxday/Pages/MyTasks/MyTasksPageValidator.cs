@@ -11,12 +11,14 @@ namespace TeamProjectFluxday.Pages
         public void TaskExists()
         {
             var expectedResult = TestData.Task.Title;
+            Thread.Sleep(1000);
             Assert.AreEqual(expectedResult, Map.TaskTitle.Text);
         }
 
         public void IsOnMyTasksPage()
         {
             var expectedResult = "My tasks";
+            Thread.Sleep(1000);
             Assert.AreEqual(expectedResult, Map.MyTasksPageTitle.Text);
         }
 

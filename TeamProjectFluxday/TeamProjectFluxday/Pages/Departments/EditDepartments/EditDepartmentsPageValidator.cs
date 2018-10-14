@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
+using TeamProjectFluxday.Core;
 
 namespace TeamProjectFluxday.Pages
 {
-    public class EditDepartmentsPageValidator
+    public class EditDepartmentsPageValidator : BasePageValidator<EditDepartmentsPageMap>
     {
+        //internal void SettingsIconIsNotPresent()
+        //{
+        //    Assert.IsTrue(throw new ElementNotVisibleException);
+        //}
     }
 }

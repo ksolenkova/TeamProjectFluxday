@@ -1,5 +1,6 @@
 using System.Threading;
 using TeamProjectFluxday.Pages;
+using TeamProjectFluxday.Pages.MyTasks.AddNewTask;
 
 namespace TeamProjectFluxday.Parts
 {
@@ -66,6 +67,13 @@ namespace TeamProjectFluxday.Parts
             Map.UsersLink.Click();
 
             return new UsersPage();
+        }
+
+        internal AddNewTaskPage NavigateToAddNewTaskPage()
+        {
+            Map.NewTaskButton.Click();
+
+            return new AddNewTaskPage();
         }
     }
 }

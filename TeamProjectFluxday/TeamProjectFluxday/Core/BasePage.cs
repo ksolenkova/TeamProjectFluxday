@@ -1,9 +1,7 @@
 using OpenQA.Selenium;
-using System;
 using TeamProjectFluxday.Parts;
 
 namespace TeamProjectFluxday.Core
-
 {
     public class BasePage<TM> where TM : BasePageMap, new()
     {

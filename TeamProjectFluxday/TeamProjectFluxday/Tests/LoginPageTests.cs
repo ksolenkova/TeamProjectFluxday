@@ -61,9 +61,38 @@ namespace TeamProjectFluxday.Tests
         }
 
         [TestCategory("LoginPageTests")]
+        [Owner("Kristina Solenkova")]
+        [TestMethod]
+        public void Test005LogOutAsEmployee1()
+        {
+            var loginPage = new LoginPage();
+            loginPage.Navigate();
+
+            var employeeUser = Data.TestData.Employee1;
+            var dashboardPage = loginPage.Login(employeeUser);
+            dashboardPage.NavigationPanel.Logout();
+
+            loginPage.Validate().LoginForm();
+        }
+
+        [TestCategory("LoginPageTests")]
+        [Owner("Kristina Solenkova")]
+        [TestMethod]
+        public void Test006VerifyEmployee1IsNotAbleToLoginWithInvalidEmail()
+        {
+            var loginPage = new LoginPage();
+            loginPage.Navigate();
+
+            var employeeUser = Data.TestData.Employee1;
+            loginPage.Login("emploe@fluxday.io", employeeUser.Password);
+
+            loginPage.Validate().LoginForm();
+        }
+
+        [TestCategory("LoginPageTests")]
         [Owner("Angel Botev")]
         [TestMethod]
-        public void Test004LoginWithEmployee2User()
+        public void Test007LoginWithEmployee2User()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();
@@ -79,7 +108,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("LoginPageTests")]
         [Owner("Angel Botev")]
         [TestMethod]
-        public void Test005VerifyEmployee2CantLoginWithInvalidPassword()
+        public void Test008VerifyEmployee2CantLoginWithInvalidPassword()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();

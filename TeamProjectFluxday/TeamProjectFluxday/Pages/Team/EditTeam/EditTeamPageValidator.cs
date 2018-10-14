@@ -1,6 +1,6 @@
 ﻿using TeamProjectFluxday.Core;
 
-namespace TeamProjectFluxday.Pages.Team.EditTeam
+namespace TeamProjectFluxday.Pages
 {
     public class EditTeamPageValidator : BasePageValidator<EditTeamPageMap>
     {

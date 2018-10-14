@@ -1,6 +1,6 @@
 ﻿using TeamProjectFluxday.Core;
 
-namespace TeamProjectFluxday.Pages.Team.TeamDetails
+namespace TeamProjectFluxday.Pages
 {
     public class TeamDetailsPageMap : BasePageMap
 

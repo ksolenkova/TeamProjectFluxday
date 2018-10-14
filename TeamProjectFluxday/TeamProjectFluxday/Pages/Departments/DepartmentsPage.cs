@@ -1,6 +1,6 @@
 ﻿using TeamProjectFluxday.Core;
 
-namespace TeamProjectFluxday.Pages.Departments
+namespace TeamProjectFluxday.Pages
 {
     public class DepartmentsPage : BasePage<DepartmentsPageMap, DepartmentsPageValidator>
     {

@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using TeamProjectFluxday.Core;
 
-namespace TeamProjectFluxday.Pages.MyTasksPage
+namespace TeamProjectFluxday.Pages
 {
     public class MyTasksPageMap : BasePageMap
     {

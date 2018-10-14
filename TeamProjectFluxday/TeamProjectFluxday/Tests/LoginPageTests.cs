@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TeamProjectFluxday.Core;
-using TeamProjectFluxday.Pages.Login;
+using TeamProjectFluxday.Pages;
 
 namespace TeamProjectFluxday.Tests
 {

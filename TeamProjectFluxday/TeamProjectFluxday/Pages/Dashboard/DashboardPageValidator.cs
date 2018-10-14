@@ -1,6 +1,6 @@
 ﻿using TeamProjectFluxday.Core;
 
-namespace TeamProjectFluxday.Pages.Dashboard
+namespace TeamProjectFluxday.Pages
 {
     public class DashboardPageValidator : BasePageValidator<DashboardPageMap>
     {

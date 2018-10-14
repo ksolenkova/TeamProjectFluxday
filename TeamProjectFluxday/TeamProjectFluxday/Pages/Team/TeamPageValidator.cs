@@ -2,7 +2,7 @@
 using System.Threading;
 using TeamProjectFluxday.Core;
 
-namespace TeamProjectFluxday.Pages.Team
+namespace TeamProjectFluxday.Pages
 {
     public class TeamPageValidator : BasePageValidator<TeamPageMap>
     {

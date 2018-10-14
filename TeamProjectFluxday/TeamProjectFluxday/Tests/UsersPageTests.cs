@@ -2,7 +2,7 @@
 using System.Threading;
 using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data;
-using TeamProjectFluxday.Pages.Login;
+using TeamProjectFluxday.Pages;
 using TeamProjectFluxday.Pages.Users;
 using TeamProjectFluxday.Parts;
 

@@ -2,8 +2,6 @@
 using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data;
 using TeamProjectFluxday.Pages;
-using TeamProjectFluxday.Pages.Departments;
-using TeamProjectFluxday.Pages.Login;
 using TeamProjectFluxday.Parts;
 
 namespace TeamProjectFluxday.Tests

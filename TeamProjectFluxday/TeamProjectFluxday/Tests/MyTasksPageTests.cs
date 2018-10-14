@@ -1,8 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data;
-using TeamProjectFluxday.Pages.Login;
-using TeamProjectFluxday.Pages.MyTasksPage;
+using TeamProjectFluxday.Pages;
 
 namespace TeamProjectFluxday.Tests
 {

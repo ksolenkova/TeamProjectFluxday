@@ -1,6 +1,5 @@
 using System.Threading;
-using TeamProjectFluxday.Pages.Login;
-using TeamProjectFluxday.Pages.Team;
+using TeamProjectFluxday.Pages;
 
 namespace TeamProjectFluxday.Parts
 {

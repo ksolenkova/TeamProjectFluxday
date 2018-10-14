@@ -1,6 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
-using System;
 using TeamProjectFluxday.Core;
 
 namespace TeamProjectFluxday.Pages

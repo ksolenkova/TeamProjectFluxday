@@ -33,7 +33,7 @@ namespace TeamProjectFluxday.Pages.MyTasks.AddNewTask
         {
             get
             {
-                return GetElement(By.XPath(@"//*[@id='new_task']/div[3]/div[1]"));
+                return GetElement(By.CssSelector(".small-12>.title"));
             }
         }
     }

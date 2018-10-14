@@ -22,19 +22,25 @@ namespace TeamProjectFluxday.Pages
 
         public void IsTaskDeleted()
         {
-                try
-                {
-                var dashboardpagecheck = new DashboardPage();
-                dashboardpagecheck.Navigate();
+            try
+            {
+                var dashboardPageCheck = new DashboardPage();
+                dashboardPageCheck.Navigate();
                 Thread.Sleep(1000);
-                var tasks = dashboardpagecheck.ReadTaskItems();
+                var tasks = dashboardPageCheck.ReadTaskItems();
 
                 Assert.Fail();
-                }
-                catch (WebDriverTimeoutException)
-                {
-                    
-                }
+            }
+            catch (WebDriverTimeoutException)
+            {
+
+            }
+        }
+
+        public void EditedTaskExists()
+        {
+            var expectedResult = "Edited Title";
+            Assert.AreEqual(expectedResult, Map.TaskTitle.Text);
         }
     }
 }

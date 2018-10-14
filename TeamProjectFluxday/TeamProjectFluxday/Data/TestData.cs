@@ -116,6 +116,13 @@ namespace TeamProjectFluxday.Data
             }
         }
 
+        public static Task Subtask
+        {
+            get
+            {
+                return new Task("Subtask Test Title", "Subtask Test Description");
+            }
+        }
         public static User Employee2
         {
             get

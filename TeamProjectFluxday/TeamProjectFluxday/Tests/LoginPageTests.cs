@@ -35,7 +35,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("LoginPageTests")]
         [Owner("Yusuf Machan")]
         [TestMethod]
-        public void Test005LoginWithLeadUser()
+        public void Test000LoginWithLeadUser()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();

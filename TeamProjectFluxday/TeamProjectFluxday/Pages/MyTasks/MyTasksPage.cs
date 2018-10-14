@@ -38,5 +38,11 @@ namespace TeamProjectFluxday.Pages
 
             Map.UpdateTask.Click();
         }
+
+        internal void CompletedButton()
+        {
+            Thread.Sleep(1000);
+            Map.CompletedTasksButton.Click();
+        }
     }
 }

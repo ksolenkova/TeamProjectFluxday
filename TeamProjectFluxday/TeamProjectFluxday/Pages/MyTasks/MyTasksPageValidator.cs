@@ -44,5 +44,12 @@ namespace TeamProjectFluxday.Pages
             var expectedResult = "Edited Title";
             Assert.AreEqual(expectedResult, Map.TaskTitle.Text);
         }
+
+        public void IsCompletedTasksExist()
+        {
+            var expectedResult = "Announcements";
+            Thread.Sleep(1000);
+            Assert.AreEqual(expectedResult, Map.CompletedTaskTitle.Text);
+        }
     }
 }

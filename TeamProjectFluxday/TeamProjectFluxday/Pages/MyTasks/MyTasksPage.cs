@@ -63,17 +63,10 @@ namespace TeamProjectFluxday.Pages
 
         internal void DeleteTasks()
         {
-            Map.NewTask.Click();
-            Thread.Sleep(1000);
-            Map.SettingsButton.Click();
-            Thread.Sleep(1000);
-            Map.DeleteOption.Click();
-
-            Map.NewTask.Click();
-            Thread.Sleep(1000);
-            Map.SettingsButton.Click();
-            Thread.Sleep(1000);
-            Map.DeleteOption.Click();
+            do
+            {
+                DeleteNewTask();               
+            } while (!Map.TasksNotExist);
         }
     }
 }

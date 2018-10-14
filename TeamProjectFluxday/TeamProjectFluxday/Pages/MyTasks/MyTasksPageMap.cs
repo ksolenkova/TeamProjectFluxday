@@ -116,5 +116,13 @@ namespace TeamProjectFluxday.Pages
                 return GetElement(By.XPath(@"//*[@id='paginator']/a/div/div[1]"));
             }
         }
+
+        public bool TasksNotExist
+        {
+            get
+            {
+                return ElementIsNotPresent(By.XPath(@"//*[@id='paginator']/a/div"));
+            }
+        }
     }
 }

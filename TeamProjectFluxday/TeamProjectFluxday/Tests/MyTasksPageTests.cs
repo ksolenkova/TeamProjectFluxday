@@ -51,7 +51,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("MyTasksPageTests")]
         [Owner("Yusuf Machan")]
         [TestMethod]
-        public void Test006CompletedButtonValidation()
+        public void Test006CompletedButtonValidate()
         {
             var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
             

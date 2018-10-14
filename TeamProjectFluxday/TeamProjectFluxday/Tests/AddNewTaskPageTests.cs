@@ -18,11 +18,10 @@ namespace TeamProjectFluxday.Tests
             dashboardPage = LoginProvider.Login(TestData.TeamLeadUser);
         }
 
-
         [TestCategory("AddNewTaskPageTests")]
         [Owner("Yusuf Machan")]
         [TestMethod]
-        public void Test002NewTaskButtonValidation()
+        public void Test002AddNewTaskPageValidation()
         {
             var addNewTaskPage = dashboardPage.NavigationPanel.NavigateToAddNewTaskPage();
             

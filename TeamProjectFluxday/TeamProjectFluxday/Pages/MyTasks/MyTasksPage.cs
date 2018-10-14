@@ -17,5 +17,26 @@ namespace TeamProjectFluxday.Pages
             Thread.Sleep(1000);
             Map.DeleteOption.Click();
         }
+
+        internal void EditTask()
+        {
+            Map.NewTask.Click();
+            Thread.Sleep(1000);
+            Map.SettingsButton.Click();
+            Thread.Sleep(1000);
+            Map.EditOption.Click();
+
+            var titleInput = Map.TitleInput;
+            titleInput.Click();
+            titleInput.Clear();
+            titleInput.SendKeys("Edited Title");
+
+            var descriptionInput = Map.DescriptionInput;
+            descriptionInput.Click();
+            descriptionInput.Clear();
+            descriptionInput.SendKeys("Edited Description");
+
+            Map.UpdateTask.Click();
+        }
     }
 }

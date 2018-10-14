@@ -25,7 +25,7 @@ namespace TeamProjectFluxday.Pages
         {
             get
             {
-                return GetElement(By.XPath(@"//*[@id='pane3']/div[2]/div/div[1]/div[1]/div/a[2]"));
+                return GetElement(By.CssSelector(@"div.icon.settings-link"));
             }
         }
 
@@ -41,7 +41,39 @@ namespace TeamProjectFluxday.Pages
         {
             get
             {
-                return GetElement(By.XPath(@"//*[@id='pane2']/div[1]/div"));
+                return GetElement(By.CssSelector(@"div.title"));
+            }
+        }
+
+        public IWebElement EditOption
+        {
+            get
+            {
+                return GetElement(By.XPath(@"//a[contains(text(),'Edit')]"));
+            }
+        }
+
+        public IWebElement TitleInput
+        {
+            get
+            {
+                return GetElement(By.CssSelector("#task_name"));
+            }
+        }
+
+        public IWebElement DescriptionInput
+        {
+            get
+            {
+                return GetElement(By.CssSelector("#task_description"));
+            }
+        }
+
+        public IWebElement UpdateTask
+        {
+            get
+            {
+                return GetElement(By.CssSelector(".button"));
             }
         }
     }

@@ -92,5 +92,29 @@ namespace TeamProjectFluxday.Pages
                 return GetElement(By.XPath(@"//*[@id='pane2']/div[1]/dl/dd[2]"));
             }
         }
+
+        public IWebElement AddSubtaskButton
+        {
+            get
+            {
+                return GetElement(By.CssSelector(".dashed_link"));
+            }
+        }
+
+        public IWebElement CreateSubtaskButton
+        {
+            get
+            {
+                return GetElement(By.CssSelector(".button"));
+            }
+        }
+
+        public IWebElement SubtaskTitle
+        {
+            get
+            {
+                return GetElement(By.XPath(@"//*[@id='paginator']/a/div/div[1]"));
+            }
+        }
     }
 }

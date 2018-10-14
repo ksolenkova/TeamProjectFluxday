@@ -51,5 +51,11 @@ namespace TeamProjectFluxday.Pages
             Thread.Sleep(1000);
             Assert.AreEqual(expectedResult, Map.CompletedTaskTitle.Text);
         }
+
+        public void SubtaskExists()
+        {
+            var expectedResult = TestData.Subtask.Title;
+            Assert.AreEqual(expectedResult, Map.SubtaskTitle.Text);
+        }
     }
 }

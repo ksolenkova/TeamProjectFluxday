@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using TeamProjectFluxday.Core;
+using TeamProjectFluxday.Data;
 
 namespace TeamProjectFluxday.Pages
 {
@@ -43,6 +44,36 @@ namespace TeamProjectFluxday.Pages
         {
             Thread.Sleep(1000);
             Map.CompletedTasksButton.Click();
+        }
+
+        internal void AddSubtask()
+        {
+            Map.NewTask.Click();
+            Thread.Sleep(1000);
+            Map.AddSubtaskButton.Click();
+
+            var subtask = TestData.Subtask;
+
+            Map.TitleInput.SendKeys(subtask.Title);
+
+            Map.DescriptionInput.SendKeys(subtask.Description);
+
+            Map.CreateSubtaskButton.Click();
+        }
+
+        internal void DeleteTasks()
+        {
+            Map.NewTask.Click();
+            Thread.Sleep(1000);
+            Map.SettingsButton.Click();
+            Thread.Sleep(1000);
+            Map.DeleteOption.Click();
+
+            Map.NewTask.Click();
+            Thread.Sleep(1000);
+            Map.SettingsButton.Click();
+            Thread.Sleep(1000);
+            Map.DeleteOption.Click();
         }
     }
 }

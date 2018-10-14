@@ -59,5 +59,25 @@ namespace TeamProjectFluxday.Tests
 
             myTasksPage.Validate().IsCompletedTasksExist();
         }
+
+        [TestCategory("MyTasksPageTests")]
+        [Owner("Yusuf Machan")]
+        [TestMethod]
+        public void Test005AddSubtask()
+        {
+            var addNewTaskPage = dashboardPage.NavigationPanel.NavigateToAddNewTaskPage();
+
+            addNewTaskPage.CreateNewTask();
+
+            var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
+
+            myTasksPage.AddSubtask();
+
+            myTasksPage.Validate().SubtaskExists();
+
+            myTasksPage.DeleteTasks();
+
+            myTasksPage.Validate().IsTaskDeleted();
+        }
     }
 }

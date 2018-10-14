@@ -59,5 +59,13 @@ namespace TeamProjectFluxday.Data
                 return new User("emp1@fluxday.io", "password", "Employee 1");
             }
         }
+
+        public static Task Subtask
+        {
+            get
+            {
+                return new Task("Subtask Test Title", "Subtask Test Description");
+            }
+        }
     }
 }

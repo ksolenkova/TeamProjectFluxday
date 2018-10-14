@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Threading;
 using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data;
 using TeamProjectFluxday.Pages;
@@ -30,7 +31,10 @@ namespace TeamProjectFluxday.Tests
             var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
 
             myTasksPage.Validate().TaskExists();
+            Thread.Sleep(1000);
             myTasksPage.DeleteNewTask();
+            Thread.Sleep(1000);
+            myTasksPage.Validate().IsTaskDeleted();
         }
     }
 }

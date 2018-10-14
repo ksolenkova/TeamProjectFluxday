@@ -1,4 +1,6 @@
-﻿using TeamProjectFluxday.Core;
+﻿using OpenQA.Selenium;
+using System.Collections.Generic;
+using TeamProjectFluxday.Core;
 
 namespace TeamProjectFluxday.Pages
 {
@@ -6,6 +8,11 @@ namespace TeamProjectFluxday.Pages
     {
         public DashboardPage(string url = "https://app.fluxday.io/") : base(url)
         {
+        }
+
+        internal IReadOnlyCollection<IWebElement> ReadTaskItems()
+        {
+            return Map.TaskTitles;
         }
     }
 }

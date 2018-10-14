@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using TeamProjectFluxday.Core;
 
 namespace TeamProjectFluxday.Pages
@@ -16,6 +17,11 @@ namespace TeamProjectFluxday.Pages
 
             return new CreateDepartmentsPage();
         }
+
+        internal void PressSettingsIcon()
+        {
+            Map.SettingsIcon.Click();
+        }
         
         internal void DeleteNewlyCreatedDepartment()
         {
@@ -23,5 +29,19 @@ namespace TeamProjectFluxday.Pages
             Map.DeleteLink.Click();
             SwitchToAlert().Accept();
         }
+
+        internal void ClickOnFinanceDepartment()
+        {
+            Map.FinanceLink.Click();
+        }
+
+        internal EditDepartmentsPage PressEdit()
+        {
+            Map.EditLink.Click();
+
+            return new EditDepartmentsPage();
+        }
+
+        
     }
 }

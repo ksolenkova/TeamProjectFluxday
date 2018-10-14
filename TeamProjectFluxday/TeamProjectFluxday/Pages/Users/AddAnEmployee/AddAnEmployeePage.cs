@@ -1,4 +1,5 @@
-﻿using TeamProjectFluxday.Core;
+﻿using System;
+using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Utils;
 
 namespace TeamProjectFluxday.Pages
@@ -52,6 +53,11 @@ namespace TeamProjectFluxday.Pages
             FillInEmployeeCode();
             FillInPassword();
             FillInConfirmPassword();
+        }
+
+        internal void CancelButtonClick()
+        {
+            Map.CancelButton.Click();
         }
     }
 }

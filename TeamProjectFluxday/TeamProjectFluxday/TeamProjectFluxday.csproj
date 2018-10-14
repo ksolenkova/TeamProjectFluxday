@@ -65,7 +65,10 @@
     <Compile Include="Pages\Departments\CreateDepartments\CreateDepartmentsPage.cs" />
     <Compile Include="Pages\Departments\CreateDepartments\CreateDepartmentsPageMap.cs" />
     <Compile Include="Pages\Departments\CreateDepartments\CreateDepartmentsValidator.cs" />
+    <Compile Include="Pages\Departments\EditDepartments\EditDepartmentsPage.cs" />
     <Compile Include="Pages\Departments\DepartmentsPageValidator.cs" />
+    <Compile Include="Pages\Departments\EditDepartments\EditDepartmentsPageMap.cs" />
+    <Compile Include="Pages\Departments\EditDepartments\EditDepartmentsPageValidator.cs" />
     <Compile Include="Pages\Login\LoginPageValidator.cs" />
     <Compile Include="Pages\MyTasks\AddNewTask\AddNewTaskPage.cs" />
     <Compile Include="Pages\MyTasks\AddNewTask\AddNewTaskPageMap.cs" />
@@ -106,6 +109,7 @@
     <Compile Include="Tests\DepartmentsPageTests.cs" />
     <Compile Include="Pages\Users\UsersPage.cs" />
     <Compile Include="Pages\Users\UsersPageMap.cs" />
+    <Compile Include="Tests\EditDepartmentsPageTests.cs" />
     <Compile Include="Tests\LoginPageTests.cs" />
     <Compile Include="Core\BasePage.cs" />
     <Compile Include="Core\BasePageMap.cs" />

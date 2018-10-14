@@ -23,10 +23,12 @@ namespace TeamProjectFluxday.Parts
             return Map.UserLink.Text;
         }
 
-        internal void ClickOnDepartmentsLink()
+        internal CreateDepartmentsPage ClickOnDepartmentsLink()
         {
             Map.DepartmentsLink.Click();
             Thread.Sleep(2000);
+
+            return new CreateDepartmentsPage();
         }
 
         internal void UsersLinkClick()

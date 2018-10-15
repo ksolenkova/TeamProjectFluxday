@@ -124,6 +124,7 @@
     <Compile Include="Tests\UsersTests\UsersPageTests.cs" />
     <Compile Include="Utils\LoginProvider.cs" />
     <Compile Include="Utils\StringHelper.cs" />
+    <Compile Include="Utils\TaskProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,5 +1,4 @@
-﻿using System;
-using TeamProjectFluxday.Core;
+﻿using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Utils;
 
 namespace TeamProjectFluxday.Pages

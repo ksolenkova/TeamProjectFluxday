@@ -45,6 +45,8 @@ namespace TeamProjectFluxday.Tests
 
             var userDetailsPage = usersPage.NewUserClick();
             userDetailsPage.DeleteNewUser();
+
+            usersPage.Validate().NewEmployeeIsNotInTheList();
         }
 
         [TestCategory("AddAnEmployeePageTests")]
@@ -58,7 +60,7 @@ namespace TeamProjectFluxday.Tests
             addAnEmployeePage.FillInAddUserForm();
             addAnEmployeePage.CancelButtonClick();
 
-           // usersPage.Validate().NewEmployeeIsNotInTheList();
+            addAnEmployeePage.Validate().IsNotOnAddAnEmployeePage();
         }
     }
 }

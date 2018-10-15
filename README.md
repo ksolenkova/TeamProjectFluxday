@@ -1,5 +1,5 @@
 # Team Project Fluxday
->SoftServe Academy Team Project - a test automation framework for the web application Fluxday
+>SoftServe Academy Team Project - a test automation framework for the web application Fluxday, written in C#, implementing the Page Object Model 
 
 
 ### Tools used in the development of the framework:

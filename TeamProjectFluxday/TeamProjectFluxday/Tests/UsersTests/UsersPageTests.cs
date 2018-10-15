@@ -41,11 +41,21 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("UsersPageTests")]
         [Owner("Dobrin Ganev")]
         [TestMethod]
-        public void Test003ValidateDefaultUsersListCount()
+        public void Test003VerifyDefaultUsersListCount()
         {
             var usersPage = dashboardPage.NavigationPanel.NavigateToUsersPage();
 
             usersPage.Validate().DefaultUsersListCount();
+        }
+
+        [TestCategory("UsersPageTests")]
+        [Owner("Dobrin Ganev")]
+        [TestMethod]
+        public void Test004VerifyThatTeamLeadIsInUsersList()
+        {
+            var usersPage = dashboardPage.NavigationPanel.NavigateToUsersPage();
+
+            usersPage.Validate().TeamLeadIsInUsersList();
         }
     }
 }

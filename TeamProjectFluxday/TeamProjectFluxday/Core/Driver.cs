@@ -4,7 +4,7 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 using System;
 
-namespace SeleniumWebDriver.Core
+namespace TeamProjectFluxday.Core
 {
     public static class Driver
     {

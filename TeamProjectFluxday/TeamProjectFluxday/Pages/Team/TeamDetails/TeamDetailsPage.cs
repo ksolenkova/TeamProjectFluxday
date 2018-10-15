@@ -10,6 +10,10 @@ namespace TeamProjectFluxday.Pages
         {
         }
 
+        public TeamDetailsPage()
+        {
+        }
+
         internal void ClickOnSettingsIcon()
         {
             Map.SettingsIcon.Click();

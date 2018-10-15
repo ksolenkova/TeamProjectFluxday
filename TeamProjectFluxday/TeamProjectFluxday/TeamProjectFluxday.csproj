@@ -97,14 +97,14 @@
     <Compile Include="Parts\NavigationPanel.cs" />
     <Compile Include="Parts\NavigationPanelMap.cs" />
     <Compile Include="Parts\NavigationPanelValidator.cs" />
-    <Compile Include="Tests\AddAnEmployeePageTests.cs" />
-    <Compile Include="Tests\AddNewTaskPageTests.cs" />
-    <Compile Include="Tests\CreateDepartmentPageTests.cs" />
-    <Compile Include="Tests\DepartmentsPageTests.cs" />
+    <Compile Include="Tests\UsersTests\AddAnEmployeePageTests.cs" />
+    <Compile Include="Tests\MyTasksTests\AddNewTaskPageTests.cs" />
+    <Compile Include="Tests\DepartmentsTests\CreateDepartmentPageTests.cs" />
+    <Compile Include="Tests\DepartmentsTests\DepartmentsPageTests.cs" />
     <Compile Include="Pages\Users\UsersPage.cs" />
     <Compile Include="Pages\Users\UsersPageMap.cs" />
-    <Compile Include="Tests\EditDepartmentsPageTests.cs" />
-    <Compile Include="Tests\EditTeamPageTests.cs" />
+    <Compile Include="Tests\DepartmentsTests\EditDepartmentsPageTests.cs" />
+    <Compile Include="Tests\TeamTests\EditTeamPageTests.cs" />
     <Compile Include="Tests\LoginPageTests.cs" />
     <Compile Include="Core\BasePage.cs" />
     <Compile Include="Core\BasePageMap.cs" />
@@ -118,10 +118,10 @@
     <Compile Include="Pages\Login\LoginPage.cs" />
     <Compile Include="Pages\Login\LoginPageMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\MyTasksPageTests.cs" />
-    <Compile Include="Tests\TeamDetailsPageTests.cs" />
-    <Compile Include="Tests\TeamPageTests.cs" />
-    <Compile Include="Tests\UsersPageTests.cs" />
+    <Compile Include="Tests\MyTasksTests\MyTasksPageTests.cs" />
+    <Compile Include="Tests\TeamTests\TeamDetailsPageTests.cs" />
+    <Compile Include="Tests\TeamTests\TeamPageTests.cs" />
+    <Compile Include="Tests\UsersTests\UsersPageTests.cs" />
     <Compile Include="Utils\LoginProvider.cs" />
     <Compile Include="Utils\StringHelper.cs" />
   </ItemGroup>

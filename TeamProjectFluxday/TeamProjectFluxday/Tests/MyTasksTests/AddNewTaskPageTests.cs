@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Threading;
 using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data;
 using TeamProjectFluxday.Pages;
@@ -8,7 +7,7 @@ using TeamProjectFluxday.Utils;
 namespace TeamProjectFluxday.Tests
 {
     [TestClass]
-    public class MyTasksPageTests : BaseTest
+    public class AddNewTaskPageTests : BaseTest
     {
         DashboardPage dashboardPage;
 
@@ -19,33 +18,31 @@ namespace TeamProjectFluxday.Tests
             dashboardPage = LoginProvider.Login(TestData.TeamLeadUser);
         }
 
-        [TestCategory("MyTasksPageTests")]
+        [TestCategory("AddNewTaskPageTests")]
         [Owner("Yusuf Machan")]
         [TestMethod]
-        public void Test001MyTasksPageValidation()
-        {
-            var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
-            Thread.Sleep(1000);
-            myTasksPage.Validate().IsOnMyTasksPage();
-        }
-
-        [TestCategory("MyTasksPageTests")]
-        [Owner("Yusuf Machan")]
-        [TestMethod]
-        public void Test004EditTask()
+        public void Test002AddNewTaskPageValidation()
         {
             var addNewTaskPage = dashboardPage.NavigationPanel.NavigateToAddNewTaskPage();
+            
+            addNewTaskPage.Validate().IsOnAddNewTaskPage();
+        }
 
+        [TestCategory("AddNewTaskPageTests")]
+        [Owner("Yusuf Machan")]
+        [TestMethod]
+        public void Test003CreateNewTask()
+        {
+            var addNewTaskPage = dashboardPage.NavigationPanel.NavigateToAddNewTaskPage();
+            
             addNewTaskPage.CreateNewTask();
 
             var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
 
-            myTasksPage.EditTask();
-
-            myTasksPage.Validate().EditedTaskExists();
-
+            myTasksPage.Validate().TaskExists();
+            
             myTasksPage.DeleteNewTask();
-           
+            
             myTasksPage.Validate().IsTaskDeleted();
         }
     }

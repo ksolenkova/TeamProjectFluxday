@@ -11,12 +11,14 @@ namespace TeamProjectFluxday.Pages
         public void TaskExists()
         {
             var expectedResult = TestData.Task.Title;
+            Thread.Sleep(1000);
             Assert.AreEqual(expectedResult, Map.TaskTitle.Text);
         }
 
         public void IsOnMyTasksPage()
         {
             var expectedResult = "My tasks";
+            Thread.Sleep(1000);
             Assert.AreEqual(expectedResult, Map.MyTasksPageTitle.Text);
         }
 
@@ -41,6 +43,19 @@ namespace TeamProjectFluxday.Pages
         {
             var expectedResult = "Edited Title";
             Assert.AreEqual(expectedResult, Map.TaskTitle.Text);
+        }
+
+        public void IsCompletedTasksExist()
+        {
+            var expectedResult = "Announcements";
+            Thread.Sleep(1000);
+            Assert.AreEqual(expectedResult, Map.CompletedTaskTitle.Text);
+        }
+
+        public void SubtaskExists()
+        {
+            var expectedResult = TestData.Subtask.Title;
+            Assert.AreEqual(expectedResult, Map.SubtaskTitle.Text);
         }
     }
 }

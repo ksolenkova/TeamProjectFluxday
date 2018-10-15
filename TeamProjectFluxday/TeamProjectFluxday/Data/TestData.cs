@@ -5,7 +5,7 @@ namespace TeamProjectFluxday.Data
 {
     public static class TestData
     {
-        private static List<User> defaulUsersList = new List<User>()
+        private static List<User> defaultUsersList = new List<User>()
         {
             AdminUser,
             TeamLeadUser,
@@ -53,7 +53,7 @@ namespace TeamProjectFluxday.Data
         {
             get
             {
-                return defaulUsersList;
+                return defaultUsersList;
 
             }
         }

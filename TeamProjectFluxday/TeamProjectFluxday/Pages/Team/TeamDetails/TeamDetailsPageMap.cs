@@ -13,7 +13,7 @@ namespace TeamProjectFluxday.Pages
             }
         }
 
-        public IWebElement DevOpsTitle
+        public IWebElement TeamTitle
         {
             get
             {

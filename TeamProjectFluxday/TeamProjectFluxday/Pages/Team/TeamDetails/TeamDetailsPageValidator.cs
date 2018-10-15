@@ -9,7 +9,7 @@ namespace TeamProjectFluxday.Pages
         public void DevOpsTitle()
         {
             var expectedResult = "DevOps";
-            Assert.AreEqual(expectedResult, Map.DevOpsTitle.Text);
+            Assert.AreEqual(expectedResult, Map.TeamTitle.Text);
         }
 
         public void UzityTeamMembersCount()
@@ -23,6 +23,11 @@ namespace TeamProjectFluxday.Pages
             var expectedResult = Map.AddMembersButton.Displayed
                 && Map.AddMembersButton.Enabled;
             Assert.IsTrue(expectedResult);
+        }
+
+        public void EditedSupportTitle(string editedTitle)
+        {
+            Assert.AreEqual(editedTitle, Map.TeamTitle.Text);
         }
     }
 }

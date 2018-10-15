@@ -21,7 +21,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("AddAnEmployeePageTests")]
         [Owner("Dobrin Ganev")]
         [TestMethod]
-        public void Test001AdAnEmployeePageValidation()
+        public void Test001NavigateToAddAnEmployeePage()
         {
             var usersPage = dashboardPage.NavigationPanel.NavigateToUsersPage();
 

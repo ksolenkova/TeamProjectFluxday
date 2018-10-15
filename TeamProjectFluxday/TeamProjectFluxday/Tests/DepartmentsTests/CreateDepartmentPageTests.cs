@@ -22,7 +22,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("CreateDepartmentsPageTestsAsAdmin")]
         [Owner("Kristina Solenkova")]
         [TestMethod]
-        public void Test001CreateDepartmentsPageValidation()
+        public void Test001NavigateToCreateDepartmentsPage()
         {
             var departmentsPage = dashboardPage.NavigationPanel.NavigateToDepartmentsPage();
 

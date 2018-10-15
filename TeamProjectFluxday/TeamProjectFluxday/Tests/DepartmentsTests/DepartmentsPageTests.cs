@@ -21,7 +21,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("DepartmentsPageTests")]
         [Owner("Kristina Solenkova")]
         [TestMethod]
-        public void Test001DepartmentsPageValidation()
+        public void Test001NavigateToDepartmentsPage()
         {
             var departmentsPage = dashboardPage.NavigationPanel.NavigateToDepartmentsPage();
 

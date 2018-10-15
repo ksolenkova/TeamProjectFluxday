@@ -21,7 +21,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("AddNewTaskPageTests")]
         [Owner("Yusuf Machan")]
         [TestMethod]
-        public void Test002AddNewTaskPageValidation()
+        public void Test002NavigateToAddNewTaskPage()
         {
             var addNewTaskPage = dashboardPage.NavigationPanel.NavigateToAddNewTaskPage();
             

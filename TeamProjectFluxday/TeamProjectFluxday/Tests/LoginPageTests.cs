@@ -8,13 +8,20 @@ namespace TeamProjectFluxday.Tests
     [TestClass]
     public class LoginPageTests : BaseTest
     {
+        LoginPage loginPage;
+
+        [TestInitialize]
+        public void TestSetup()
+        {
+            Driver.StartBrowser();
+            loginPage = new LoginPage();
+            loginPage.Navigate();
+        }
+
         [TestCategory("LoginPageTests")]
         [TestMethod]
-        public void Test001LoginPageValidation()
+        public void Test001NavigateToLoginPage()
         {
-            var loginPage = new LoginPage();
-            loginPage.Navigate();
-
             loginPage.Validate().LoginForm();
         }
 
@@ -23,9 +30,6 @@ namespace TeamProjectFluxday.Tests
         [TestMethod]
         public void Test002LoginWithAdminUser()
         {
-            var loginPage = new LoginPage();
-            loginPage.Navigate();
-
             var adminUser = TestData.AdminUser;
             var dashboardPage = loginPage.Login(adminUser);
 
@@ -37,9 +41,6 @@ namespace TeamProjectFluxday.Tests
         [TestMethod]
         public void Test003VerifyAdminUserCantLoginWithInvalidPassword()
         {
-            var loginPage = new LoginPage();
-            loginPage.Navigate();
-
             var adminUser = TestData.AdminUser;
 
             var dashboardPage = loginPage.Login(adminUser.Email, "invalidPassword");
@@ -52,9 +53,6 @@ namespace TeamProjectFluxday.Tests
         [TestMethod]
         public void Test004LogOutAsAdminUser()
         {
-            var loginPage = new LoginPage();
-            loginPage.Navigate();
-
             var adminUser = TestData.AdminUser;
             var dashboardPage = loginPage.Login(adminUser);
             dashboardPage.NavigationPanel.Logout();
@@ -67,9 +65,6 @@ namespace TeamProjectFluxday.Tests
         [TestMethod]
         public void Test005LoginWithLeadUser()
         {
-            var loginPage = new LoginPage();
-            loginPage.Navigate();
-
             var teamLeadUser = TestData.TeamLeadUser;
             var dashboardPage = loginPage.Login(teamLeadUser);
             dashboardPage.Validate().UserNameLink(teamLeadUser.Name);  
@@ -80,9 +75,6 @@ namespace TeamProjectFluxday.Tests
         [TestMethod]
         public void Test006VerifyTeamLeadUserCantLoginWithInvalidPassword()
         {
-            var loginPage = new LoginPage();
-            loginPage.Navigate();
-
             var teamLeadUser = TestData.TeamLeadUser;
 
             var dashboardPage = loginPage.Login(teamLeadUser.Email, "invalidPassword");
@@ -95,9 +87,6 @@ namespace TeamProjectFluxday.Tests
         [TestMethod]
         public void Test007LoginWithEmployee1User()
         {
-            var loginPage = new LoginPage();
-            loginPage.Navigate();
-
             var employeeUser = TestData.Employee1;
             var dashboardPage = loginPage.Login(employeeUser);
 
@@ -109,9 +98,6 @@ namespace TeamProjectFluxday.Tests
         [TestMethod]
         public void Test008LogOutAsEmployee1()
         {
-            var loginPage = new LoginPage();
-            loginPage.Navigate();
-
             var employeeUser = TestData.Employee1;
             var dashboardPage = loginPage.Login(employeeUser);
             dashboardPage.NavigationPanel.Logout();
@@ -124,9 +110,6 @@ namespace TeamProjectFluxday.Tests
         [TestMethod]
         public void Test009VerifyEmployee1IsNotAbleToLoginWithInvalidEmail()
         {
-            var loginPage = new LoginPage();
-            loginPage.Navigate();
-
             var employeeUser = TestData.Employee1;
             loginPage.Login("emploe@fluxday.io", employeeUser.Password);
 
@@ -138,9 +121,6 @@ namespace TeamProjectFluxday.Tests
         [TestMethod]
         public void Test010LoginWithEmployee2User()
         {
-            var loginPage = new LoginPage();
-            loginPage.Navigate();
-
             var employee2User = TestData.Employee2;
             var dashboardPage = loginPage.Login(employee2User);
 
@@ -154,9 +134,6 @@ namespace TeamProjectFluxday.Tests
         [TestMethod]
         public void Test011VerifyEmployee2CantLoginWithInvalidPassword()
         {
-            var loginPage = new LoginPage();
-            loginPage.Navigate();
-
             var employee2User = TestData.Employee2;
 
             var dashboardPage = loginPage.Login(employee2User.Email, "password1");
@@ -168,9 +145,6 @@ namespace TeamProjectFluxday.Tests
         [TestMethod]
         public void Test012LogOutAsEmployee2()
         {
-            var loginPage = new LoginPage();
-            loginPage.Navigate();
-
             var employee2 = TestData.Employee2;
             var dashboardPage = loginPage.Login(employee2);
             dashboardPage.NavigationPanel.Logout();

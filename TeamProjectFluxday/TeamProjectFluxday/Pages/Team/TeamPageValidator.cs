@@ -10,7 +10,7 @@ namespace TeamProjectFluxday.Pages
         public void TeamPageTitle()
         {
             var expectedResult = "Teams";
-            Thread.Sleep(500);
+            Thread.Sleep(1000);
             Assert.AreEqual(expectedResult, Map.TeamPageTitle.Text);
         }
 

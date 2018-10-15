@@ -62,6 +62,21 @@ namespace TeamProjectFluxday.Tests
         }
 
         [TestCategory("LoginPageTests")]
+        [Owner("Yusuf Machan")]
+        [TestMethod]
+        public void Test000LogOutAsTeamLead()
+        {
+            var loginPage = new LoginPage();
+            loginPage.Navigate();
+
+            var teamLeadUser = TestData.TeamLeadUser;
+            var dashboardPage = loginPage.Login(teamLeadUser);
+            dashboardPage.NavigationPanel.Logout();
+
+            loginPage.Validate().LoginForm();
+        }
+
+        [TestCategory("LoginPageTests")]
         [Owner("Kristina Solenkova")]
         [TestMethod]
         public void Test004LoginWithEmployee1User()

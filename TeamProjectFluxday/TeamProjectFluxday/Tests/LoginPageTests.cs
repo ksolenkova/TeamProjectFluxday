@@ -83,9 +83,24 @@ namespace TeamProjectFluxday.Tests
         }
 
         [TestCategory("LoginPageTests")]
+        [Owner("Yusuf Machan")]
+        [TestMethod]
+        public void Test007LogOutAsTeamLead()
+        {
+            var loginPage = new LoginPage();
+            loginPage.Navigate();
+
+            var teamLeadUser = TestData.TeamLeadUser;
+            var dashboardPage = loginPage.Login(teamLeadUser);
+            dashboardPage.NavigationPanel.Logout();
+
+            loginPage.Validate().LoginForm();
+        }
+
+        [TestCategory("LoginPageTests")]
         [Owner("Kristina Solenkova")]
         [TestMethod]
-        public void Test007LoginWithEmployee1User()
+        public void Test008LoginWithEmployee1User()
         {
             var employeeUser = TestData.Employee1;
             var dashboardPage = loginPage.Login(employeeUser);
@@ -96,7 +111,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("LoginPageTests")]
         [Owner("Kristina Solenkova")]
         [TestMethod]
-        public void Test008LogOutAsEmployee1()
+        public void Test009LogOutAsEmployee1()
         {
             var employeeUser = TestData.Employee1;
             var dashboardPage = loginPage.Login(employeeUser);
@@ -108,7 +123,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("LoginPageTests")]
         [Owner("Kristina Solenkova")]
         [TestMethod]
-        public void Test009VerifyEmployee1IsNotAbleToLoginWithInvalidEmail()
+        public void Test0010VerifyEmployee1IsNotAbleToLoginWithInvalidEmail()
         {
             var employeeUser = TestData.Employee1;
             loginPage.Login("emploe@fluxday.io", employeeUser.Password);
@@ -119,7 +134,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("LoginPageTests")]
         [Owner("Angel Botev")]
         [TestMethod]
-        public void Test010LoginWithEmployee2User()
+        public void Test011LoginWithEmployee2User()
         {
             var employee2User = TestData.Employee2;
             var dashboardPage = loginPage.Login(employee2User);
@@ -132,7 +147,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("LoginPageTests")]
         [Owner("Angel Botev")]
         [TestMethod]
-        public void Test011VerifyEmployee2CantLoginWithInvalidPassword()
+        public void Test012VerifyEmployee2CantLoginWithInvalidPassword()
         {
             var employee2User = TestData.Employee2;
 
@@ -143,7 +158,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("LoginPageTests")]
         [Owner("Angel Botev")]
         [TestMethod]
-        public void Test012LogOutAsEmployee2()
+        public void Test013LogOutAsEmployee2()
         {
             var employee2 = TestData.Employee2;
             var dashboardPage = loginPage.Login(employee2);

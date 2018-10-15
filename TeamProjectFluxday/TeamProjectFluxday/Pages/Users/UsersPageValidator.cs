@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Threading;
 using TeamProjectFluxday.Core;
 
 namespace TeamProjectFluxday.Pages
@@ -7,14 +8,14 @@ namespace TeamProjectFluxday.Pages
     {
         public void IsOnUsersPage()
         {
+            Thread.Sleep(2000);
             var expectedResult = "Users";
             Assert.AreEqual(expectedResult, Map.UsersTitle.Text);
         }
 
         internal void NewEmployeeIsAdded()
         {
-            var expectedResult = "TestEmployee";
-            Assert.AreEqual(expectedResult, Map.NewUser.Text);
+            Assert.IsTrue(Map.NewUser.Displayed, "New user is not added!");
         }
 
         internal void AddUserLinkIsAvailabe()
@@ -30,9 +31,9 @@ namespace TeamProjectFluxday.Pages
             Assert.AreEqual(4, Map.ListOfUsers.Count);
         }
 
-        //internal void NewEmployeeIsNotInTheList()
-        //{
-        //    Assert.IsFalse(Map.NewUser.Displayed, "New employee is in the list!");
-        //}
+        internal void NewEmployeeIsNotInTheList()
+        {
+            Assert.IsTrue(Map.NewEmployeeNotVisible, "New employee is in the list!");
+        }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using TeamProjectFluxday.Core;
+﻿using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Utils;
 
 namespace TeamProjectFluxday.Pages
@@ -12,7 +11,7 @@ namespace TeamProjectFluxday.Pages
 
         internal void FillInName()
         {
-            Map.UserNameField.SendKeys("TestEmployee");
+            Map.UserNameField.SendKeys(StringHelper.AppendDateTimeString("TestEmployee"));
         }
 
         internal void FillInNickName()

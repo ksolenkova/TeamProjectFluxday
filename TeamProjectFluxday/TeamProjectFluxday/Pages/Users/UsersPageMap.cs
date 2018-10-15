@@ -22,6 +22,14 @@ namespace TeamProjectFluxday.Pages
             }
         }
 
+        public IWebElement TeamLeadUser
+        {
+            get
+            {
+                return GetElement(By.LinkText("Team Lead"));
+            }
+        }
+
         public IWebElement NewUser
         {
             get

@@ -33,10 +33,6 @@ namespace TeamProjectFluxday.Tests
         [TestMethod]
         public void Test002EditTask()
         {
-            //var addNewTaskPage = dashboardPage.NavigationPanel.NavigateToAddNewTaskPage();
-
-            //addNewTaskPage.CreateNewTask();
-
             TaskProvider.CreateTask(dashboardPage);
 
             var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
@@ -67,9 +63,7 @@ namespace TeamProjectFluxday.Tests
         [TestMethod]
         public void Test004AddSubtask()
         {
-            var addNewTaskPage = dashboardPage.NavigationPanel.NavigateToAddNewTaskPage();
-
-            addNewTaskPage.CreateNewTask();
+            TaskProvider.CreateTask(dashboardPage);
 
             var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
 
@@ -87,9 +81,7 @@ namespace TeamProjectFluxday.Tests
         [TestMethod]
         public void Test005DeleteTask()
         {
-            var addNewTaskPage = dashboardPage.NavigationPanel.NavigateToAddNewTaskPage();
-
-            addNewTaskPage.CreateNewTask();
+            TaskProvider.CreateTask(dashboardPage);
 
             var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
 

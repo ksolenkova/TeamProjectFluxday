@@ -44,6 +44,7 @@ namespace TeamProjectFluxday.Pages
         {
             Thread.Sleep(1000);
             Map.CompletedTasksButton.Click();
+            Thread.Sleep(500);
         }
 
         internal void AddSubtask()

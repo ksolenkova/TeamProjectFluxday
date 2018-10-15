@@ -144,9 +144,7 @@ namespace TeamProjectFluxday.Tests
             var employee2User = TestData.Employee2;
             var dashboardPage = loginPage.Login(employee2User);
 
-            var actualResult = dashboardPage.NavigationPanel.ReadUserLinkText();
-
-            Assert.AreEqual(employee2User.Name, actualResult);
+            dashboardPage.Validate().UserNameLink(employee2User.Name);
         }
 
         [TestCategory("LoginPageTests")]

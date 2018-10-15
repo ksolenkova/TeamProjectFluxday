@@ -36,6 +36,9 @@ namespace TeamProjectFluxday.Tests
 
             var editedSupportDetailsPage = editPage.ChangeTeamName(newSupportName);
             editedSupportDetailsPage.Validate().EditedSupportTitle(newSupportName);
+
+            detailsPage.NavigateToTeamDetailsPage(defaultSupportName);
+
             editPage.ChangeTeamName(defaultSupportName);
         }
     }

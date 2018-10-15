@@ -1,5 +1,4 @@
-﻿using System;
-using TeamProjectFluxday.Core;
+﻿using TeamProjectFluxday.Core;
 using TeamProjectFluxday.Data;
 
 namespace TeamProjectFluxday.Pages
@@ -28,6 +27,7 @@ namespace TeamProjectFluxday.Pages
         {
             ClickOnSettingsIcon();
             ClickOnEditOption();
+
             string teamIndex = TestData.TeamIndexes[teamName];
             return new EditTeamPage($"https://app.fluxday.io/teams/{teamIndex}/edit#pane3");
         }

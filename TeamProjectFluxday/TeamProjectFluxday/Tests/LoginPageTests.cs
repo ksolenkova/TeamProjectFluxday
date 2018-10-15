@@ -93,7 +93,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("LoginPageTests")]
         [Owner("Yusuf Machan")]
         [TestMethod]
-        public void Test000LogOutAsTeamLead()
+        public void Test007LogOutAsTeamLead()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();
@@ -108,7 +108,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("LoginPageTests")]
         [Owner("Kristina Solenkova")]
         [TestMethod]
-        public void Test007LoginWithEmployee1User()
+        public void Test008LoginWithEmployee1User()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();
@@ -122,7 +122,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("LoginPageTests")]
         [Owner("Kristina Solenkova")]
         [TestMethod]
-        public void Test008LogOutAsEmployee1()
+        public void Test009LogOutAsEmployee1()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();
@@ -137,7 +137,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("LoginPageTests")]
         [Owner("Kristina Solenkova")]
         [TestMethod]
-        public void Test009VerifyEmployee1IsNotAbleToLoginWithInvalidEmail()
+        public void Test0010VerifyEmployee1IsNotAbleToLoginWithInvalidEmail()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();
@@ -151,7 +151,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("LoginPageTests")]
         [Owner("Angel Botev")]
         [TestMethod]
-        public void Test010LoginWithEmployee2User()
+        public void Test011LoginWithEmployee2User()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();
@@ -167,7 +167,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("LoginPageTests")]
         [Owner("Angel Botev")]
         [TestMethod]
-        public void Test011VerifyEmployee2CantLoginWithInvalidPassword()
+        public void Test012VerifyEmployee2CantLoginWithInvalidPassword()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();
@@ -181,7 +181,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("LoginPageTests")]
         [Owner("Angel Botev")]
         [TestMethod]
-        public void Test012LogOutAsEmployee2()
+        public void Test013LogOutAsEmployee2()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();

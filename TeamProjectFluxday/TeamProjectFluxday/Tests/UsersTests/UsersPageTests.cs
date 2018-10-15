@@ -21,7 +21,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("UsersPageTests")]
         [Owner("Dobrin Ganev")]
         [TestMethod]
-        public void Test001UsersPageValidation()
+        public void Test001NavigateToUsersPage()
         {
             var usersPage = dashboardPage.NavigationPanel.NavigateToUsersPage();
             
@@ -31,7 +31,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("UsersPageTests")]
         [Owner("Dobrin Ganev")]
         [TestMethod]
-        public void Test002AddUserLinkValidation()
+        public void Test002VerifyAddUserLinkIsAvailable()
         {
             var usersPage = dashboardPage.NavigationPanel.NavigateToUsersPage();
             

@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Threading;
 using TeamProjectFluxday.Core;
 
 namespace TeamProjectFluxday.Pages
@@ -7,7 +8,9 @@ namespace TeamProjectFluxday.Pages
     {
         public void IsOnDepartmentsPage()
         {
-            Assert.IsTrue(Map.DepartmentsTitle.Displayed, "Departments page is not displayed");
+            var expectedResult = "Departments";
+            Thread.Sleep(1000);
+            Assert.AreEqual(expectedResult, Map.DepartmentsTitle.Text, "Departments page is not displayed");
         }
 
         internal void NewDepartmentExists()

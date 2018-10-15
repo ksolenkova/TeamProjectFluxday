@@ -21,7 +21,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("MyTasksPageTests")]
         [Owner("Yusuf Machan")]
         [TestMethod]
-        public void Test001MyTasksPageValidation()
+        public void Test001NavigateToMyTasksPage()
         {
             var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
             
@@ -49,11 +49,11 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("MyTasksPageTests")]
         [Owner("Yusuf Machan")]
         [TestMethod]
-        public void Test003CompletedButtonValidate()
+        public void Test006VerifyCompletedTasksExist()
         {
             var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
             
-            myTasksPage.CompletedButton();
+            myTasksPage.PressCompletedButton();
 
             myTasksPage.Validate().IsCompletedTasksExist();
         }

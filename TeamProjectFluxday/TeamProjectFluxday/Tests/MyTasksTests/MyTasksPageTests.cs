@@ -31,11 +31,9 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("MyTasksPageTests")]
         [Owner("Yusuf Machan")]
         [TestMethod]
-        public void Test004EditTask()
+        public void Test002EditTask()
         {
-            var addNewTaskPage = dashboardPage.NavigationPanel.NavigateToAddNewTaskPage();
-
-            addNewTaskPage.CreateNewTask();
+            TaskProvider.CreateTask(dashboardPage);
 
             var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
 
@@ -51,7 +49,7 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("MyTasksPageTests")]
         [Owner("Yusuf Machan")]
         [TestMethod]
-        public void Test006CompletedButtonValidate()
+        public void Test003CompletedButtonValidate()
         {
             var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
             
@@ -63,11 +61,9 @@ namespace TeamProjectFluxday.Tests
         [TestCategory("MyTasksPageTests")]
         [Owner("Yusuf Machan")]
         [TestMethod]
-        public void Test005AddSubtask()
+        public void Test004AddSubtask()
         {
-            var addNewTaskPage = dashboardPage.NavigationPanel.NavigateToAddNewTaskPage();
-
-            addNewTaskPage.CreateNewTask();
+            TaskProvider.CreateTask(dashboardPage);
 
             var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
 
@@ -76,6 +72,20 @@ namespace TeamProjectFluxday.Tests
             myTasksPage.Validate().SubtaskExists();
 
             myTasksPage.DeleteTasks();
+
+            myTasksPage.Validate().IsTaskDeleted();
+        }
+
+        [TestCategory("MyTasksPageTests")]
+        [Owner("Yusuf Machan")]
+        [TestMethod]
+        public void Test005DeleteTask()
+        {
+            TaskProvider.CreateTask(dashboardPage);
+
+            var myTasksPage = dashboardPage.NavigationPanel.NavigateToMyTasksPage();
+
+            myTasksPage.DeleteNewTask();
 
             myTasksPage.Validate().IsTaskDeleted();
         }

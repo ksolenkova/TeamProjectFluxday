@@ -35,5 +35,10 @@ namespace TeamProjectFluxday.Pages
         {
             Assert.IsTrue(Map.NewEmployeeNotVisible, "New employee is in the list!");
         }
+
+        internal void TeamLeadIsInUsersList()
+        {
+            Assert.AreEqual(Map.TeamLeadUser.Text, "Team Lead");
+        }
     }
 }
